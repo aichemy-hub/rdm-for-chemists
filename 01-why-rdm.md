@@ -22,7 +22,7 @@ exercises: 5
 
 ## What Is Research Data?
 
-When you hear "research data", you might think of a spreadsheet of results.
+When you hear "research data", you might think of a spreadsheet of results or a graph.
 In practice, research data includes everything generated or collected during
 a research project that is needed to validate your findings. In chemistry,
 this might include:
@@ -37,8 +37,7 @@ this might include:
 - Sample metadata (batch numbers, purities, supplier information)
 - Calibration data and instrument logs
 
-Research data is not just the final polished dataset attached to a publication —
-it is the full trail of evidence behind your conclusions.
+**Research data is not just the final polished dataset attached to a publication, it is the full trail of evidence behind your conclusions.**
 
 ## What Is Research Data Management?
 
@@ -107,10 +106,9 @@ and money that went into collecting it.
 
 :::::::::::::::::::::::::::::::::::::::::  callout
 
-## Format Obsolescence Is Real
+## Format Obsolescence
 
-This is not just a problem of the past. Proprietary instrument formats,
-old versions of software, and unsupported file types can all make data
+Proprietary instrument formats, old versions of software, and unsupported file types can all make data
 inaccessible over time. Saving your data in open, standard formats alongside
 vendor-specific formats is one of the simplest things you can do to protect
 against this.
@@ -158,7 +156,7 @@ reproducibility. The findings were striking:
 - Chemists had the **highest proportion** of respondents who had been unable
   to reproduce someone else's experiment
 
-Despite this, most researchers still trusted published results — and this
+Despite this, most researchers still trusted published results and this
 confidence was most pronounced among chemists and physicists.
 
 > Baker, M. (2016) "1,500 scientists lift the lid on reproducibility."
@@ -167,7 +165,7 @@ confidence was most pronounced among chemists and physicists.
 
 The causes identified by respondents included pressure to publish, selective
 reporting, insufficient methods detail, and poor data management. Many of
-these are directly addressable through better RDM practices — which is
+these are directly addressable through better RDM practices, which is
 exactly what this workshop is about.
 
 :::::::::::::::::::::::::::::::::::::::::  callout
@@ -194,9 +192,7 @@ get there.
 
 ## Challenge 1: Data Audit
 
-**Directory:** `challenge-data/01_data-audit/`
-
-Take 2 minutes to list — on paper or in a text file — all the different
+Take 2 minutes to list all the different
 types of data you produce or use in your research. Think broadly:
 
 - Raw data files from instruments
@@ -226,9 +222,7 @@ include:
 - Software versions and environment configurations
 - Sample provenance information (supplier, batch, purity)
 
-If your list is short, that might indicate data types you are generating but
-not actively managing — and those are exactly the gaps that good RDM
-practices can fill.
+**If your list is short, that might indicate data types you are generating but not actively managing, and those are exactly the gaps that good RDM practices can fill.**
 
 :::::::::::::::::::::::::
 

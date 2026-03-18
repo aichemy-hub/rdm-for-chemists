@@ -1,15 +1,16 @@
 ---
 site: sandpaper::sandpaper_site
 ---
+# Workshop overview
 
-Good research data management is essential for reproducible, impactful science —
+Good research data management is essential for reproducible, impactful science,
 yet it is rarely taught as part of a chemistry degree. This workshop gives
 PhD students and postdocs working in chemistry the practical knowledge and
 skills to manage their research data effectively, from the first day of a
 project to long after publication.
 
-Part 1 covers general research data management principles — planning, storing,
-organising, and sharing data — with reference to UK funder requirements and
+Part 1 covers general research data management principles: planning, storing,
+organising, and sharing data, with reference to UK funder requirements and
 the FAIR principles. Part 2 applies these principles to the specific challenges
 of chemistry research, covering topics such as metadata standards for
 spectroscopic data, electronic lab notebooks, chemistry-specific data
