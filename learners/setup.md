@@ -27,8 +27,6 @@ The challenge data folder has the following structure:
 
 ```
 challenge-data/
-├── 01_data-audit/
-├── 02_dmp-speed-round/
 ├── 03_data-access-statements/
 ├── 04_fair-self-assessment/
 ├── 05_fix-this-folder/

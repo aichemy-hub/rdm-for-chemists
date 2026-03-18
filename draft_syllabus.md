@@ -34,10 +34,6 @@ All challenge materials are provided in a shared directory with the following st
 
 ```
 challenge-data/
-├── 01_data-audit/
-│   └── (no files needed — reflective exercise)
-├── 02_dmp-speed-round/
-│   └── (no files needed — group discussion)
 ├── 03_data-access-statements/
 │   └── data_access_statements.md
 ├── 04_fair-self-assessment/
@@ -158,6 +154,7 @@ RDM is not free. Most funding bodies permit the inclusion of data management cos
 - **Software licences:** For specialist data management or analysis tools
 
 Useful budgeting tools:
+
 - [UK Data Service Costing Tool and Checklist](https://ukdataservice.ac.uk/learning-hub/research-data-management/plan-to-share/costing/)
 - [OpenAIRE RDM Costing Tool](https://www.openaire.eu/)
 
@@ -247,6 +244,7 @@ Chemistry produces diverse data types (spectra, structures, reaction conditions,
 > **Directory:** `challenge-data/03_data-access-statements/`
 >
 > **Exercise:** Open `data_access_statements.md`. It contains three fictional data access statements from chemistry papers. For each one, discuss with your neighbour:
+>
 > 1. Does it meet the EPSRC/UKRI requirements?
 > 2. Could you actually find and access the data based on this statement?
 > 3. How would you improve it?
@@ -255,7 +253,7 @@ Chemistry produces diverse data types (spectra, structures, reaction conditions,
 >
 > *Statement A:* "Data is available from the authors upon reasonable request."
 >
-> *Statement B:* "The raw NMR, IR, and mass spectrometry data supporting this study are deposited in the Chemotion Repository at https://doi.org/10.14272/xxxxx under a CC-BY 4.0 licence. Computational input/output files are available on Zenodo at https://doi.org/10.5281/zenodo.xxxxx."
+> *Statement B:* "The raw NMR, IR, and mass spectrometry data supporting this study are deposited in the Chemotion Repository at <https://doi.org/10.14272/xxxxx> under a CC-BY 4.0 licence. Computational input/output files are available on Zenodo at <https://doi.org/10.5281/zenodo.xxxxx>."
 >
 > *Statement C:* "All data are included in the supplementary information."
 
@@ -289,6 +287,7 @@ Chemistry produces diverse data types (spectra, structures, reaction conditions,
 Consistent, descriptive names with dates (ISO 8601: YYYY-MM-DD), version numbers, and meaningful abbreviations. Avoid spaces and special characters.
 
 Example:
+
 ```
 BAD:  final_data_v3_FINAL_really final (2).xlsx
 GOOD: 2025-03-15_catalyst-screening_NMR_Cu-series_v02.xlsx
@@ -296,6 +295,7 @@ GOOD: 2025-03-15_catalyst-screening_NMR_Cu-series_v02.xlsx
 
 **Folder structures.**
 Show a good example folder structure for a chemistry project:
+
 ```
 project-name/
 ├── 01_raw-data/
@@ -383,11 +383,13 @@ Data sharing is not all-or-nothing. There are several approaches, roughly ordere
 
 **Choosing a repository.**
 Hierarchy of preference:
+
 1. **Domain-specific repository** (best for discoverability and community standards)
 2. **Institutional repository** (often required by your university — most UK universities have one)
 3. **General-purpose repository** (e.g. Zenodo, Figshare) — always available as a fallback
 
 Key repositories to highlight:
+
 - [Zenodo](https://zenodo.org/) — general purpose, free, CERN-hosted, DOI minting
 - [Figshare](https://figshare.com/) — general purpose, good visualisation
 - Institutional repositories — varies by university
@@ -398,6 +400,7 @@ A DOI is a persistent identifier for your dataset. It makes data citable, discov
 
 **Licensing your data.**
 Without a licence, others legally cannot reuse your data. Common options:
+
 - **CC0** (public domain dedication) — maximum reuse, recommended for data
 - **CC-BY** — requires attribution
 - **CC-BY-SA** — attribution + share-alike
@@ -418,6 +421,7 @@ EPSRC requires 10 years minimum. Consider format obsolescence — prefer open, n
 > **Hands-on exercise:** Open the `messy-project/` folder on your laptop. It contains a set of badly named files, duplicates, and no documentation from a fictional chemistry project. In pairs, reorganise the files into a sensible structure and rename them following the conventions discussed. You can create new folders, rename files, and add a README. We'll compare solutions afterwards.
 >
 > **Example contents of the messy folder:**
+>
 > ```
 > messy-project/
 > ├── data final.xlsx
@@ -463,6 +467,7 @@ This is a capstone exercise for Part 1 that ties together sharing, licensing, an
 > **Exercise:** Open `scenario.md`. A research group has produced a dataset of UV-Vis absorption spectra for 30 novel organic dye molecules, along with the Python scripts used for fitting and analysis. They want to share both the data and the code, but their industrial collaborator has asked that commercial use be restricted for 12 months.
 >
 > In pairs, discuss:
+>
 > 1. Which Creative Commons licence would you recommend for the spectral data?
 > 2. Would you use the same licence for the Python scripts, or a different one (e.g. MIT, GPL)? Why?
 > 3. How would you handle the 12-month commercial restriction — can you do this with a CC licence?
@@ -472,6 +477,7 @@ This is a capstone exercise for Part 1 that ties together sharing, licensing, an
 > **Directory:** `challenge-data/06_sharing-licensing-repositories/06b_data-access-statement/`
 >
 > **Exercise:** Open `scenario.md`. You are about to submit a paper to an RSC journal. Your study involved:
+>
 > - ¹H and ¹³C NMR spectra for 15 compounds (deposited in the Chemotion Repository)
 > - DFT calculations (input/output files on Zenodo)
 > - A proprietary catalyst formulation that cannot be disclosed due to an NDA with an industrial partner
@@ -567,6 +573,7 @@ Many reproducibility failures stem from poor data management — incomplete meth
 Searchability, automatic timestamping, backup, data linking, collaboration, integration with instruments, and increasingly a funder/publisher expectation. Paper notebooks degrade, are hard to search, and can't be easily shared or backed up.
 
 **Chemistry-specific ELN features to look for:**
+
 - Chemical structure drawing and searching
 - Reaction scheme capture
 - Stoichiometry calculators
@@ -586,6 +593,7 @@ Searchability, automatic timestamping, backup, data linking, collaboration, inte
 | **Benchling** | Good for bio/chem | Free for academics | No | Popular but data lock-in concerns |
 
 **Practical considerations:**
+
 - Does your institution already have a licence? Check first.
 - What happens to your data when you leave? Can you export it?
 - Is the ELN actively maintained and supported?
@@ -649,6 +657,7 @@ Reference: "IUPAC specification for the FAIR management of spectroscopic data" �
 
 **Standard file formats.**
 Prefer open, standard formats where possible:
+
 - **JCAMP-DX**: Standard for spectroscopic data (NMR, IR, MS, UV-Vis)
 - **CIF**: Crystallographic Information File (for crystal structures)
 - **CML**: Chemical Markup Language
@@ -665,6 +674,7 @@ Prefer open, standard formats where possible:
 > **Directory:** `challenge-data/09_metadata/`
 >
 > **Hands-on exercise:** Open `09b_inchi_smiles_exercise.md` for instructions. Using the [NCI/CADD Chemical Identifier Resolver](https://cactus.nci.nih.gov/chemical/structure):
+>
 > 1. Convert the name "aspirin" to an InChI and an InChIKey
 > 2. Convert the SMILES `CC(=O)OC1=CC=CC=C1C(=O)O` to a structure — is it the same molecule?
 > 3. Search for the InChIKey in Google — what do you find?
@@ -727,6 +737,7 @@ Reference: [RSC — Data Sharing](https://www.rsc.org/publishing/publish-with-us
 > **Directory:** `challenge-data/10_find-a-repository/`
 >
 > **Hands-on exercise:** Open `instructions.md`. Go to [re3data.org](https://www.re3data.org/) and search for repositories relevant to chemistry. Find one repository that would be relevant to your own research area. Note down:
+>
 > 1. What is it called?
 > 2. What data does it accept?
 > 3. Does it mint DOIs?
@@ -774,6 +785,7 @@ Walk through a realistic chemistry workflow — a researcher synthesises a compo
 Facilities like the [Rapid Online Analysis of Reactions (ROAR)](https://www.imperial.ac.uk/rapid-online-analysis-of-reactions/) at Imperial College generate data at scale — automated reactions with inline analytics producing thousands of data points per day.
 
 Challenges:
+
 - Volume: terabytes of data per experiment
 - Automation: metadata must be captured automatically — manual recording is not feasible
 - Standardisation: need consistent naming, formats, and metadata across all runs
@@ -781,6 +793,7 @@ Challenges:
 
 **Large-scale facilities.**
 Neutron and synchrotron sources (e.g. ISIS, Diamond Light Source) produce enormous datasets. These facilities often have their own data management infrastructure, but researchers need to plan for:
+
 - Data transfer (how to get terabytes of data home)
 - Data storage (institutional storage may not be sufficient)
 - Metadata standards specific to the facility
@@ -793,12 +806,14 @@ Neutron and synchrotron sources (e.g. ISIS, Diamond Light Source) produce enormo
 > **Directory:** `challenge-data/11_multi-technique-dmp/`
 >
 > **Group exercise:** Open `scenario.md`. Your group has been awarded funding for a project that involves:
+>
 > - Synthesising 50 new compounds
 > - Characterising each by ¹H NMR, ¹³C NMR, IR, and high-resolution mass spectrometry
 > - Running 10 of them through a high-throughput screening facility
 > - Publishing results in an RSC journal
 >
 > In groups of 3–4, spend 8 minutes creating a mini data management plan:
+>
 > 1. What file naming convention will you use?
 > 2. What metadata will you record for each technique?
 > 3. Where will you store the raw data during the project?
@@ -977,6 +992,7 @@ Content from the following Imperial College RDM pages has been reviewed and inco
 - **How to share research data** — The spectrum of sharing approaches and Data Access Statements incorporated into Episode 5
 
 Additional Imperial sub-pages that may contain further useful material (not yet reviewed):
+
 - Managing sensitive data
 - Organising and describing data
 - What does my publisher require?
@@ -986,6 +1002,7 @@ Additional Imperial sub-pages that may contain further useful material (not yet 
 ## On the Carpentries Format
 
 The shell-novice lesson structure uses:
+
 - **Episodes** with front matter specifying `teaching` and `exercises` time
 - **Objectives** at the start (`::: objectives`)
 - **Questions** to frame the episode (`::: questions`)
@@ -1018,6 +1035,7 @@ When converting this syllabus to actual lesson materials, the Carpentries Workbe
 | | **Workshop Total** | | | **~190–205 min (~3–3.5 hr)** |
 
 **Note on timing:** The current syllabus totals approximately 3–3.25 hours of content (excluding the break). To fit within 2.5 hours, consider:
+
 - Trimming the funder policy detail in Episode 2 (summarise rather than list every funder)
 - Reducing Challenge 6 to two sub-challenges instead of three
 - Shortening the ELN episode to a brief signpost rather than a full teaching segment
