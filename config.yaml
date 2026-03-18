@@ -1,0 +1,73 @@
+#------------------------------------------------------------
+# Values for this lesson.
+#------------------------------------------------------------
+
+# Which carpentry is this (swc, dc, lc, or cp)?
+# swc: Software Carpentry
+# dc: Data Carpentry
+# lc: Library Carpentry
+# cp: Carpentries (to use for instructor training for instance)
+# incubator: The Carpentries Incubator
+carpentry: 'incubator'
+
+# Overall title for pages.
+title: 'Research Data Management for Chemists'
+
+# Date the lesson was created (YYYY-MM-DD, this is empty by default)
+created: '2026-03-18'
+
+# Comma-separated list of keywords for the lesson
+keywords: 'research data management, chemistry, FAIR data, data management plans, reproducibility, metadata, open science'
+
+# Life cycle stage of the lesson
+# possible values: pre-alpha, alpha, beta, stable
+life_cycle: 'pre-alpha'
+
+# License of the lesson materials (recommended CC-BY 4.0)
+license: 'CC-BY 4.0'
+
+# Link to the source repository for this lesson
+source: 'https://github.com/aichemy-hub/rdm-for-chemists'
+
+# Default branch of your lesson
+branch: 'main'
+
+# Who to contact if there are any issues
+contact: 'd.w.davies@imperial.ac.uk'
+
+# Navigation ------------------------------------------------
+#
+# Use the following menu items to specify the order of
+# individual pages in each dropdown section.
+
+# Order of episodes in your lesson
+episodes:
+- 01-why-rdm.md
+- 02-planning-and-policies.md
+- 03-fair-data.md
+- 04-storage-and-organisation.md
+- 05-sharing-and-licensing.md
+- 06-reproducibility-in-chemistry.md
+- 07-electronic-lab-notebooks.md
+- 08-metadata-and-standards.md
+- 09-chemistry-repositories.md
+- 10-managing-chemistry-data.md
+- 11-psdi.md
+
+# Information for Learners
+learners:
+
+# Information for Instructors
+instructors:
+
+# Learner Profiles
+profiles:
+
+# Customisation ---------------------------------------------
+#
+# This space below is where custom yaml items (e.g. pinning
+# sandpaper and varnish versions) should live
+
+url: 'https://aichemy-hub.github.io/rdm-for-chemists'
+analytics: carpentries
+lang: en
