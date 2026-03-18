@@ -25,7 +25,7 @@ text editor and web browser.
 
 The challenge data folder has the following structure:
 
-```
+```bash
 challenge-data/
 ├── 03_data-access-statements/
 ├── 04_fair-self-assessment/

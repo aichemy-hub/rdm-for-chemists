@@ -32,7 +32,7 @@ By the end of the workshop, participants will be able to:
 
 All challenge materials are provided in a shared directory with the following structure:
 
-```
+```bash
 challenge-data/
 ├── 03_data-access-statements/
 │   └── data_access_statements.md
