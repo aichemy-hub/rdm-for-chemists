@@ -220,7 +220,7 @@
 <div class="accordion accordion-flush" id="accordionFlush3">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading3">
-        <a href="02-planning-and-policies.html">2. Planning Your Data — DMPs, Budgeting, and Funder Policies</a>
+        <a href="02-planning-and-policies.html">2. Planning Your Data: DMPs, Budgeting, and Funder Policies</a>
     </div><!--/div.accordion-header-->
 
   </div><!--/div.accordion-item-->
@@ -413,14 +413,16 @@ reproducibility crisis and how does it relate to data management?
 <span class="visually-hidden">Duration: </span>00h 15m
 </td>
 <td>
- 2. <a href="02-planning-and-policies.html">Planning Your Data — DMPs,
+ 2. <a href="02-planning-and-policies.html">Planning Your Data: DMPs,
 Budgeting, and Funder Policies</a>
 </td>
 <td>
-TODO: Add framing questions
+What is a Data Management Plan and do I need one?<br>What does my
+funder require me to do with my data?<br>How much does research data
+management cost, and can I claim it on a grant?
 </td>
 </tr><tr><td>
-<span class="visually-hidden">Duration: </span>00h 35m
+<span class="visually-hidden">Duration: </span>00h 40m
 </td>
 <td>
  3. <a href="03-fair-data.html">FAIR Data Principles</a>
@@ -429,7 +431,7 @@ TODO: Add framing questions
 TODO: Add framing questions
 </td>
 </tr><tr><td>
-<span class="visually-hidden">Duration: </span>00h 50m
+<span class="visually-hidden">Duration: </span>00h 55m
 </td>
 <td>
  4. <a href="04-storage-and-organisation.html">Data Storage, Security,
@@ -439,7 +441,7 @@ and Organisation</a>
 TODO: Add framing questions
 </td>
 </tr><tr><td>
-<span class="visually-hidden">Duration: </span>01h 05m
+<span class="visually-hidden">Duration: </span>01h 10m
 </td>
 <td>
  5. <a href="05-sharing-and-licensing.html">Sharing, Preserving, and
@@ -449,7 +451,7 @@ Licensing Your Data</a>
 TODO: Add framing questions
 </td>
 </tr><tr><td>
-<span class="visually-hidden">Duration: </span>01h 35m
+<span class="visually-hidden">Duration: </span>01h 40m
 </td>
 <td>
  6. <a href="06-reproducibility-in-chemistry.html">The Reproducibility
@@ -459,7 +461,7 @@ Crisis in Chemistry</a>
 TODO: Add framing questions
 </td>
 </tr><tr><td>
-<span class="visually-hidden">Duration: </span>01h 50m
+<span class="visually-hidden">Duration: </span>01h 55m
 </td>
 <td>
  7. <a href="07-electronic-lab-notebooks.html">Electronic Lab Notebooks
@@ -469,7 +471,7 @@ for Chemists</a>
 TODO: Add framing questions
 </td>
 </tr><tr><td>
-<span class="visually-hidden">Duration: </span>02h 02m
+<span class="visually-hidden">Duration: </span>02h 07m
 </td>
 <td>
  8. <a href="08-metadata-and-standards.html">Metadata and Chemical Data
@@ -479,7 +481,7 @@ Standards</a>
 TODO: Add framing questions
 </td>
 </tr><tr><td>
-<span class="visually-hidden">Duration: </span>02h 22m
+<span class="visually-hidden">Duration: </span>02h 27m
 </td>
 <td>
  9. <a href="09-chemistry-repositories.html">Chemistry Data Repositories
@@ -489,7 +491,7 @@ and Databases</a>
 TODO: Add framing questions
 </td>
 </tr><tr><td>
-<span class="visually-hidden">Duration: </span>02h 37m
+<span class="visually-hidden">Duration: </span>02h 42m
 </td>
 <td>
 10. <a href="10-managing-chemistry-data.html">Managing Data from Common
@@ -499,7 +501,7 @@ Chemistry Techniques</a>
 TODO: Add framing questions
 </td>
 </tr><tr><td>
-<span class="visually-hidden">Duration: </span>02h 57m
+<span class="visually-hidden">Duration: </span>03h 02m
 </td>
 <td>
 11. <a href="11-psdi.html">PSDI and the Chemistry Data Landscape</a>
@@ -508,7 +510,7 @@ TODO: Add framing questions
 TODO: Add framing questions
 </td>
 </tr><tr><td>
-<span class="visually-hidden">Duration: </span>03h 07m
+<span class="visually-hidden">Duration: </span>03h 12m
 </td>
 <td>
 Finish
@@ -541,18 +543,20 @@ sub-folders for each exercise.</li>
 </ol><p><strong>Let your instructor know if you need help with this
 step.</strong></p>
 <p>The challenge data folder has the following structure:</p>
-<pre><code>challenge-data/
-├── 01_data-audit/
-├── 02_dmp-speed-round/
-├── 03_data-access-statements/
-├── 04_fair-self-assessment/
-├── 05_fix-this-folder/
-├── 06_sharing-licensing-repositories/
-├── 07_reproducibility-detective/
-├── 09_metadata/
-├── 10_find-a-repository/
-├── 11_multi-technique-dmp/
-└── 13_post-workshop-action-plan/</code></pre>
+<div class="codewrapper sourceCode" id="cb1">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" tabindex="-1"></a><span class="ex">challenge-data/</span></span>
+<span id="cb1-2"><a href="#cb1-2" tabindex="-1"></a><span class="ex">├──</span> 03_data-access-statements/</span>
+<span id="cb1-3"><a href="#cb1-3" tabindex="-1"></a><span class="ex">├──</span> 04_fair-self-assessment/</span>
+<span id="cb1-4"><a href="#cb1-4" tabindex="-1"></a><span class="ex">├──</span> 05_fix-this-folder/</span>
+<span id="cb1-5"><a href="#cb1-5" tabindex="-1"></a><span class="ex">├──</span> 06_sharing-licensing-repositories/</span>
+<span id="cb1-6"><a href="#cb1-6" tabindex="-1"></a><span class="ex">├──</span> 07_reproducibility-detective/</span>
+<span id="cb1-7"><a href="#cb1-7" tabindex="-1"></a><span class="ex">├──</span> 09_metadata/</span>
+<span id="cb1-8"><a href="#cb1-8" tabindex="-1"></a><span class="ex">├──</span> 10_find-a-repository/</span>
+<span id="cb1-9"><a href="#cb1-9" tabindex="-1"></a><span class="ex">├──</span> 11_multi-technique-dmp/</span>
+<span id="cb1-10"><a href="#cb1-10" tabindex="-1"></a><span class="ex">└──</span> 13_post-workshop-action-plan/</span></code></pre>
+</div>
 <p>Each folder contains the files and instructions needed for that
 challenge. Your instructor will tell you when to open each one.</p>
 </section></section></main><nav class="bottom-pagination mx-md-4" aria-label="Next Chapter"><!-- content for small screens --><div class="d-block d-sm-block d-md-none">
@@ -606,8 +610,8 @@ challenge. Your instructor will tell you when to open each one.</p>
   "url": "https://aichemy-hub.github.io/rdm-for-chemists/instructor/index.html",
   "identifier": "https://aichemy-hub.github.io/rdm-for-chemists/instructor/index.html",
   "dateCreated": "2026-03-18",
-  "dateModified": "2026-03-18",
-  "datePublished": "2026-03-18"
+  "dateModified": "2026-03-19",
+  "datePublished": "2026-03-19"
 }
 
   </script><script>
