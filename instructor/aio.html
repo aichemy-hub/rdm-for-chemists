@@ -1155,10 +1155,10 @@ it out later.</li>
 </div>
 </section></section><section id="aio-03-fair-data"><p>Content from <a href="03-fair-data.html">FAIR Data Principles</a></p>
 <hr>
-<p>Last updated on 2026-03-18 |
+<p>Last updated on 2026-03-19 |
 
         <a href="https://github.com/aichemy-hub/rdm-for-chemists/edit/main/episodes/03-fair-data.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
-<p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 15 minutes</p>
+<p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 20 minutes</p>
 <div class="text-end">
           <button role="button" aria-pressed="false" tabindex="0" id="expand-code" class="pull-right" data-expand="Expand All Solutions " data-collapse="Collapse All Solutions "> Expand All Solutions <i aria-hidden="true" data-feather="plus"></i></button>
         </div>
@@ -1170,7 +1170,9 @@ it out later.</li>
 <div class="inner">
 <h3 class="card-title">Questions</h3>
 <ul>
-<li>TODO: Add framing questions</li>
+<li>What does FAIR data mean?</li>
+<li>Is FAIR the same as open?</li>
+<li>How do I know if my data is FAIR?</li>
 </ul>
 </div>
 </div>
@@ -1180,15 +1182,301 @@ it out later.</li>
 <div class="inner bordered">
 <h3 class="card-title">Objectives</h3>
 <ul>
-<li>TODO: Add learning objectives</li>
+<li>Explain the four FAIR principles and what each means in
+practice</li>
+<li>Distinguish between FAIR data and open data</li>
+<li>Assess how FAIR a dataset is using a simple checklist</li>
 </ul>
 </div>
 </div>
 </div>
 </div>
 </div>
-<p>TODO: Episode content to be written. See draft_syllabus.md for
-detailed content plan.</p>
+<section><h2 class="section-heading" id="what-is-fair">What Is FAIR?<a class="anchor" aria-label="anchor" href="#what-is-fair"></a>
+</h2>
+<hr class="half-width">
+<p>FAIR is a set of guiding principles for research data, first
+published in <em>Scientific Data</em> in 2016. The acronym stands
+for:</p>
+<ul>
+<li><strong>Findable</strong></li>
+<li><strong>Accessible</strong></li>
+<li><strong>Interoperable</strong></li>
+<li><strong>Reusable</strong></li>
+</ul>
+<p>These principles were developed to address a straightforward problem:
+vast amount of research data exist but cannot easily be found,
+understood, or reused, <strong>even by the researchers who generated
+them</strong>. FAIR is not a standard or a certification. It is a
+framework for thinking about what good data management looks like from
+the perspective of someone who wants to use your data in the future
+(including your future self).</p>
+<blockquote>
+<p>Wilkinson, M.D. et al. (2016) “The FAIR Guiding Principles for
+scientific data management and stewardship.” <em>Scientific Data</em> 3,
+160018. <a href="https://doi.org/10.1038/sdata.2016.18" class="external-link">doi:10.1038/sdata.2016.18</a></p>
+</blockquote>
+</section><section><h2 class="section-heading" id="the-four-principles">The Four Principles<a class="anchor" aria-label="anchor" href="#the-four-principles"></a>
+</h2>
+<hr class="half-width">
+<div class="section level3">
+<h3 id="findable">Findable<a class="anchor" aria-label="anchor" href="#findable"></a>
+</h3>
+<p>Data should be easy to find, both for humans and machines. This
+means:</p>
+<ul>
+<li>Assigning a <strong>persistent identifier</strong> (such as a DOI)
+to your dataset so it can be reliably linked to and cited</li>
+<li>Describing the data with <strong>rich metadata</strong>: information
+about what the data contains, how it was generated, and how to access
+it</li>
+<li>Registering the data in a <strong>searchable resource</strong> such
+as a data repository</li>
+</ul>
+<p>A dataset buried in a supplementary file attached to a journal
+article with no identifier and no metadata is not findable. A dataset
+deposited in a repository with a DOI, a descriptive title, and keywords
+is.</p>
+</div>
+<div class="section level3">
+<h3 id="accessible">Accessible<a class="anchor" aria-label="anchor" href="#accessible"></a>
+</h3>
+<p>Once someone has found your data, they should be able to retrieve it.
+This means:</p>
+<ul>
+<li>The data (or at minimum its metadata) can be accessed using a
+<strong>standard protocol</strong> such as HTTP or FTP, not a
+proprietary system requiring special software</li>
+<li>
+<strong>Authentication and authorisation</strong> may be applied
+where necessary (for example, restricted access to sensitive data), but
+the process for requesting access should be clear</li>
+<li>
+<strong>Metadata should remain accessible</strong> even if the data
+itself is no longer available so that others can at least discover what
+once existed</li>
+</ul>
+</div>
+<div class="section level3">
+<h3 id="interoperable">Interoperable<a class="anchor" aria-label="anchor" href="#interoperable"></a>
+</h3>
+<p>Data should be able to be combined with other data and used with
+different tools and workflows. This means:</p>
+<ul>
+<li>Using <strong>formal, widely used, and openly available
+formats</strong> (JCAMP-DX for spectra, CIF for crystal structures)
+rather than proprietary vendor formats</li>
+<li>Using <strong>shared vocabularies and ontologies</strong>, for
+example, identifying molecules using InChI or SMILES rather than
+informal names that may mean different things in different contexts</li>
+<li>Including <strong>references to other relevant datasets</strong>
+where appropriate</li>
+</ul>
+<p>Interoperability is where chemistry has historically struggled most.
+Data from different instruments, groups, and fields often cannot be
+combined without significant manual effort, simply because no common
+formats or identifiers were used.</p>
+</div>
+<div class="section level3">
+<h3 id="reusable">Reusable<a class="anchor" aria-label="anchor" href="#reusable"></a>
+</h3>
+<p>Data should be sufficiently well described that it can be understood
+and reused by others (and by you, years later). This means:</p>
+<ul>
+<li>Providing <strong>rich provenance information</strong>: Where did
+the data come from, how was it processed, what instrument was used and
+under what conditions?</li>
+<li>Applying a <strong>clear licence</strong> so others know what they
+are permitted to do with the data (more on this in a later episode)</li>
+<li>Meeting <strong>community standards</strong> for the relevant
+domain. In chemistry, this might mean following IUPAC recommendations
+for spectral data or depositing crystal structures with the CSD</li>
+</ul>
+<div id="fair-is-a-spectrum-not-a-switch" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<span class="callout-header">Callout</span>
+<div id="fair-is-a-spectrum-not-a-switch" class="callout-inner">
+<h3 class="callout-title">FAIR Is a Spectrum, Not a Switch</h3>
+<div class="callout-content">
+<p>No dataset is perfectly FAIR, and improving FAIRness is an ongoing
+process rather than a one-time task. A dataset with a DOI and a clear
+licence is more FAIR than one without, even if it is not yet using a
+standard file format. The goal is to make incremental improvements,
+starting with the changes that have the biggest impact for the least
+effort.</p>
+<p>The two highest-impact things most researchers can do immediately
+are: deposit data in a repository (gains F and A), and apply a licence
+(gains R).</p>
+</div>
+</div>
+</div>
+<div id="check-your-understanding-fair-or-not-fair" class="callout challenge">
+<div class="callout-square">
+<i class="callout-icon" data-feather="zap"></i>
+</div>
+<span class="callout-header">Challenge</span>
+<div id="check-your-understanding-fair-or-not-fair" class="callout-inner">
+<h3 class="callout-title">Check Your Understanding: FAIR or Not
+FAIR?</h3>
+<div class="callout-content">
+<p>For each scenario below, identify which FAIR principle(s) are being
+violated, and what could be done to fix it.</p>
+<p>A. A researcher deposits their NMR spectra as proprietary Bruker
+<code>.fid</code> files in Zenodo with a DOI, but includes no
+information about the instrument, solvent, or compounds measured.</p>
+<p>B. A paper includes the line: “Data are available from the
+corresponding author upon reasonable request.”</p>
+<p>C. A dataset is deposited in a repository under a CC-BY licence with
+rich metadata and a DOI, but the files are in a format that requires a
+£500/year commercial software licence to open.</p>
+</div>
+</div>
+</div>
+<div id="accordionSolution1" class="accordion challenge-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
+  <h4 class="accordion-header" id="headingSolution1">
+  Discussion
+  </h4>
+</button>
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div class="accordion-body">
+<p><strong>A</strong> violates <strong>Reusable</strong> (and arguably
+<strong>Interoperable</strong>). The dataset has a DOI (Findable) and
+can be downloaded (Accessible), but without metadata about the
+instrument, solvent, nucleus, or compounds, no one can interpret the
+spectra. The fix: add a README or metadata record describing the
+experimental conditions for each file.</p>
+<p><strong>B</strong> violates <strong>Findable</strong> and
+<strong>Accessible</strong>. There is no identifier, no repository, and
+no guarantee the author will respond or that the data will still exist
+in five years. Evidence suggests that “available on request” frequently
+means “not actually available”. The fix: deposit the data in a
+repository and replace the statement with a DOI.</p>
+<p><strong>C</strong> violates <strong>Interoperable</strong> (and
+arguably <strong>Accessible</strong> in practice). The legal access
+conditions are fine (open licence, accessible repository), but the data
+cannot actually be used without expensive proprietary software. The fix:
+export to an open format such as csv, json, mzML (for mass spec) etc.,
+alongside the proprietary files.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section><section><h2 class="section-heading" id="fair-is-not-the-same-as-open">FAIR Is Not the Same as Open<a class="anchor" aria-label="anchor" href="#fair-is-not-the-same-as-open"></a>
+</h2>
+<hr class="half-width">
+<p>This is one of the most common misconceptions about FAIR. The two
+concepts are related but distinct:</p>
+<ul>
+<li>
+<strong>Open</strong> data means anyone can access and use it
+freely, with no restrictions.</li>
+<li>
+<strong>FAIR</strong> data means it is well described, findable, and
+usable – but it may still have access restrictions.</li>
+</ul>
+<p>A dataset can be FAIR but not open: for example, sensitive patient
+data or commercially confidential compounds might be deposited in a
+repository with full metadata and a clear licence, but with access
+controlled so that only approved users can download the actual files.
+The metadata is still findable and the access process is clear. That is
+FAIR, even though the data is not open.</p>
+<p>Conversely, data can be open but not FAIR: a file uploaded to a
+personal website with no metadata, no licence, and no persistent
+identifier is technically accessible to anyone, but it is not FAIR.</p>
+<p>The principle to remember: <strong>metadata should always be as open
+as possible, even when the data itself cannot be.</strong></p>
+<div id="challenge-3-how-fair-is-your-data" class="callout challenge">
+<div class="callout-square">
+<i class="callout-icon" data-feather="zap"></i>
+</div>
+<span class="callout-header">Challenge</span>
+<div id="challenge-3-how-fair-is-your-data" class="callout-inner">
+<h3 class="callout-title">Challenge 3: How FAIR Is Your Data?</h3>
+<div class="callout-content">
+<p>Think of a dataset you have generated as part of a recent
+publication, even something simple like a set of analysis files from an
+experiment or a table of results. Or, if you can’t think of a specific
+dataset of your own, think of a dataset from a paper you have read
+recently.</p>
+<p>Using the checklist below, score it against each FAIR principle. Be
+honest.</p>
+<p><strong>Findable</strong></p>
+<ul class="task-list">
+<li><label><input type="checkbox">Does it have a persistent identifier
+(DOI or similar)?</label></li>
+<li><label><input type="checkbox">Is it described with a title,
+keywords, and a summary?</label></li>
+<li><label><input type="checkbox">Is it registered in a searchable
+repository?</label></li>
+</ul>
+<p><strong>Accessible</strong></p>
+<ul class="task-list">
+<li><label><input type="checkbox">Can someone download it without
+needing specialist software or institutional access?</label></li>
+<li><label><input type="checkbox">Is there a clear process for
+accessing it if it is restricted?</label></li>
+</ul>
+<p><strong>Interoperable</strong></p>
+<ul class="task-list">
+<li><label><input type="checkbox">Is it in an open, non-proprietary
+file format?</label></li>
+<li><label><input type="checkbox">Does it use standard identifiers
+(e.g. InChI for molecules)?</label></li>
+</ul>
+<p><strong>Reusable</strong></p>
+<ul class="task-list">
+<li><label><input type="checkbox">Does it have a licence?</label></li>
+<li><label><input type="checkbox">Is there enough metadata to
+understand how it was generated?</label></li>
+<li><label><input type="checkbox">Does it meet any relevant community
+standards for your field?</label></li>
+</ul>
+<p>Discuss with your neighbour: which principle did you score lowest on?
+What is the single easiest thing you could do to improve your score?</p>
+</div>
+</div>
+</div>
+<div id="accordionSolution2" class="accordion challenge-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
+  <h4 class="accordion-header" id="headingSolution2">
+  Discussion
+  </h4>
+</button>
+<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
+<div class="accordion-body">
+<p>For most researchers, the honest answer is that datasets can score
+very poorly or very well against FAIR principles. The point of the
+exercise is not to feel bad if your dataset scores low, but to identify
+the gaps.</p>
+<p>The most common weak spots are:</p>
+<ul>
+<li>
+<strong>No persistent identifier</strong> – data is on a shared
+drive or a personal laptop, nowhere findable by anyone else</li>
+<li>
+<strong>No licence</strong> – data exists but legally cannot be
+reused</li>
+<li>
+<strong>Proprietary formats</strong> – spectra saved only as vendor
+files that require specific software</li>
+<li>
+<strong>No metadata</strong> – files named
+<code>data_final.xlsx</code> with no accompanying documentation</li>
+</ul>
+<p>The single highest-impact improvement for most people is to
+<strong>deposit data in a repository when publishing</strong>. This
+gains F, A, and often R in one step. We will cover how to do this well
+in Episode 5.</p>
+</div>
+</div>
+</div>
+</div>
 <div id="keypoints1" class="callout keypoints">
 <div class="callout-square">
 <i class="callout-icon" data-feather="key"></i>
@@ -1197,11 +1485,22 @@ detailed content plan.</p>
 <div class="callout-inner">
 <div class="callout-content">
 <ul>
-<li>TODO: Add key points</li>
+<li>FAIR stands for Findable, Accessible, Interoperable, and Reusable:
+It is a framework for making data useful beyond its original
+context.</li>
+<li>FAIR is not the same as open: data can be FAIR with access
+restrictions, and open without being FAIR.</li>
+<li>Metadata should always be as open as possible, even when the data
+itself cannot be shared freely.</li>
+<li>Most researchers’ current data scores poorly against FAIR principles
+– the goal is incremental improvement, not perfection.</li>
+<li>The highest-impact steps are depositing data in a repository and
+applying a licence.</li>
 </ul>
 </div>
 </div>
-</div></section><section id="aio-04-storage-and-organisation"><p>Content from <a href="04-storage-and-organisation.html">Data Storage, Security, and Organisation</a></p>
+</div>
+</section></section><section id="aio-04-storage-and-organisation"><p>Content from <a href="04-storage-and-organisation.html">Data Storage, Security, and Organisation</a></p>
 <hr>
 <p>Last updated on 2026-03-18 |
 
