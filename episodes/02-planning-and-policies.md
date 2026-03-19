@@ -20,7 +20,7 @@ exercises: 10
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
-## Who Is This Episode For?
+## Is This Episode For Me?
 
 As a Masters student, PhD student or postdoc, you are probably not the person writing grant
 applications. That job typically falls to your PI. So why should you care
