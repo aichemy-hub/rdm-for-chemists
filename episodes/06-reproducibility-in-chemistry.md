@@ -33,18 +33,13 @@ A 2024 review in *Heliyon* examined reproducibility specifically in chemistry re
 
 ### Insufficient methods reporting
 
-Chemistry papers routinely omit details that turn out to be critical. A reaction described as "carried out under inert atmosphere in dry solvent at elevated temperature" leaves an enormous amount unspecified: which inert gas? which solvent, and how was it dried? what temperature, exactly? what concentration? what purity of starting materials?
+Chemistry papers routinely omit details that turn out to be critical. A reaction described as "carried out under inert atmosphere in dry solvent at elevated temperature" leaves an enormous amount unspecified: which inert gas? which solvent, and how was it dried? what temperature, exactly? what concentration? what purity of starting materials? These details are often treated as obvious, or too routine to mention -- but small variations can determine whether a reaction succeeds or fails entirely.
 
-These details are often treated as obvious by the authors, or considered too routine to mention. But small variations -- a few degrees of temperature, trace water in a solvent, a different source of a commercial reagent -- can determine whether a reaction succeeds or fails. A synthetic chemist trying to reproduce the work is left to guess.
+The same problem is acute in computational chemistry. A DFT study reported as "performed using a GGA functional and plane-wave basis set" says almost nothing: which exact basis set? which dispersion correction, if any? what convergence criteria? which software package, and which version? Computational results can be sensitive to all of these choices. Trajectories, input files, and pseudopotentials are routinely discarded after publication making independent validation impossible even in principle.
 
 ### Chemistry-specific experimental pitfalls
 
-Some chemistry sub-fields face reproducibility challenges that are almost entirely hidden in published methods:
-
-- **Trace impurities:** In supramolecular and coordination chemistry, small amounts of impurities in building blocks can template completely different products. The "successful" outcome may have depended on a specific batch of reagent that is never mentioned.
-- **Pathway complexity:** Many systems can reach multiple thermodynamic or kinetic outcomes depending on how a reaction is set up, e.g., stirring rate, order of addition, concentration during mixing. Published methods rarely capture this level of procedural detail.
-- **Polymorphism:** Crystal form depends sensitively on conditions (solvent, temperature, seeding, rate of cooling). A compound described as having certain properties may exist in a different polymorph than the one actually isolated, with different physical characteristics.
-- **Atmospheric sensitivity:** Reactions sensitive to oxygen or moisture depend heavily on technique -- glovebox, Schlenk line, or just a nitrogen balloon -- and the skill with which each is used.
+Beyond missing parameters, some chemistry sub-fields face pitfalls that are almost impossible to convey in a conventional methods section. Trace impurities in building blocks can template entirely different products in supramolecular chemistry. Polymorphic outcomes depend on subtle conditions -- stirring rate, seeding, rate of cooling -- that rarely appear in published procedures. Reactions sensitive to oxygen or moisture are highly dependent on technique: a glovebox, a Schlenk line, and a nitrogen balloon are not equivalent, even if the paper says only "under inert atmosphere."
 
 ### Publication culture
 
@@ -52,7 +47,11 @@ The *Heliyon* review also found that chemistry papers contain more "hyping" lang
 
 ## The Industrial Perspective
 
-The stakes become clearest in pharmaceutical and applied chemistry contexts. Bayer HealthCare reported that only 7 of 67 internal target validation projects (around 10%) were fully reproducible, with published and in-house data agreeing in only 20--25% of cases. Amgen reported that 89% of landmark oncology results they attempted to replicate could not be confirmed.
+The stakes become clearest in pharmaceutical and applied chemistry contexts. Bayer HealthCare reported that only 7 of 67 internal target validation projects (around 10%) were fully reproducible, with published and in-house data agreeing in only 20--25% of cases. Amgen found that 89% of landmark oncology results they attempted to replicate could not be confirmed.
+
+> Prinz, F., Schlange, T. & Asadullah, K. (2011) "Believe it or not: how much can we rely on published data on potential drug targets?" *Nature Reviews Drug Discovery* 10, 712–713. [doi:10.1038/nrd3439](https://doi.org/10.1038/nrd3439)
+>
+> Begley, C.G. & Ellis, L.M. (2012) "Drug development: Raise the bar of cancer research." *Nature* 483, 531–533. [doi:10.1038/483531a](https://doi.org/10.1038/483531a)
 
 These are not academic curiosities. Failed reproduction wastes enormous resources and, in drug discovery, can mean years of downstream work built on a shaky foundation.
 
@@ -85,35 +84,38 @@ The last point connects directly to what we cover in the rest of Part 2: electro
 
 ## Challenge 7: Reproducibility Detective
 
-Below is an excerpt from the methods section of a fictional chemistry paper. Read it carefully, then discuss with a neighbour:
+Below is an excerpt from the experimental section of a fictional chemistry paper that would routinely pass peer review. Read it carefully, then discuss with a neighbour:
 
-1. What information is missing that would be needed to reproduce this experiment?
-2. Which missing details do you think are most likely to affect the outcome?
-3. What metadata should the authors have recorded and where?
+1. What does this procedure report well?
+2. What information is missing that would prevent you from reproducing it?
+3. What should the authors have recorded in their ELN that did not make it into the paper?
 
 ---
 
-> *"The catalyst was prepared according to our previously reported method and was used without further purification. NMR spectra were recorded on a standard spectrometer. The reaction was carried out at elevated temperature under inert atmosphere in dry solvent. The mixture was stirred until complete, as judged by TLC. Yields were determined by standard analytical methods and are reported as averages of three independent runs."*
+> *"4-Bromoanisole (1.87 g, 10.0 mmol) and phenylboronic acid (1.46 g, 12.0 mmol) were combined with Pd(PPh₃)₄ and Cs₂CO₃ in DMF/water and heated to 80 °C under nitrogen. After stirring overnight, the mixture was cooled to room temperature and extracted with EtOAc (3 × 30 mL). The combined organic layers were dried over MgSO₄, filtered, and concentrated under reduced pressure. Purification by column chromatography (hexane/EtOAc) gave the product as a white solid (87%). ¹H NMR (400 MHz, CDCl₃): δ 7.52 (d, J = 8.6 Hz, 2H), 7.41–7.30 (m, 5H), 6.97 (d, J = 8.6 Hz, 2H), 3.84 (s, 3H)."*
 
 :::::::::::::::  solution
 
 ## Discussion
 
-This excerpt is almost entirely uninformative for reproduction purposes. Some of the missing details:
+**What is reported well:**
 
-**Catalyst:** Which previously reported method? From which paper? What batch number and purity? Was it freshly prepared or stored, and how?
+The starting material masses and molar quantities are given. Temperature (80 °C) and atmosphere (nitrogen) are stated. The workup is described in detail. NMR data include field strength (400 MHz), solvent (CDCl₃), and coupling constants; enough for someone to compare their product to the reported spectrum.
 
-**NMR:** Which nucleus? What field strength (MHz)? Which solvent? What reference standard? What concentration? Which instrument model and at what temperature?
+**What is missing:**
 
-**Reaction conditions:** What temperature, exactly? What inert atmosphere -- nitrogen or argon, and how was it maintained? Which solvent, and how was it dried? What concentration of reagents? What scale?
+- **Catalyst loading:** Pd(PPh₃)₄ is listed but no amount or mol% is given. Palladium catalyst loading is one of the most important variables in cross-coupling reactions.
+- **Base equivalents:** Cs₂CO₃ appears with no quantity. The amount of base affects both rate and selectivity.
+- **Solvent ratio:** "DMF/water" -- what ratio? This is well known to affect Suzuki coupling outcomes significantly.
+- **Reaction time:** "Overnight" is anywhere from 12 to 18 hours. For an optimised procedure, the actual time matters.
+- **Column conditions:** "hexane/EtOAc" with no ratio. Anyone reproducing this needs to develop their own conditions from scratch.
+- **Characterisation:** No HRMS (high-resolution mass spectrometry) data, no melting point, no purity assessment. The NMR alone is not sufficient for unambiguous identification of a new compound.
 
-**"Until complete, as judged by TLC":** What TLC system (solvent, plate type, staining)? What Rf values indicated completion? How long did this take?
+**What should have been in the ELN:**
 
-**Yields:** What analytical method -- weight, NMR, titration? What are the actual values from three runs, not just the average? What was the variance?
+Exact masses and volumes of all reagents including catalyst and base, lot numbers for commercial reagents, the actual reaction time, TLC conditions used to monitor the reaction, column gradient used in purification, and the mass of product actually isolated from each run (not just the percentage yield). Much of this is captured automatically if a structured ELN with a stoichiometry calculator is used.
 
-The phrase "standard" appears three times in this excerpt and specifies nothing. What seems obvious to the author may be far from obvious to someone in a different lab, institution, or country -- and even within the same group, "standard" conditions may differ between researchers.
-
-**Where should this metadata have been recorded?** In an ELN at the time of the experiment, attached to the raw data files, and included in the supplementary information at publication. Many of these details can be captured automatically by instruments if the metadata is set up correctly.
+The lesson here is not that the paper is fraudulent or careless, this level of reporting is commonplace and accepted. The problem is that what passes peer review is often not enough to reproduce the work.
 
 :::::::::::::::::::::::::
 
@@ -122,8 +124,9 @@ The phrase "standard" appears three times in this excerpt and specifies nothing.
 :::::::::::::::::::::::::::::::::::::::  keypoints
 
 - Chemistry is fundamentally a reproducible science, but inadequate methods reporting and poor data management undermine this in practice.
-- Experimental details that seem obvious to the author -- solvent source, exact temperature, reagent purity -- are often critical for reproduction.
+- Experimental details that seem obvious to the author -- catalyst loading, solvent ratio, reagent purity -- are often critical for reproduction and routinely absent from publications.
+- The same problem applies in computational chemistry: functional, basis set, software version, and input files must be archived and shared, not discarded after publication.
 - Publication pressure and selective reporting compound the problem: failure modes rarely appear in the literature.
-- Good RDM practices -- recording metadata systematically, keeping raw data, documenting processing steps -- directly address the most preventable causes of irreproducibility.
+- Good RDM practices -- recording metadata systematically in an ELN, keeping raw data, documenting processing steps -- directly address the most preventable causes of irreproducibility.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
