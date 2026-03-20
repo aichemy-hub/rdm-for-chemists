@@ -2528,7 +2528,7 @@ chromatography (hexane/EtOAc) gave the product as a white solid (87%).
   Discussion
   </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <p><strong>What is reported well:</strong></p>
 <p>The starting material masses and molar quantities are given.
@@ -2568,7 +2568,7 @@ conditions used to monitor the reaction, column gradient used in
 purification, and the mass of product actually isolated from each run
 (not just the percentage yield). Much of this is captured automatically
 if a structured ELN with a stoichiometry calculator is used.</p>
-<p>The lesson here is not that the paper is fraudulent or careless, this
+<p>The lesson here is not that the paper is fraudulent or careless; this
 level of reporting is commonplace and accepted. The problem is that what
 passes peer review is often not enough to reproduce the work.</p>
 </div>
@@ -2606,7 +2606,7 @@ most preventable causes of irreproducibility.</li>
 <p>Last updated on 2026-03-20 |
 
         <a href="https://github.com/aichemy-hub/rdm-for-chemists/edit/main/episodes/07-electronic-lab-notebooks.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
-<p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 12 minutes</p>
+<p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 15 minutes</p>
 <div class="text-end">
           <button role="button" aria-pressed="false" tabindex="0" id="expand-code" class="pull-right" data-expand="Expand All Solutions " data-collapse="Collapse All Solutions "> Expand All Solutions <i aria-hidden="true" data-feather="plus"></i></button>
         </div>
@@ -2666,8 +2666,8 @@ cryptographic proof in the way that an ELN with automatic timestamping
 can.</li>
 <li>
 <strong>Hard to link to data.</strong> A notebook entry describing a
-reaction does not connect directly to the NMR FID acquired the next day
-or the mass spectrum acquired the day after that.</li>
+reaction does not connect directly to the NMR FID or mass spectrum
+acquired the following day.</li>
 </ul>
 <p>Electronic lab notebooks address all of these, and they increasingly
 integrate with the data repositories and metadata standards that make
@@ -2703,15 +2703,14 @@ experiments</li>
 <li>Support export of data in standard formats so you are not locked
 in</li>
 </ul>
-<p>Beyond this minimum, chemistry-specific ELNs can offer features that
-go significantly further.</p>
+<p>Chemistry-specific ELNs go further.</p>
 </section><section><h2 class="section-heading" id="chemistry-specific-features">Chemistry-Specific Features<a class="anchor" aria-label="anchor" href="#chemistry-specific-features"></a>
 </h2>
 <hr class="half-width">
-<p>General-purpose ELNs (designed to serve all disciplines) will handle
-structured notes and file attachments, but they are not chemistry-aware.
-For synthetic and analytical chemists in particular, several additional
-features matter:</p>
+<p>General-purpose ELNs will handle structured notes and file
+attachments, but they are not chemistry-aware. For synthetic and
+analytical chemists in particular, several additional features
+matter:</p>
 <p><strong>Chemical structure drawing.</strong> The ability to draw and
 search structures directly in the ELN, using tools like Ketcher or
 ChemDraw integration, rather than attaching image files.</p>
@@ -2835,6 +2834,48 @@ than removing it.</p>
 introduce costs later, either direct pricing changes or the cost of
 migration when the product changes strategy. Open-source tools with
 self-hosting options give more long-term control.</p>
+<div id="check-your-understanding-eln-exit-strategy" class="callout challenge">
+<div class="callout-square">
+<i class="callout-icon" data-feather="zap"></i>
+</div>
+<span class="callout-header">Challenge</span>
+<div id="check-your-understanding-eln-exit-strategy" class="callout-inner">
+<h3 class="callout-title">Check Your Understanding: ELN Exit
+Strategy</h3>
+<div class="callout-content">
+<p>Your group has been using a commercial ELN for three years. The
+company announces that the product will be discontinued in 12 months.
+What would you need to check immediately, and what is the biggest
+risk?</p>
+</div>
+</div>
+</div>
+<div id="accordionSolution1" class="accordion challenge-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
+  <h4 class="accordion-header" id="headingSolution1">
+  Discussion
+  </h4>
+</button>
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div class="accordion-body">
+<p>The most urgent question is <strong>data portability</strong>: can
+you export all records, including attached files and metadata, in a
+format that another system can read? If the ELN stores data in a
+proprietary format with no export route, you have a data rescue problem
+on your hands.</p>
+<p>Other questions to ask quickly: how complete is the export (does it
+include attachments, timestamps, and audit trails)? Is there
+institutional IT support for migration? Do you have any records backed
+up outside the ELN, for example in a data repository?</p>
+<p>This is not a hypothetical scenario. It has happened to research
+groups, and the cost of migration rises sharply the longer you wait.
+This is why data portability should be assessed <em>before</em>
+committing to a tool, not after receiving bad news.</p>
+</div>
+</div>
+</div>
+</div>
 <p>For most chemistry groups in UK academia at the time of writing,
 <strong>Chemotion ELN</strong> (if your work involves synthesis or
 spectroscopy) or <strong>eLabFTW</strong> (if you need a flexible
@@ -3095,7 +3136,7 @@ capture?</li>
   Discussion
   </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <p><strong>What is recorded well:</strong></p>
 <ul>
@@ -3244,7 +3285,7 @@ than just the compound name?</li>
   Discussion
   </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
 <div class="accordion-body">
 <p><strong>Steps 1 and 2</strong> should both resolve to aspirin
 (acetylsalicylic acid), confirming that InChI and SMILES are
