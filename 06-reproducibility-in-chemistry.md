@@ -115,7 +115,7 @@ The starting material masses and molar quantities are given. Temperature (80 °C
 
 Exact masses and volumes of all reagents including catalyst and base, lot numbers for commercial reagents, the actual reaction time, TLC conditions used to monitor the reaction, column gradient used in purification, and the mass of product actually isolated from each run (not just the percentage yield). Much of this is captured automatically if a structured ELN with a stoichiometry calculator is used.
 
-The lesson here is not that the paper is fraudulent or careless, this level of reporting is commonplace and accepted. The problem is that what passes peer review is often not enough to reproduce the work.
+The lesson here is not that the paper is fraudulent or careless; this level of reporting is commonplace and accepted. The problem is that what passes peer review is often not enough to reproduce the work.
 
 :::::::::::::::::::::::::
 

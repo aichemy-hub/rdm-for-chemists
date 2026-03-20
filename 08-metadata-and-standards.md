@@ -155,7 +155,7 @@ FAIRSpec is not yet a universal requirement, but it represents the direction the
 
 Just as important as the metadata *content* is the format in which data and metadata are stored. Proprietary formats -- Bruker `.fid`, Agilent `.d` directories, Thermo `.raw` -- are not necessarily readable by other software and may become inaccessible as instrument software versions change. Open formats allow any tool to read the data without a proprietary licence.
 
-For tabulated data like reaction yields, calibration curves, summary statistics, computed energies etc., **CSV (comma-separated values)** is perfectly adequate and  preferred over XLSX. CSV is plain text, readable by any software without a licence, and will not become inaccessible as spreadsheet software versions change. Reserve proprietary spreadsheet formats for cases where formatting, formulas, or macros are genuinely necessary, and always export a CSV alongside them for deposition.
+For tabulated data like reaction yields, calibration curves, summary statistics, computed energies etc., **CSV (comma-separated values)** is perfectly adequate and preferred over XLSX. CSV is plain text, readable by any software without a licence, and will not become inaccessible as spreadsheet software versions change. Reserve proprietary spreadsheet formats for cases where formatting, formulas, or macros are genuinely necessary, and always export a CSV alongside them for deposition.
 
 For instrument and technique-specific data, some open formats are:
 
