@@ -1,7 +1,7 @@
 ---
 title: "Electronic Lab Notebooks for Chemists"
 teaching: 12
-exercises: 0
+exercises: 3
 ---
 
 ::::::::::::::::::::::::::::::::::::::: objectives
@@ -28,7 +28,7 @@ The paper lab notebook has served chemistry well for centuries, but paper notebo
 - **Not backed up.** A notebook left on a lab bench can be lost to fire, flood, or theft. There is no offsite copy.
 - **Not easily shared.** Collaboration across sites means scanning pages or physically posting notebooks, with no version control and no way to link entries to associated data files.
 - **Not timestamped in any verifiable way.** While a handwritten date can establish priority in principle, it provides no cryptographic proof in the way that an ELN with automatic timestamping can.
-- **Hard to link to data.** A notebook entry describing a reaction does not connect directly to the NMR FID acquired the next day or the mass spectrum acquired the day after that.
+- **Hard to link to data.** A notebook entry describing a reaction does not connect directly to the NMR FID or mass spectrum acquired the following day.
 
 Electronic lab notebooks address all of these, and they increasingly integrate with the data repositories and metadata standards that make chemistry data FAIR.
 
@@ -51,11 +51,11 @@ At a minimum, an ELN should:
 - Allow files (spectra, images, data files) to be attached to experiments
 - Support export of data in standard formats so you are not locked in
 
-Beyond this minimum, chemistry-specific ELNs can offer features that go significantly further.
+Chemistry-specific ELNs go further.
 
 ## Chemistry-Specific Features
 
-General-purpose ELNs (designed to serve all disciplines) will handle structured notes and file attachments, but they are not chemistry-aware. For synthetic and analytical chemists in particular, several additional features matter:
+General-purpose ELNs will handle structured notes and file attachments, but they are not chemistry-aware. For synthetic and analytical chemists in particular, several additional features matter:
 
 **Chemical structure drawing.** The ability to draw and search structures directly in the ELN, using tools like Ketcher or ChemDraw integration, rather than attaching image files.
 
@@ -102,6 +102,26 @@ Choosing an ELN is a long-term decision. Switching systems mid-project is disrup
 **Integration.** Does it connect with the instruments, repositories, and workflows you already use? An ELN that sits in isolation from everything else in your workflow adds friction rather than removing it.
 
 **Cost over time.** Free-at-point-of-use tools can introduce costs later, either direct pricing changes or the cost of migration when the product changes strategy. Open-source tools with self-hosting options give more long-term control.
+
+:::::::::::::::::::::::::::::::::::::::  challenge
+
+## Check Your Understanding: ELN Exit Strategy
+
+Your group has been using a commercial ELN for three years. The company announces that the product will be discontinued in 12 months. What would you need to check immediately, and what is the biggest risk?
+
+:::::::::::::::  solution
+
+## Discussion
+
+The most urgent question is **data portability**: can you export all records, including attached files and metadata, in a format that another system can read? If the ELN stores data in a proprietary format with no export route, you have a data rescue problem on your hands.
+
+Other questions to ask quickly: how complete is the export (does it include attachments, timestamps, and audit trails)? Is there institutional IT support for migration? Do you have any records backed up outside the ELN, for example in a data repository?
+
+This is not a hypothetical scenario. It has happened to research groups, and the cost of migration rises sharply the longer you wait. This is why data portability should be assessed *before* committing to a tool, not after receiving bad news.
+
+:::::::::::::::::::::::::
+
+::::::::::::::::::::::::::::::::::::::::::::::::::
 
 For most chemistry groups in UK academia at the time of writing, **Chemotion ELN** (if your work involves synthesis or spectroscopy) or **eLabFTW** (if you need a flexible general solution) are strong starting points. Both are free and open source, and neither locks your data into a proprietary format.
 
