@@ -119,11 +119,11 @@
   Research Data Management for Chemists
 </div>
 
-<aside class="col-md-12 lesson-progress"><div style="width: 62%" class="percentage">
-    62%
+<aside class="col-md-12 lesson-progress"><div style="width: 60%" class="percentage">
+    60%
   </div>
   <div class="progress incubator">
-    <div class="progress-bar incubator" role="progressbar" style="width: 62%" aria-valuenow="62" aria-label="Lesson Progress" aria-valuemin="0" aria-valuemax="100">
+    <div class="progress-bar incubator" role="progressbar" style="width: 60%" aria-valuenow="60" aria-label="Lesson Progress" aria-valuemin="0" aria-valuemax="100">
     </div>
   </div>
 </aside><div class="container">
@@ -261,12 +261,23 @@
 <div class="accordion accordion-flush" id="accordionFlushcurrent">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-headingcurrent">
+      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapsecurrent" aria-expanded="true" aria-controls="flush-collapsecurrent">
         <span class="visually-hidden">Current Chapter</span>
         <span class="current-chapter">
         7. Electronic Lab Notebooks for Chemists
         </span>
-      
+      </button>
     </div><!--/div.accordion-header-->
+
+    <div id="flush-collapsecurrent" class="accordion-collapse collapse show" aria-labelledby="flush-headingcurrent" data-bs-parent="#accordionFlushcurrent">
+      <div class="accordion-body">
+        <ul><li><a href="#the-case-for-going-electronic">The Case for Going Electronic</a></li>
+<li><a href="#what-a-good-eln-should-do">What a Good ELN Should Do</a></li>
+<li><a href="#chemistry-specific-features">Chemistry-Specific Features</a></li>
+<li><a href="#some-of-the-main-options">Some of the Main Options</a></li>
+<li><a href="#before-you-commit-questions-to-ask">Before You Commit: Questions to Ask</a></li>
+        </ul></div><!--/div.accordion-body-->
+    </div><!--/div.accordion-collapse-->
 
   </div><!--/div.accordion-item-->
 </div><!--/div.accordion-flush-->
@@ -365,7 +376,7 @@
       </div>
       <hr></nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Electronic Lab Notebooks for Chemists</h1>
-        <p>Last updated on 2026-03-18 |
+        <p>Last updated on 2026-03-20 |
 
         <a href="https://github.com/aichemy-hub/rdm-for-chemists/edit/main/episodes/07-electronic-lab-notebooks.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 
@@ -384,7 +395,10 @@
 <div class="card-body">
 <div class="inner">
 <h3 class="card-title">Questions</h3>
-<ul><li>TODO: Add framing questions</li>
+<ul><li>What does an electronic lab notebook do that a paper one
+cannot?</li>
+<li>What should I look for in an ELN for chemistry research?</li>
+<li>How do I choose between the options available?</li>
 </ul></div>
 </div>
 </div>
@@ -392,14 +406,177 @@
 <div class="card-body">
 <div class="inner bordered">
 <h3 class="card-title">Objectives</h3>
-<ul><li>TODO: Add learning objectives</li>
+<ul><li>Explain the advantages of electronic lab notebooks over paper for
+research data management</li>
+<li>Identify features that are important when choosing an ELN for
+chemistry</li>
+<li>Evaluate practical considerations before adopting an ELN</li>
 </ul></div>
 </div>
 </div>
 </div>
 </div>
-<p>TODO: Episode content to be written. See draft_syllabus.md for
-detailed content plan.</p>
+<section><h2 class="section-heading" id="the-case-for-going-electronic">The Case for Going Electronic<a class="anchor" aria-label="anchor" href="#the-case-for-going-electronic"></a></h2>
+<hr class="half-width"><p>The paper lab notebook has served chemistry well for centuries, but
+paper notebooks have serious limitations from an RDM perspective:</p>
+<ul><li>
+<strong>Not searchable.</strong> Finding a specific experiment from
+two years ago requires physically flipping through notebooks, if they
+have not been mislaid, damaged, or left with a former group member.</li>
+<li>
+<strong>Not backed up.</strong> A notebook left on a lab bench can
+be lost to fire, flood, or theft. There is no offsite copy.</li>
+<li>
+<strong>Not easily shared.</strong> Collaboration across sites means
+scanning pages or physically posting notebooks, with no version control
+and no way to link entries to associated data files.</li>
+<li>
+<strong>Not timestamped in any verifiable way.</strong> While a
+handwritten date can establish priority in principle, it provides no
+cryptographic proof in the way that an ELN with automatic timestamping
+can.</li>
+<li>
+<strong>Hard to link to data.</strong> A notebook entry describing a
+reaction does not connect directly to the NMR FID acquired the next day
+or the mass spectrum acquired the day after that.</li>
+</ul><p>Electronic lab notebooks address all of these, and they increasingly
+integrate with the data repositories and metadata standards that make
+chemistry data FAIR.</p>
+<div id="paper-and-electronic-can-coexist" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<span class="callout-header">Callout</span>
+<div id="paper-and-electronic-can-coexist" class="callout-inner">
+<h3 class="callout-title">Paper and Electronic Can Coexist</h3>
+<div class="callout-content">
+<p>Moving to an ELN does not have to mean abandoning paper immediately.
+Many groups use ELNs for structured records (reaction schemes,
+experimental parameters, results) while keeping paper for quick sketches
+and planning. The key is that the primary scientific record – the one
+linked to raw data and shared with the group – is electronic.</p>
+</div>
+</div>
+</div>
+</section><section><h2 class="section-heading" id="what-a-good-eln-should-do">What a Good ELN Should Do<a class="anchor" aria-label="anchor" href="#what-a-good-eln-should-do"></a></h2>
+<hr class="half-width"><p>At a minimum, an ELN should:</p>
+<ul><li>Allow structured recording of experiments with fields for
+conditions, observations, and results</li>
+<li>Provide automatic, tamper-evident timestamps</li>
+<li>Store records securely with backup</li>
+<li>Be searchable across all entries</li>
+<li>Allow files (spectra, images, data files) to be attached to
+experiments</li>
+<li>Support export of data in standard formats so you are not locked
+in</li>
+</ul><p>Beyond this minimum, chemistry-specific ELNs can offer features that
+go significantly further.</p>
+</section><section><h2 class="section-heading" id="chemistry-specific-features">Chemistry-Specific Features<a class="anchor" aria-label="anchor" href="#chemistry-specific-features"></a></h2>
+<hr class="half-width"><p>General-purpose ELNs (designed to serve all disciplines) will handle
+structured notes and file attachments, but they are not chemistry-aware.
+For synthetic and analytical chemists in particular, several additional
+features matter:</p>
+<p><strong>Chemical structure drawing.</strong> The ability to draw and
+search structures directly in the ELN, using tools like Ketcher or
+ChemDraw integration, rather than attaching image files.</p>
+<p><strong>Reaction scheme capture.</strong> Recording a full synthetic
+step including reactants, reagents, solvents, conditions, stoichiometry
+and yield in a structured, machine-readable way rather than as free
+text.</p>
+<p><strong>Stoichiometry and yield calculators.</strong> Built-in tools
+that calculate equivalents, masses, and theoretical yields from entered
+molecular weights and quantities, reducing transcription errors.</p>
+<p><strong>Analytical data integration.</strong> Linking NMR, IR, and
+mass spectrometry data directly to the experiment that generated it,
+rather than keeping them in separate folders with no connection.</p>
+<p><strong>Standard identifiers.</strong> Auto-populating InChI and
+SMILES for compounds drawn in the notebook, making entries interoperable
+with external databases and repositories.</p>
+<p><strong>Repository export.</strong> Some ELNs can export directly to
+chemistry data repositories (most notably, Chemotion ELN exports
+directly to the Chemotion Repository), creating a seamless path from
+experiment to deposition.</p>
+</section><section><h2 class="section-heading" id="some-of-the-main-options">Some of the Main Options<a class="anchor" aria-label="anchor" href="#some-of-the-main-options"></a></h2>
+<hr class="half-width"><p>The ELN landscape is large and changes quickly. New tools appear, and
+institutional licences change. This table reflects the situation at the
+time of writing; always check the current state before choosing.</p>
+<table class="table"><colgroup><col width="9%"><col width="37%"><col width="11%"><col width="27%"><col width="13%"></colgroup><thead><tr><th>ELN</th>
+<th>Chemistry features</th>
+<th>Cost</th>
+<th>Open source?</th>
+<th>Notes</th>
+</tr></thead><tbody><tr><td><strong>Chemotion ELN</strong></td>
+<td>Excellent – structure drawing, reaction schemes, analytical data
+integration</td>
+<td>Free</td>
+<td>Yes</td>
+<td>Built specifically for chemistry; direct export to Chemotion
+repository</td>
+</tr><tr><td><strong>eLabFTW</strong></td>
+<td>Basic (general-purpose)</td>
+<td>Free</td>
+<td>Yes</td>
+<td>Flexible, self-hosted, widely used across disciplines</td>
+</tr><tr><td><strong>RSpace</strong></td>
+<td>Good via plugins</td>
+<td>Free tier for academics</td>
+<td>No</td>
+<td>UK-based, good institutional support</td>
+</tr><tr><td><strong>LabArchives</strong></td>
+<td>Basic</td>
+<td>Institutional licence</td>
+<td>No</td>
+<td>Common at UK and US universities</td>
+</tr><tr><td>
+<strong>Signals Notebook</strong> (Revvity)</td>
+<td>Excellent – ChemDraw integration</td>
+<td>Commercial</td>
+<td>No</td>
+<td>Enterprise-grade; may be available via institutional licence</td>
+</tr></tbody></table><div id="check-what-your-institution-already-has" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<span class="callout-header">Callout</span>
+<div id="check-what-your-institution-already-has" class="callout-inner">
+<h3 class="callout-title">Check What Your Institution Already Has</h3>
+<div class="callout-content">
+<p>Before evaluating any ELN independently, find out whether your
+university already has a site licence. Many UK universities have
+licences for LabArchives, RSpace, or similar tools that make them free
+at the point of use. Starting with what is already supported also means
+institutional IT can help with setup, backup, and migration.</p>
+</div>
+</div>
+</div>
+</section><section><h2 class="section-heading" id="before-you-commit-questions-to-ask">Before You Commit: Questions to Ask<a class="anchor" aria-label="anchor" href="#before-you-commit-questions-to-ask"></a></h2>
+<hr class="half-width"><p>Choosing an ELN is a long-term decision. Switching systems
+mid-project is disruptive and can result in data loss or fragmentation.
+Before committing to any tool, consider:</p>
+<p><strong>Data portability.</strong> Can you export all your records,
+including attached files and metadata, in a usable format? What happens
+to your data if the company folds, the institutional licence expires, or
+you move to a different institution? Proprietary formats with no export
+route create long-term risks.</p>
+<p><strong>Institutional support.</strong> Is the ELN supported by your
+institution’s IT or research data team? Is there a community of users in
+your group or department who can help?</p>
+<p><strong>Longevity.</strong> Is the tool actively maintained? An ELN
+that is no longer developed is a liability: security vulnerabilities
+accumulate and eventually the product may be discontinued.</p>
+<p><strong>Integration.</strong> Does it connect with the instruments,
+repositories, and workflows you already use? An ELN that sits in
+isolation from everything else in your workflow adds friction rather
+than removing it.</p>
+<p><strong>Cost over time.</strong> Free-at-point-of-use tools can
+introduce costs later, either direct pricing changes or the cost of
+migration when the product changes strategy. Open-source tools with
+self-hosting options give more long-term control.</p>
+<p>For most chemistry groups in UK academia at the time of writing,
+<strong>Chemotion ELN</strong> (if your work involves synthesis or
+spectroscopy) or <strong>eLabFTW</strong> (if you need a flexible
+general solution) are strong starting points. Both are free and open
+source, and neither locks your data into a proprietary format.</p>
 <div id="keypoints1" class="callout keypoints">
 <div class="callout-square">
 <i class="callout-icon" data-feather="key"></i>
@@ -407,14 +584,20 @@ detailed content plan.</p>
 <span class="callout-header">Key Points</span>
 <div class="callout-inner">
 <div class="callout-content">
-<ul><li>TODO: Add key points</li>
+<ul><li>Electronic lab notebooks improve searchability, backup, data
+linking, and collaboration compared to paper notebooks.</li>
+<li>For chemistry, look for ELNs with structure drawing, reaction scheme
+capture, stoichiometry tools, and analytical data integration.</li>
+<li>Data portability is critical – ensure you can export all records in
+a usable format before committing.</li>
+<li>Check what your institution already provides before evaluating tools
+independently.</li>
+<li>Chemotion ELN and eLabFTW are widely used open-source options with
+good chemistry support.</li>
 </ul></div>
 </div>
 </div>
-
-
-
-      </div> <!-- / div.lesson-content -->
+</section></div> <!-- / div.lesson-content -->
     </main><!-- / main#main-content.main-content --><nav class="bottom-pagination mx-md-4" aria-label="Previous and Next Chapter"><div class="d-block d-sm-block d-md-none">
         <a class="chapter-link" href="06-reproducibility-in-chemistry.html"><i aria-hidden="true" class="small-arrow" data-feather="arrow-left"></i>Previous</a>
         <a class="chapter-link float-end" href="08-metadata-and-standards.html">Next<i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i></a>
@@ -474,8 +657,8 @@ detailed content plan.</p>
   "url": "https://aichemy-hub.github.io/rdm-for-chemists/07-electronic-lab-notebooks.html",
   "identifier": "https://aichemy-hub.github.io/rdm-for-chemists/07-electronic-lab-notebooks.html",
   "dateCreated": "2026-03-18",
-  "dateModified": "2026-03-18",
-  "datePublished": "2026-03-19"
+  "dateModified": "2026-03-20",
+  "datePublished": "2026-03-20"
 }
 
   </script><script>

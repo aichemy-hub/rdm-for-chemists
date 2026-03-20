@@ -119,11 +119,11 @@
   Research Data Management for Chemists
 </div>
 
-<aside class="col-md-12 lesson-progress"><div style="width: 40%" class="percentage">
-    40%
+<aside class="col-md-12 lesson-progress"><div style="width: 42%" class="percentage">
+    42%
   </div>
   <div class="progress incubator">
-    <div class="progress-bar incubator" role="progressbar" style="width: 40%" aria-valuenow="40" aria-label="Lesson Progress" aria-valuemin="0" aria-valuemax="100">
+    <div class="progress-bar incubator" role="progressbar" style="width: 42%" aria-valuenow="42" aria-label="Lesson Progress" aria-valuemin="0" aria-valuemax="100">
     </div>
   </div>
 </aside><div class="container">
@@ -243,12 +243,24 @@
 <div class="accordion accordion-flush" id="accordionFlushcurrent">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-headingcurrent">
+      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapsecurrent" aria-expanded="true" aria-controls="flush-collapsecurrent">
         <span class="visually-hidden">Current Chapter</span>
         <span class="current-chapter">
         5. Sharing, Preserving, and Licensing Your Data
         </span>
-      
+      </button>
     </div><!--/div.accordion-header-->
+
+    <div id="flush-collapsecurrent" class="accordion-collapse collapse show" aria-labelledby="flush-headingcurrent" data-bs-parent="#accordionFlushcurrent">
+      <div class="accordion-body">
+        <ul><li><a href="#why-share-your-data">Why Share Your Data?</a></li>
+<li><a href="#the-spectrum-of-data-sharing">The Spectrum of Data Sharing</a></li>
+<li><a href="#choosing-a-repository">Choosing a Repository</a></li>
+<li><a href="#licensing-your-data">Licensing Your Data</a></li>
+<li><a href="#data-access-statements">Data Access Statements</a></li>
+<li><a href="#data-preservation">Data Preservation</a></li>
+        </ul></div><!--/div.accordion-body-->
+    </div><!--/div.accordion-collapse-->
 
   </div><!--/div.accordion-item-->
 </div><!--/div.accordion-flush-->
@@ -365,13 +377,13 @@
       </div>
       <hr></nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Sharing, Preserving, and Licensing Your Data</h1>
-        <p>Last updated on 2026-03-18 |
+        <p>Last updated on 2026-03-20 |
 
         <a href="https://github.com/aichemy-hub/rdm-for-chemists/edit/main/episodes/05-sharing-and-licensing.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 
 
 
-        <p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 30 minutes</p>
+        <p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 20 minutes</p>
 
         <div class="text-end">
           <button role="button" aria-pressed="false" tabindex="0" id="expand-code" class="pull-right" data-expand="Expand All Solutions " data-collapse="Collapse All Solutions "> Expand All Solutions <i aria-hidden="true" data-feather="plus"></i></button>
@@ -386,7 +398,9 @@
 <div class="card-body">
 <div class="inner">
 <h3 class="card-title">Questions</h3>
-<ul><li>TODO: Add framing questions</li>
+<ul><li>Why should I share my research data, and what are my options?</li>
+<li>How do I choose a repository and a licence?</li>
+<li>What is a data access statement and when do I need one?</li>
 </ul></div>
 </div>
 </div>
@@ -394,29 +408,334 @@
 <div class="card-body">
 <div class="inner bordered">
 <h3 class="card-title">Objectives</h3>
-<ul><li>TODO: Add learning objectives</li>
+<ul><li>Explain the key reasons to share research data openly</li>
+<li>Choose an appropriate repository for a given dataset</li>
+<li>Select a licence that allows appropriate reuse of your data</li>
+<li>Write a data access statement that meets funder requirements</li>
 </ul></div>
 </div>
 </div>
 </div>
 </div>
-<p>TODO: Episode content to be written. See draft_syllabus.md for
-detailed content plan.</p>
-<div id="keypoints1" class="callout keypoints">
+<section><h2 class="section-heading" id="why-share-your-data">Why Share Your Data?<a class="anchor" aria-label="anchor" href="#why-share-your-data"></a></h2>
+<hr class="half-width"><p>Data sharing is increasingly expected – by funders, publishers, and
+the research community – but the underlying reasons go beyond
+compliance. Shared data:</p>
+<ul><li>
+<strong>Enables reproducibility.</strong> Others can verify your
+results and build on your work without starting from scratch.</li>
+<li>
+<strong>Generates credit.</strong> A dataset with a DOI can be cited
+independently of the paper, giving you a citable output for work that
+would otherwise be invisible.</li>
+<li>
+<strong>Increases efficiency.</strong> Experiments do not have to be
+repeated, and computational researchers can validate methods against
+real datasets.</li>
+<li>
+<strong>Is increasingly required.</strong> UKRI, EPSRC, and most
+major journals now mandate data sharing or, at minimum, a statement
+explaining why data cannot be shared.</li>
+</ul><p>The question is not really whether to share, but how.</p>
+</section><section><h2 class="section-heading" id="the-spectrum-of-data-sharing">The Spectrum of Data Sharing<a class="anchor" aria-label="anchor" href="#the-spectrum-of-data-sharing"></a></h2>
+<hr class="half-width"><p>Data sharing is not all-or-nothing. In rough order from most to least
+desirable:</p>
+<ol style="list-style-type: decimal"><li>
+<strong>Deposit in a data repository</strong> – data gets a DOI, is
+discoverable, and is preserved long-term. This is best practice.</li>
+<li>
+<strong>Restricted/controlled access</strong> – some repositories
+(e.g. the UK Data Service) provide tiered access for sensitive data,
+where users must register or agree to terms before downloading. The data
+is still findable and citable.</li>
+<li>
+<strong>Supplementary information</strong> – some journals host
+small datasets alongside papers. Discoverability is limited, there is
+usually no DOI, and long-term preservation is not guaranteed. Use this
+only for small illustrative datasets, not as a substitute for repository
+deposit.</li>
+<li>
+<strong>“Available upon request”</strong> – should be a last resort.
+Evidence consistently shows that requests frequently go unanswered,
+contact details become stale, and data may no longer exist. The
+practical availability of “on request” data drops sharply within just a
+few years of publication.</li>
+</ol></section><section><h2 class="section-heading" id="choosing-a-repository">Choosing a Repository<a class="anchor" aria-label="anchor" href="#choosing-a-repository"></a></h2>
+<hr class="half-width"><p>When selecting where to deposit data, a simple hierarchy applies:</p>
+<ol style="list-style-type: decimal"><li>
+<strong>Domain-specific repository</strong> – best for
+discoverability within your field and most likely to apply community
+standards and metadata schemas. Examples: Chemotion Repository
+(synthetic chemistry), NOMAD (computational materials), Cambridge
+Structural Database (crystal structures). We will cover these in more
+detail in Part 2.</li>
+<li>
+<strong>Institutional repository</strong> – most UK universities
+have one, and depositing here formally links your dataset to your
+institution’s research outputs and reporting systems. Some funders
+require deposit in an institutional repository as well as (or instead
+of) a domain-specific one. Check your institution’s guidance.</li>
+<li>
+<strong>General-purpose repository</strong> – <a href="https://zenodo.org/" class="external-link">Zenodo</a> (hosted by CERN, with an explicit
+20-year preservation commitment) and <a href="https://figshare.com/" class="external-link">Figshare</a> are widely used fallbacks.
+Both are free, mint DOIs automatically, and are trusted by funders. If
+no domain-specific repository exists for your data type, Zenodo is a
+safe default.</li>
+</ol><div id="ml-and-community-platforms-are-not-a-substitute" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<span class="callout-header">Callout</span>
+<div id="ml-and-community-platforms-are-not-a-substitute" class="callout-inner">
+<h3 class="callout-title">ML and Community Platforms Are Not a
+Substitute</h3>
+<div class="callout-content">
+<p>For computational or AI-adjacent research, community platforms such
+as Kaggle and Hugging Face Hub offer useful tools and visibility for
+models and datasets. However, they do not provide DOIs or the same
+long-term preservation guarantees as a research archive. Use them in
+addition to a proper repository (such as Zenodo) rather than as your
+primary deposit.</p>
+</div>
+</div>
+</div>
+<p>The key thing a repository gives you that supplementary information
+cannot is a <strong>Digital Object Identifier (DOI)</strong> – a
+persistent link that remains stable even if the underlying URL changes,
+making your data citable and findable for the long term.</p>
+</section><section><h2 class="section-heading" id="licensing-your-data">Licensing Your Data<a class="anchor" aria-label="anchor" href="#licensing-your-data"></a></h2>
+<hr class="half-width"><p>Depositing data without a licence does not make it freely reusable.
+Without a licence, the default legal position is “all rights reserved.”
+While individual facts are not protected by copyright, the structure,
+selection, documentation, and any associated database rights usually
+are, meaning that cautious researchers will avoid reusing unlicensed
+data rather than risk infringement. A licence tells others exactly what
+they are permitted to do, turning your data from “visible but unusable”
+into a reusable research output.</p>
+<div class="section level3">
+<h3 id="data-licences">Data licences<a class="anchor" aria-label="anchor" href="#data-licences"></a></h3>
+<p>For most deposited datasets – a CSV of experimental results, a
+collection of spectra, a table of computed properties – a
+<strong>Creative Commons</strong> licence is appropriate:</p>
+<ul><li>
+<strong>CC-BY</strong> (Attribution) is the recommended default for
+research data. Free to use, adapt, and redistribute for any purpose,
+including commercially, as long as the original source is credited.</li>
+<li>
+<strong>CC-BY-SA</strong> (Attribution-ShareAlike) is the same
+permissions as CC-BY, but with the condition that any derivatives must
+be released under the same licence. Use this if you want the
+“share-alike” condition to propagate downstream.</li>
+<li>
+<strong>CC0</strong> (Public Domain Dedication) has no restrictions
+whatsoever: no attribution required. An option where maximum reuse with
+minimum friction is the priority, and attribution credit is not
+important to the researcher.</li>
+<li>
+<strong>CC-BY-NC</strong> (Attribution-NonCommercial) restricts
+commercial use. This sounds appealing but in practice limits reuse
+significantly: many universities count as commercial entities under some
+interpretations, and the restriction can prevent reuse in ways you did
+not intend. Avoid unless a specific contractual obligation requires
+it.</li>
+</ul></div>
+<div class="section level3">
+<h3 id="database-licences">Database licences<a class="anchor" aria-label="anchor" href="#database-licences"></a></h3>
+<p>If you are releasing a structured, searchable data collection – a
+relational database, a curated online resource, or an API-driven
+platform – a <strong>Creative Commons</strong> licence may not cover the
+underlying database rights. In these cases, consider an <strong>Open
+Data Commons</strong> licence instead:</p>
+<ul><li>
+<strong>ODC-By</strong> (Attribution) is the recommended default for
+databases. Freely share, modify, and use the database, providing
+attribution.</li>
+<li>
+<strong>ODbL</strong> (Open Database Licence) makes attribution
+required, and any derivative databases must be released under the same
+terms.</li>
+</ul><p>In practice, if you are depositing a fixed collection of files in a
+repository, treat it as a dataset and use Creative Commons. If you are
+releasing a maintained, queryable platform, treat it as a database and
+consider Open Data Commons.</p>
+<p>If your data involves contractual restrictions (e.g. data under NDA
+or from an industrial collaboration), discuss the appropriate approach
+with your institution’s legal or technology transfer team before
+depositing anything.</p>
+<div id="check-your-understanding-which-licence" class="callout challenge">
+<div class="callout-square">
+<i class="callout-icon" data-feather="zap"></i>
+</div>
+<span class="callout-header">Challenge</span>
+<div id="check-your-understanding-which-licence" class="callout-inner">
+<h3 class="callout-title">Check Your Understanding: Which Licence?</h3>
+<div class="callout-content">
+<p>For each of the following situations, which licence would be most
+appropriate? Discuss with a neighbour.</p>
+<p><strong>Situation A.</strong> A crystallographic dataset from a
+purely academic project, with no commercial partners and no contractual
+restrictions. The researcher wants maximum reuse with attribution.</p>
+<p><strong>Situation B.</strong> A set of reaction yield data produced
+in collaboration with an industrial partner. The agreement with the
+company prohibits commercial use of the data by third parties.</p>
+<p><strong>Situation C.</strong> A researcher wants her data to be
+freely reusable, but wants to ensure that anyone who builds on it and
+publishes a derivative dataset also makes that derivative freely
+available.</p>
+</div>
+</div>
+</div>
+<div id="accordionSolution1" class="accordion challenge-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
+  <h4 class="accordion-header" id="headingSolution1">
+  Discussion
+  </h4>
+</button>
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div class="accordion-body">
+<p><strong>Situation A:</strong> <strong>CC-BY</strong> is the
+recommended default – permits any use including commercial, requires
+attribution, and is widely understood by researchers and institutions.
+If attribution credit is not important to the researcher,
+<strong>CC0</strong> is also a valid choice for maximum reuse with
+minimum friction.</p>
+<p><strong>Situation B:</strong> <strong>CC-BY-NC</strong> reflects the
+contractual constraint. However, it is worth flagging that this will
+limit reuse more broadly than intended – many academic institutions can
+be interpreted as commercial under NC clauses. The better long-term
+solution is to negotiate more permissive terms with the industrial
+partner at the outset, or to apply a time-limited embargo before
+releasing under CC-BY.</p>
+<p><strong>Situation C:</strong> <strong>CC-BY-SA</strong> is the
+licence designed for this: anyone who adapts the data must release their
+adaptation under the same terms. This is a legitimate choice, but it is
+worth thinking through whether “share-alike” is really what the
+researcher wants – it can create compatibility problems with other
+licences downstream.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section><section><h2 class="section-heading" id="data-access-statements">Data Access Statements<a class="anchor" aria-label="anchor" href="#data-access-statements"></a></h2>
+<hr class="half-width"><p>All UKRI-funded publications must include a <strong>data access
+statement</strong> – a short paragraph explaining where associated data
+can be found and under what terms. This is required even when there are
+no data (in which case a statement to that effect is needed). The
+requirement also applies increasingly to non-UKRI funders and many
+journals regardless of funding source.</p>
+<p>A good data access statement includes:</p>
+<ul><li>Where the data can be accessed (with a DOI or persistent link)</li>
+<li>The licence under which data can be used</li>
+<li>An explanation if data cannot be shared – and the reason why</li>
+</ul><div id="challenge-6-evaluate-these-data-access-statements" class="callout challenge">
+<div class="callout-square">
+<i class="callout-icon" data-feather="zap"></i>
+</div>
+<span class="callout-header">Challenge</span>
+<div id="challenge-6-evaluate-these-data-access-statements" class="callout-inner">
+<h3 class="callout-title">Challenge 6: Evaluate These Data Access
+Statements</h3>
+<div class="callout-content">
+<p>Below are three fictional data access statements from chemistry
+papers. For each one, discuss with a neighbour:</p>
+<ol style="list-style-type: decimal"><li>Does it meet UKRI requirements?</li>
+<li>Could you actually find and access the data based on this
+statement?</li>
+<li>How would you improve it?</li>
+</ol><hr><p><strong>Statement A</strong></p>
+<blockquote>
+<p>“Data are available from the corresponding author upon reasonable
+request.”</p>
+</blockquote>
+<hr><p><strong>Statement B</strong></p>
+<blockquote>
+<p>“Raw NMR, IR, and mass spectrometry data supporting this study are
+deposited in the Chemotion Repository at <a href="https://doi.org/10.14272/xxxxx" class="external-link uri">https://doi.org/10.14272/xxxxx</a> under a CC-BY 4.0
+licence. DFT input and output files are available on Zenodo at <a href="https://doi.org/10.5281/zenodo.xxxxx" class="external-link uri">https://doi.org/10.5281/zenodo.xxxxx</a> under CC0.”</p>
+</blockquote>
+<hr><p><strong>Statement C</strong></p>
+<blockquote>
+<p>“All data supporting the conclusions of this paper are included in
+the supplementary information.”</p>
+</blockquote>
+</div>
+</div>
+</div>
+<div id="accordionSolution2" class="accordion challenge-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
+  <h4 class="accordion-header" id="headingSolution2">
+  Discussion
+  </h4>
+</button>
+<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
+<div class="accordion-body">
+<p><strong>Statement A</strong> does not meet UKRI requirements.
+“Available on request” is explicitly discouraged: there is no persistent
+link, no licence, no guarantee of long-term access, and the author may
+not be reachable in five years. It also makes verification of results
+nearly impossible.</p>
+<p><strong>Statement B</strong> is a strong example. It names the
+repositories, gives DOIs (persistent and citable), specifies a licence
+for each dataset type, and separates experimental and computational
+outputs. A reader can access the data immediately without contacting
+anyone.</p>
+<p><strong>Statement C</strong> is borderline. Supplementary information
+does not have a DOI, is not independently discoverable, and long-term
+preservation depends on the journal’s policies. For small illustrative
+datasets it may be acceptable, but it should not be used for primary
+data that others might want to reuse. It also gives no licence, which
+makes the legal status of reuse unclear.</p>
+</div>
+</div>
+</div>
+</div>
+</section><section><h2 class="section-heading" id="data-preservation">Data Preservation<a class="anchor" aria-label="anchor" href="#data-preservation"></a></h2>
+<hr class="half-width"><p>Sharing data at publication is important, but so is ensuring it
+remains usable over time. EPSRC requires funded research data to be
+preserved for a minimum of ten years from the point of last access. A
+few things affect long-term usability:</p>
+<ul><li>
+<strong>File formats.</strong> Proprietary formats can become
+unreadable as software changes. Prefer open, non-proprietary formats
+where possible: CSV over XLSX, JCAMP-DX over vendor-specific spectral
+formats, CIF for crystal structures. We will return to
+chemistry-specific formats in Part 2.</li>
+<li>
+<strong>Documentation.</strong> A dataset without a README or data
+dictionary is difficult to interpret even a few years later – and nearly
+impossible for someone who was not involved in the research. Write
+documentation as you go, not as an afterthought before submission.</li>
+<li>
+<strong>Repository choice.</strong> General-purpose repositories
+like Zenodo have explicit long-term preservation commitments. Not all
+institutional repositories do – check your institution’s retention
+policy before depositing data you need to preserve for ten years.</li>
+</ul><div id="keypoints1" class="callout keypoints">
 <div class="callout-square">
 <i class="callout-icon" data-feather="key"></i>
 </div>
 <span class="callout-header">Key Points</span>
 <div class="callout-inner">
 <div class="callout-content">
-<ul><li>TODO: Add key points</li>
+<ul><li>Share your data via a repository: it makes your work citable,
+discoverable, and preserved long-term.</li>
+<li>Choose domain-specific repositories first; Zenodo is a good
+general-purpose fallback.</li>
+<li>Always apply a licence. Without one, the default is “all rights
+reserved” and others cannot safely reuse your data. CC-BY is the
+recommended default for research datasets; use Open Data Commons
+licences (ODC-By) for structured databases.</li>
+<li>All UKRI-funded publications require a data access statement, even
+when there is no associated data.</li>
+<li>Prefer open file formats and include documentation to ensure data
+remains usable for the required ten-year preservation period.</li>
 </ul></div>
 </div>
 </div>
-
-
-
-      </div> <!-- / div.lesson-content -->
+</section></div> <!-- / div.lesson-content -->
     </main><!-- / main#main-content.main-content --><nav class="bottom-pagination mx-md-4" aria-label="Previous and Next Chapter"><div class="d-block d-sm-block d-md-none">
         <a class="chapter-link" href="../instructor/04-storage-and-organisation.html"><i aria-hidden="true" class="small-arrow" data-feather="arrow-left"></i>Previous</a>
         <a class="chapter-link float-end" href="../instructor/06-reproducibility-in-chemistry.html">Next<i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i></a>
@@ -476,8 +795,8 @@ detailed content plan.</p>
   "url": "https://aichemy-hub.github.io/rdm-for-chemists/instructor/05-sharing-and-licensing.html",
   "identifier": "https://aichemy-hub.github.io/rdm-for-chemists/instructor/05-sharing-and-licensing.html",
   "dateCreated": "2026-03-18",
-  "dateModified": "2026-03-18",
-  "datePublished": "2026-03-19"
+  "dateModified": "2026-03-20",
+  "datePublished": "2026-03-20"
 }
 
   </script><script>

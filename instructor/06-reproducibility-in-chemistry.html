@@ -119,11 +119,11 @@
   Research Data Management for Chemists
 </div>
 
-<aside class="col-md-12 lesson-progress"><div style="width: 54%" class="percentage">
-    54%
+<aside class="col-md-12 lesson-progress"><div style="width: 52%" class="percentage">
+    52%
   </div>
   <div class="progress incubator">
-    <div class="progress-bar incubator" role="progressbar" style="width: 54%" aria-valuenow="54" aria-label="Lesson Progress" aria-valuemin="0" aria-valuemax="100">
+    <div class="progress-bar incubator" role="progressbar" style="width: 52%" aria-valuenow="52" aria-label="Lesson Progress" aria-valuemin="0" aria-valuemax="100">
     </div>
   </div>
 </aside><div class="container">
@@ -252,12 +252,22 @@
 <div class="accordion accordion-flush" id="accordionFlushcurrent">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-headingcurrent">
+      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapsecurrent" aria-expanded="true" aria-controls="flush-collapsecurrent">
         <span class="visually-hidden">Current Chapter</span>
         <span class="current-chapter">
         6. The Reproducibility Crisis in Chemistry
         </span>
-      
+      </button>
     </div><!--/div.accordion-header-->
+
+    <div id="flush-collapsecurrent" class="accordion-collapse collapse show" aria-labelledby="flush-headingcurrent" data-bs-parent="#accordionFlushcurrent">
+      <div class="accordion-body">
+        <ul><li><a href="#building-on-episode-1">Building on Episode 1</a></li>
+<li><a href="#why-chemistry-is-hard-to-reproduce">Why Chemistry Is Hard to Reproduce</a></li>
+<li><a href="#the-industrial-perspective">The Industrial Perspective</a></li>
+<li><a href="#what-good-looks-like">What Good Looks Like</a></li>
+        </ul></div><!--/div.accordion-body-->
+    </div><!--/div.accordion-collapse-->
 
   </div><!--/div.accordion-item-->
 </div><!--/div.accordion-flush-->
@@ -365,7 +375,7 @@
       </div>
       <hr></nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>The Reproducibility Crisis in Chemistry</h1>
-        <p>Last updated on 2026-03-18 |
+        <p>Last updated on 2026-03-20 |
 
         <a href="https://github.com/aichemy-hub/rdm-for-chemists/edit/main/episodes/06-reproducibility-in-chemistry.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 
@@ -386,7 +396,10 @@
 <div class="card-body">
 <div class="inner">
 <h3 class="card-title">Questions</h3>
-<ul><li>TODO: Add framing questions</li>
+<ul><li>Why is reproducibility a particular challenge in chemistry?</li>
+<li>What kinds of detail are routinely missing from chemistry
+publications?</li>
+<li>What can I do to make my own work more reproducible?</li>
 </ul></div>
 </div>
 </div>
@@ -394,14 +407,218 @@
 <div class="card-body">
 <div class="inner bordered">
 <h3 class="card-title">Objectives</h3>
-<ul><li>TODO: Add learning objectives</li>
+<ul><li>Describe chemistry-specific factors that undermine
+reproducibility</li>
+<li>Identify the kinds of information missing from typical chemistry
+methods sections</li>
+<li>Explain how good data management practices directly address
+reproducibility failures</li>
 </ul></div>
 </div>
 </div>
 </div>
 </div>
-<p>TODO: Episode content to be written. See draft_syllabus.md for
-detailed content plan.</p>
+<section><h2 class="section-heading" id="building-on-episode-1">Building on Episode 1<a class="anchor" aria-label="anchor" href="#building-on-episode-1"></a></h2>
+<hr class="half-width"><p>In Episode 1 we saw that over 70% of researchers had tried and failed
+to reproduce another scientist’s results, and that chemists showed the
+highest rates of irreproducibility in Baker’s 2016 <em>Nature</em>
+survey. Here we look at why chemistry is particularly vulnerable, and
+what the research community is doing about it.</p>
+</section><section><h2 class="section-heading" id="why-chemistry-is-hard-to-reproduce">Why Chemistry Is Hard to Reproduce<a class="anchor" aria-label="anchor" href="#why-chemistry-is-hard-to-reproduce"></a></h2>
+<hr class="half-width"><p>A 2024 review in <em>Heliyon</em> examined reproducibility
+specifically in chemistry research and identified several structural
+factors that make the field particularly prone to reproducibility
+failures.</p>
+<blockquote>
+<p>“Reproducibility in chemistry research.” (2024) <em>Heliyon</em> 10,
+e35986. <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC11305220/" class="external-link">doi:10.1016/j.heliyon.2024.e35986</a></p>
+</blockquote>
+<div class="section level3">
+<h3 id="insufficient-methods-reporting">Insufficient methods reporting<a class="anchor" aria-label="anchor" href="#insufficient-methods-reporting"></a></h3>
+<p>Chemistry papers routinely omit details that turn out to be critical.
+A reaction described as “carried out under inert atmosphere in dry
+solvent at elevated temperature” leaves an enormous amount unspecified:
+which inert gas? which solvent, and how was it dried? what temperature,
+exactly? what concentration? what purity of starting materials? These
+details are often treated as obvious, or too routine to mention – but
+small variations can determine whether a reaction succeeds or fails
+entirely.</p>
+<p>The same problem is acute in computational chemistry. A DFT study
+reported as “performed using a GGA functional and plane-wave basis set”
+says almost nothing: which exact basis set? which dispersion correction,
+if any? what convergence criteria? which software package, and which
+version? Computational results can be sensitive to all of these choices.
+Trajectories, input files, and pseudopotentials are routinely discarded
+after publication making independent validation impossible even in
+principle.</p>
+</div>
+<div class="section level3">
+<h3 id="chemistry-specific-experimental-pitfalls">Chemistry-specific experimental pitfalls<a class="anchor" aria-label="anchor" href="#chemistry-specific-experimental-pitfalls"></a></h3>
+<p>Beyond missing parameters, some chemistry sub-fields face pitfalls
+that are almost impossible to convey in a conventional methods section.
+Trace impurities in building blocks can template entirely different
+products in supramolecular chemistry. Polymorphic outcomes depend on
+subtle conditions – stirring rate, seeding, rate of cooling – that
+rarely appear in published procedures. Reactions sensitive to oxygen or
+moisture are highly dependent on technique: a glovebox, a Schlenk line,
+and a nitrogen balloon are not equivalent, even if the paper says only
+“under inert atmosphere.”</p>
+</div>
+<div class="section level3">
+<h3 id="publication-culture">Publication culture<a class="anchor" aria-label="anchor" href="#publication-culture"></a></h3>
+<p>The <em>Heliyon</em> review also found that chemistry papers contain
+more “hyping” language than those in other disciplines with 2.54
+promotional terms per 100 words on average. Phrases like “novel”,
+“superior”, “unprecedented”, and “highly efficient” appear routinely
+regardless of the strength of the underlying evidence. This does not
+cause irreproducibility directly, but it correlates with selective
+reporting: the pressure to present positive, impactful results
+discourages the publication of failure modes, contradictory results, and
+the conditions under which a method does <em>not</em> work.</p>
+</div>
+</section><section><h2 class="section-heading" id="the-industrial-perspective">The Industrial Perspective<a class="anchor" aria-label="anchor" href="#the-industrial-perspective"></a></h2>
+<hr class="half-width"><p>The stakes become clearest in pharmaceutical and applied chemistry
+contexts. Bayer HealthCare reported that only 7 of 67 internal target
+validation projects (around 10%) were fully reproducible, with published
+and in-house data agreeing in only 20–25% of cases. Amgen found that 89%
+of landmark oncology results they attempted to replicate could not be
+confirmed.</p>
+<blockquote>
+<p>Prinz, F., Schlange, T. &amp; Asadullah, K. (2011) “Believe it or
+not: how much can we rely on published data on potential drug targets?”
+<em>Nature Reviews Drug Discovery</em> 10, 712–713. <a href="https://doi.org/10.1038/nrd3439" class="external-link">doi:10.1038/nrd3439</a></p>
+<p>Begley, C.G. &amp; Ellis, L.M. (2012) “Drug development: Raise the
+bar of cancer research.” <em>Nature</em> 483, 531–533. <a href="https://doi.org/10.1038/483531a" class="external-link">doi:10.1038/483531a</a></p>
+</blockquote>
+<p>These are not academic curiosities. Failed reproduction wastes
+enormous resources and, in drug discovery, can mean years of downstream
+work built on a shaky foundation.</p>
+<div id="this-is-also-a-data-management-problem" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<span class="callout-header">Callout</span>
+<div id="this-is-also-a-data-management-problem" class="callout-inner">
+<h3 class="callout-title">This Is Also a Data Management Problem</h3>
+<div class="callout-content">
+<p>Many reproducibility failures stem directly from poor data
+management:</p>
+<ul><li>Raw data was lost, so the processing pipeline cannot be checked</li>
+<li>Instrument settings were not recorded, so conditions cannot be
+replicated</li>
+<li>Ambiguous file names mean no one is sure which version of the data
+was used in the paper</li>
+<li>Processing steps were applied but not documented</li>
+</ul><p>Good RDM does not solve everything. You still need good experimental
+practice and honest reporting, but it removes a large class of
+reproducibility failures that are entirely preventable.</p>
+</div>
+</div>
+</div>
+</section><section><h2 class="section-heading" id="what-good-looks-like">What Good Looks Like<a class="anchor" aria-label="anchor" href="#what-good-looks-like"></a></h2>
+<hr class="half-width"><p>The chemistry community has started to develop practical
+responses:</p>
+<ul><li>
+<strong>Mandatory “Failure Analysis” sections:</strong> Some
+journals and groups are experimenting with requiring authors to include
+a discussion of conditions under which the method failed or gave poor
+results. This information is often known to the authors but never
+published.</li>
+<li>
+<strong>Independent replication:</strong> A small number of
+high-profile journals now require independent replication of key results
+before publication.</li>
+<li>
+<strong>Structured supplementary information:</strong> Rather than a
+narrative methods section, it is now sometimes possible to provide
+machine-readable records of experimental conditions, including ELN
+exports and instrument metadata files.</li>
+</ul><p>The last point connects directly to what we cover in the rest of Part
+2: electronic lab notebooks, metadata standards, and structured data
+repositories are the practical tools for making chemistry reproducible
+at scale.</p>
+<div id="challenge-7-reproducibility-detective" class="callout challenge">
+<div class="callout-square">
+<i class="callout-icon" data-feather="zap"></i>
+</div>
+<span class="callout-header">Challenge</span>
+<div id="challenge-7-reproducibility-detective" class="callout-inner">
+<h3 class="callout-title">Challenge 7: Reproducibility Detective</h3>
+<div class="callout-content">
+<p>Below is an excerpt from the experimental section of a fictional
+chemistry paper that would routinely pass peer review. Read it
+carefully, then discuss with a neighbour:</p>
+<ol style="list-style-type: decimal"><li>What does this procedure report well?</li>
+<li>What information is missing that would prevent you from reproducing
+it?</li>
+<li>What should the authors have recorded in their ELN that did not make
+it into the paper?</li>
+</ol><hr><blockquote>
+<p><em>“4-Bromoanisole (1.87 g, 10.0 mmol) and phenylboronic acid (1.46
+g, 12.0 mmol) were combined with Pd(PPh₃)₄ and Cs₂CO₃ in DMF/water and
+heated to 80 °C under nitrogen. After stirring overnight, the mixture
+was cooled to room temperature and extracted with EtOAc (3 × 30 mL). The
+combined organic layers were dried over MgSO₄, filtered, and
+concentrated under reduced pressure. Purification by column
+chromatography (hexane/EtOAc) gave the product as a white solid (87%).
+¹H NMR (400 MHz, CDCl₃): δ 7.52 (d, J = 8.6 Hz, 2H), 7.41–7.30 (m, 5H),
+6.97 (d, J = 8.6 Hz, 2H), 3.84 (s, 3H).”</em></p>
+</blockquote>
+</div>
+</div>
+</div>
+<div id="accordionSolution1" class="accordion challenge-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
+  <h4 class="accordion-header" id="headingSolution1">
+  Discussion
+  </h4>
+</button>
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div class="accordion-body">
+<p><strong>What is reported well:</strong></p>
+<p>The starting material masses and molar quantities are given.
+Temperature (80 °C) and atmosphere (nitrogen) are stated. The workup is
+described in detail. NMR data include field strength (400 MHz), solvent
+(CDCl₃), and coupling constants; enough for someone to compare their
+product to the reported spectrum.</p>
+<p><strong>What is missing:</strong></p>
+<ul><li>
+<strong>Catalyst loading:</strong> Pd(PPh₃)₄ is listed but no amount
+or mol% is given. Palladium catalyst loading is one of the most
+important variables in cross-coupling reactions.</li>
+<li>
+<strong>Base equivalents:</strong> Cs₂CO₃ appears with no quantity.
+The amount of base affects both rate and selectivity.</li>
+<li>
+<strong>Solvent ratio:</strong> “DMF/water” – what ratio? This is
+well known to affect Suzuki coupling outcomes significantly.</li>
+<li>
+<strong>Reaction time:</strong> “Overnight” is anywhere from 12 to
+18 hours. For an optimised procedure, the actual time matters.</li>
+<li>
+<strong>Column conditions:</strong> “hexane/EtOAc” with no ratio.
+Anyone reproducing this needs to develop their own conditions from
+scratch.</li>
+<li>
+<strong>Characterisation:</strong> No HRMS (high-resolution mass
+spectrometry) data, no melting point, no purity assessment. The NMR
+alone is not sufficient for unambiguous identification of a new
+compound.</li>
+</ul><p><strong>What should have been in the ELN:</strong></p>
+<p>Exact masses and volumes of all reagents including catalyst and base,
+lot numbers for commercial reagents, the actual reaction time, TLC
+conditions used to monitor the reaction, column gradient used in
+purification, and the mass of product actually isolated from each run
+(not just the percentage yield). Much of this is captured automatically
+if a structured ELN with a stoichiometry calculator is used.</p>
+<p>The lesson here is not that the paper is fraudulent or careless, this
+level of reporting is commonplace and accepted. The problem is that what
+passes peer review is often not enough to reproduce the work.</p>
+</div>
+</div>
+</div>
+</div>
 <div id="keypoints1" class="callout keypoints">
 <div class="callout-square">
 <i class="callout-icon" data-feather="key"></i>
@@ -409,14 +626,24 @@ detailed content plan.</p>
 <span class="callout-header">Key Points</span>
 <div class="callout-inner">
 <div class="callout-content">
-<ul><li>TODO: Add key points</li>
+<ul><li>Chemistry is fundamentally a reproducible science, but inadequate
+methods reporting and poor data management undermine this in
+practice.</li>
+<li>Experimental details that seem obvious to the author – catalyst
+loading, solvent ratio, reagent purity – are often critical for
+reproduction and routinely absent from publications.</li>
+<li>The same problem applies in computational chemistry: functional,
+basis set, software version, and input files must be archived and
+shared, not discarded after publication.</li>
+<li>Publication pressure and selective reporting compound the problem:
+failure modes rarely appear in the literature.</li>
+<li>Good RDM practices – recording metadata systematically in an ELN,
+keeping raw data, documenting processing steps – directly address the
+most preventable causes of irreproducibility.</li>
 </ul></div>
 </div>
 </div>
-
-
-
-      </div> <!-- / div.lesson-content -->
+</section></div> <!-- / div.lesson-content -->
     </main><!-- / main#main-content.main-content --><nav class="bottom-pagination mx-md-4" aria-label="Previous and Next Chapter"><div class="d-block d-sm-block d-md-none">
         <a class="chapter-link" href="../instructor/05-sharing-and-licensing.html"><i aria-hidden="true" class="small-arrow" data-feather="arrow-left"></i>Previous</a>
         <a class="chapter-link float-end" href="../instructor/07-electronic-lab-notebooks.html">Next<i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i></a>
@@ -476,8 +703,8 @@ detailed content plan.</p>
   "url": "https://aichemy-hub.github.io/rdm-for-chemists/instructor/06-reproducibility-in-chemistry.html",
   "identifier": "https://aichemy-hub.github.io/rdm-for-chemists/instructor/06-reproducibility-in-chemistry.html",
   "dateCreated": "2026-03-18",
-  "dateModified": "2026-03-18",
-  "datePublished": "2026-03-19"
+  "dateModified": "2026-03-20",
+  "datePublished": "2026-03-20"
 }
 
   </script><script>
