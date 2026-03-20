@@ -142,8 +142,8 @@ is no way to recover. The experiments must be repeated from scratch, costing
 months of work.
 
 This kind of scenario is avoidable with simple practices: keep raw data
-read-only, use consistent file naming, and follow the 3-2-1 backup rule (more
-on this in a later episode).
+in a separate folder and set it to read-only, use consistent file naming, and
+make sure your data is backed up (more on this in a later episode).
 
 ## The Reproducibility Crisis
 

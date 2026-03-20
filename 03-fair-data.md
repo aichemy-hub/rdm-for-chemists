@@ -30,12 +30,14 @@ FAIR is a set of guiding principles for research data, first published in
 - **Interoperable**
 - **Reusable**
 
-These principles were developed to address a straightforward problem: vast
-amount of research data exist but cannot easily be found, understood, or
-reused, **even by the researchers who generated them**. FAIR is not a standard
+These principles were developed to address a straightforward problem: a vast
+amount of research data exists but cannot easily be found, understood, or
+reused **even by the researchers who generated it**. FAIR is not a standard
 or a certification. It is a framework for thinking about what good data
 management looks like from the perspective of someone who wants to use
 your data in the future (including your future self).
+
+![The FAIR Data Principles](fig/fair-data-image.png){alt="A diagram showing the four FAIR data principles and what they mean."}
 
 > Wilkinson, M.D. et al. (2016) "The FAIR Guiding Principles for scientific
 > data management and stewardship." *Scientific Data* 3, 160018.
