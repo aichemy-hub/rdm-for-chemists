@@ -153,7 +153,7 @@ If you are unsure whether your data requires special handling, your institution'
 
 :::::::::::::::::::::::::::::::::::::::  challenge
 
-## Challenge 5: Reorganise This Project
+## Challenge: Reorganise This Project
 
 Below is the file listing for a chemistry project, as it was left when the PhD student who ran it moved on.
 

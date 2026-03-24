@@ -20,6 +20,18 @@ exercises: 5
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
+:::::::::::::::::::::::::::::::::::::::  callout
+
+## Part 2: Chemistry-Specific Data Management
+
+Welcome to Part 2. Episodes 6--11 apply the principles from Part 1 to the
+specific challenges, tools, and opportunities in chemistry research: the
+reproducibility crisis, electronic lab notebooks, metadata standards,
+chemistry repositories, managing analytical data, and the UK data
+infrastructure landscape.
+
+::::::::::::::::::::::::::::::::::::::::::::::::::
+
 ## Building on Episode 1
 
 In Episode 1 we saw that over 70% of researchers had tried and failed to reproduce another scientist's results, and that chemists showed the highest rates of irreproducibility in Baker's 2016 *Nature* survey. Here we look at why chemistry is particularly vulnerable, and what the research community is doing about it.
@@ -82,7 +94,7 @@ The last point connects directly to what we cover in the rest of Part 2: electro
 
 :::::::::::::::::::::::::::::::::::::::  challenge
 
-## Challenge 7: Reproducibility Detective
+## Challenge: Reproducibility Detective
 
 Below is an excerpt from the experimental section of a fictional chemistry paper that would routinely pass peer review. Read it carefully, then discuss with a neighbour:
 

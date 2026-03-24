@@ -121,7 +121,7 @@ A good data access statement includes:
 
 :::::::::::::::::::::::::::::::::::::::  challenge
 
-## Challenge 6: Evaluate These Data Access Statements
+## Challenge: Evaluate These Data Access Statements
 
 Below are three fictional data access statements from chemistry papers. For each one, discuss with a neighbour:
 
@@ -168,6 +168,16 @@ Sharing data at publication is important, but so is ensuring it remains usable o
 - **File formats.** Proprietary formats can become unreadable as software changes. Prefer open, non-proprietary formats where possible: CSV over XLSX, JCAMP-DX over vendor-specific spectral formats, CIF for crystal structures. We will return to chemistry-specific formats in Part 2.
 - **Documentation.** A dataset without a README or data dictionary is difficult to interpret even a few years later -- and nearly impossible for someone who was not involved in the research. Write documentation as you go, not as an afterthought before submission.
 - **Repository choice.** General-purpose repositories like Zenodo have explicit long-term preservation commitments. Not all institutional repositories do -- check your institution's retention policy before depositing data you need to preserve for ten years.
+
+:::::::::::::::::::::::::::::::::::::::  callout
+
+## End of Part 1
+
+This concludes Part 1 on general research data management principles. After a
+break, Part 2 applies everything covered so far to the specific challenges of
+chemistry research.
+
+::::::::::::::::::::::::::::::::::::::::::::::::::
 
 :::::::::::::::::::::::::::::::::::::::  keypoints
 

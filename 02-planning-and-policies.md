@@ -277,7 +277,7 @@ covers European funder requirements.
 
 :::::::::::::::::::::::::::::::::::::::  challenge
 
-## Challenge 2: DMP Speed Round
+## Challenge: DMP Speed Round
 
 You have just been awarded a 3-year EPSRC grant to develop novel
 heterogeneous catalysts for CO2 reduction. Your project will involve

@@ -20,6 +20,17 @@ exercises: 5
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
+:::::::::::::::::::::::::::::::::::::::  callout
+
+## Part 1: Research Data Management Principles
+
+Episodes 1--5 cover the general principles of research data management that
+apply across all disciplines: what research data is, how to plan for it, how
+to make it FAIR, and how to store, share, and licence it. After the break,
+Part 2 applies these principles to the specific challenges of chemistry research.
+
+::::::::::::::::::::::::::::::::::::::::::::::::::
+
 ## What Is Research Data?
 
 When you hear "research data", you might think of a spreadsheet of results or a graph.
@@ -190,7 +201,7 @@ get there.
 
 :::::::::::::::::::::::::::::::::::::::  challenge
 
-## Challenge 1: Data Audit
+## Challenge: Data Audit
 
 Take 2 minutes to list all the different
 types of data you produce or use in your research. Think broadly:
