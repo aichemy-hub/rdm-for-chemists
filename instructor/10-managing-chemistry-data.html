@@ -288,12 +288,22 @@
 <div class="accordion accordion-flush" id="accordionFlushcurrent">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-headingcurrent">
+      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapsecurrent" aria-expanded="true" aria-controls="flush-collapsecurrent">
         <span class="visually-hidden">Current Chapter</span>
         <span class="current-chapter">
         10. Managing Data from Common Chemistry Techniques
         </span>
-      
+      </button>
     </div><!--/div.accordion-header-->
+
+    <div id="flush-collapsecurrent" class="accordion-collapse collapse show" aria-labelledby="flush-headingcurrent" data-bs-parent="#accordionFlushcurrent">
+      <div class="accordion-body">
+        <ul><li><a href="#a-day-in-the-lab">A Day in the Lab</a></li>
+<li><a href="#organising-a-multi-technique-project">Organising a Multi-Technique Project</a></li>
+<li><a href="#high-throughput-facilities">High-Throughput Facilities</a></li>
+<li><a href="#large-scale-facilities">Large-Scale Facilities</a></li>
+        </ul></div><!--/div.accordion-body-->
+    </div><!--/div.accordion-collapse-->
 
   </div><!--/div.accordion-item-->
 </div><!--/div.accordion-flush-->
@@ -365,7 +375,7 @@
       </div>
       <hr></nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Managing Data from Common Chemistry Techniques</h1>
-        <p>Last updated on 2026-03-18 |
+        <p>Last updated on 2026-03-24 |
 
         <a href="https://github.com/aichemy-hub/rdm-for-chemists/edit/main/episodes/10-managing-chemistry-data.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 
@@ -386,7 +396,11 @@
 <div class="card-body">
 <div class="inner">
 <h3 class="card-title">Questions</h3>
-<ul><li>TODO: Add framing questions</li>
+<ul><li>What metadata should I record for each analytical technique I
+use?</li>
+<li>How do I keep my raw data safe and well-organised across a
+multi-technique project?</li>
+<li>What changes when experiments are run at scale?</li>
 </ul></div>
 </div>
 </div>
@@ -394,14 +408,280 @@
 <div class="card-body">
 <div class="inner bordered">
 <h3 class="card-title">Objectives</h3>
-<ul><li>TODO: Add learning objectives</li>
+<ul><li>Apply good data management practices to data from common analytical
+techniques</li>
+<li>Identify the metadata required for NMR, IR, and mass spectrometry
+records</li>
+<li>Understand the data management challenges posed by high-throughput
+and large-scale facilities</li>
 </ul></div>
 </div>
 </div>
 </div>
 </div>
-<p>TODO: Episode content to be written. See draft_syllabus.md for
-detailed content plan.</p>
+<section><h2 class="section-heading" id="a-day-in-the-lab">A Day in the Lab<a class="anchor" aria-label="anchor" href="#a-day-in-the-lab"></a></h2>
+<hr class="half-width"><p>The best way to understand chemistry data management in practice is
+to follow a realistic workflow from bench to publication. Consider a
+researcher synthesising a new compound and characterising it by NMR, IR,
+and mass spectrometry. At each stage, data management decisions are
+either made or missed.</p>
+<div class="section level3">
+<h3 id="step-1-synthesis-and-eln-entry">Step 1: Synthesis and ELN entry<a class="anchor" aria-label="anchor" href="#step-1-synthesis-and-eln-entry"></a></h3>
+<p>The reaction is set up and recorded in an electronic lab notebook.
+This is the point at which several critical pieces of metadata should be
+captured:</p>
+<ul><li>Batch numbers and purities of all starting materials and
+reagents</li>
+<li>Exact masses and equivalents used (not just “10 mg” but enough to
+reconstruct the stoichiometry)</li>
+<li>Instrument and conditions: reaction temperature, inert atmosphere
+method (glovebox, Schlenk line, nitrogen balloon), stirring rate,
+time</li>
+<li>Solvent identity and drying method, where relevant</li>
+</ul><p>This information is easiest to record in real time. Reconstructing it
+from memory a week later is error-prone; reconstructing it from memory
+two years later for a resubmission is nearly impossible.</p>
+</div>
+<div class="section level3">
+<h3 id="step-2-nmr-acquisition">Step 2: NMR acquisition<a class="anchor" aria-label="anchor" href="#step-2-nmr-acquisition"></a></h3>
+<p>The compound goes on the NMR spectrometer. Good practice at this step
+means:</p>
+<ul><li>Saving the raw FID alongside the processed spectrum. Never keep only
+the processed spectrum, because the processing choices (phasing,
+baseline correction, integration) become impossible to review or
+redo</li>
+<li>Recording the full acquisition parameters: nucleus (¹H, ¹³C, etc.),
+field strength (e.g. 400 MHz), solvent, temperature, pulse sequence,
+reference compound, and concentration</li>
+<li>Exporting to JCAMP-DX alongside the vendor format (Bruker
+<code>.fid</code>, Varian, etc.) for long-term accessibility</li>
+<li>Naming the file consistently – the file name should identify the
+compound, technique, and experiment date unambiguously</li>
+</ul></div>
+<div class="section level3">
+<h3 id="step-3-ir-and-mass-spectrometry">Step 3: IR and mass spectrometry<a class="anchor" aria-label="anchor" href="#step-3-ir-and-mass-spectrometry"></a></h3>
+<p>The same principles apply:</p>
+<ul><li>
+<strong>IR:</strong> Record whether ATR or transmission mode was
+used, the resolution, the wavenumber range, and how the sample was
+prepared. These parameters affect whether results from different
+instruments can be compared.</li>
+<li>
+<strong>Mass spectrometry:</strong> Record the ionisation method
+(ESI, APCI, EI, MALDI, etc.), instrument model, mass range, resolution,
+and calibration standard. High-resolution mass spectrometry data files
+can be very large so plan storage accordingly.</li>
+</ul><div id="what-is-missing-from-this-record" class="callout challenge">
+<div class="callout-square">
+<i class="callout-icon" data-feather="zap"></i>
+</div>
+<span class="callout-header">Challenge</span>
+<div id="what-is-missing-from-this-record" class="callout-inner">
+<h3 class="callout-title">What Is Missing From This Record?</h3>
+<div class="callout-content">
+<p>A researcher submits the following metadata record to accompany an
+NMR spectrum in a repository:</p>
+<blockquote>
+<p><strong>File:</strong> compound_14_NMR.jdx
+<strong>Instrument:</strong> Bruker <strong>Solvent:</strong> CDCl₃
+<strong>Date:</strong> 2024-11-05</p>
+</blockquote>
+<p>Which essential pieces of metadata are missing from this record?
+Choose all that apply.</p>
+<ul><li>A. The field strength (e.g. 400 MHz or 600 MHz)</li>
+<li>B. The nucleus measured (¹H, ¹³C, DEPT, etc.)</li>
+<li>C. The colour of the compound</li>
+<li>D. The pulse sequence used</li>
+<li>E. The reference compound (e.g. TMS, residual solvent)</li>
+<li>F. The concentration of the sample</li>
+<li>G. The instrument software version</li>
+</ul></div>
+</div>
+</div>
+<div id="accordionSolution1" class="accordion challenge-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
+  <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
+</button>
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div class="accordion-body">
+<p><strong>A, B, D, E, and F are all missing and are essential metadata
+for NMR.</strong></p>
+<p>Without the field strength and nucleus, you cannot interpret the
+spectrum (¹H at 400 MHz and ¹³C at 100 MHz are very different
+experiments). Without the pulse sequence, you cannot know whether any
+special experiment was run. Without the reference compound and
+concentration, quantitative comparisons are unreliable.</p>
+<p><strong>C (compound colour)</strong> is not NMR metadata but it is
+useful information for an ELN entry but not for the spectrum record.</p>
+<p><strong>G (software version)</strong> is good practice to record
+because processing artefacts can be software-version-dependent, but it
+is less critical than A, B, D, E, and F for basic reusability.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section><section><h2 class="section-heading" id="organising-a-multi-technique-project">Organising a Multi-Technique Project<a class="anchor" aria-label="anchor" href="#organising-a-multi-technique-project"></a></h2>
+<hr class="half-width"><p>Across a project generating NMR, IR, MS, and possibly
+crystallographic or computational data, a consistent folder structure
+and file naming scheme become essential. Without them, finding the raw
+FID for compound 47 from three years ago or linking an NMR spectrum to
+the correct ELN entry becomes an investigation in itself.</p>
+<p>A practical folder structure for a synthetic chemistry project:</p>
+<pre><code>project-name/
+├── 01_raw-data/
+│   ├── NMR/
+│   │   ├── 2024-11-05_cpd14_1H_400MHz.fid
+│   │   └── 2024-11-05_cpd14_1H_400MHz.jdx
+│   ├── IR/
+│   ├── mass-spec/
+│   └── XRD/
+├── 02_processed-data/
+├── 03_analysis/
+├── 04_manuscripts/
+└── 05_documentation/
+    ├── README.md
+    └── data-dictionary.csv</code></pre>
+<p>The <code>README.md</code> file at the project root should explain
+the naming scheme, describe the folder structure, and cross-reference
+the ELN. The <code>data-dictionary.csv</code> should define any
+abbreviations used in file names. Neither of these takes long to write
+at the start of a project, and both are invaluable when you revisit the
+data later or when someone else inherits the project.</p>
+<div id="tip-raw-data-is-sacred" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<span class="callout-header">Callout</span>
+<div id="tip-raw-data-is-sacred" class="callout-inner">
+<h3 class="callout-title">Tip: Raw Data Is Sacred</h3>
+<div class="callout-content">
+<p>Make raw instrument files read-only as soon as you copy them off the
+instrument. On most systems this is a single right-click or
+<code>chmod -w</code> command. This prevents accidental overwriting or
+deletion, and makes it immediately obvious to anyone who opens the
+folder that these files should not be modified. All processing should
+happen on copies in the <code>02_processed-data/</code> folder.</p>
+</div>
+</div>
+</div>
+</section><section><h2 class="section-heading" id="high-throughput-facilities">High-Throughput Facilities<a class="anchor" aria-label="anchor" href="#high-throughput-facilities"></a></h2>
+<hr class="half-width"><p>High-throughput experimentation (HTE) changes the data management
+challenge dramatically. Automated platforms such as the <a href="https://www.imperial.ac.uk/rapid-online-analysis-of-reactions/" class="external-link">Rapid
+Online Analysis of Reactions (ROAR)</a> at Imperial College can run
+hundreds of reactions per day with inline analytics, producing thousands
+of data points in a single experiment. Each reaction generates a
+reaction record, metadata, and one or more raw files.</p>
+<p>At this scale, manual data recording is not feasible. The key
+requirements are:</p>
+<ul><li>
+<strong>Automated metadata capture:</strong> Instrument control
+software must log parameters directly into the data files or a companion
+metadata file. Relying on a researcher to transcribe conditions from a
+notebook is too slow and too error-prone.</li>
+<li>
+<strong>Consistent naming and structure:</strong> With hundreds of
+files per run, ad hoc naming breaks down immediately. File names and
+folder structures must follow a defined schema from the outset.</li>
+<li>
+<strong>Cataloguing:</strong> A machine-readable manifest (for
+example, a CSV file linking each reaction to its raw data files,
+conditions, and outcomes) is essential for downstream analysis. This is
+the kind of structured metadata record we explored in Episode 8.</li>
+<li>
+<strong>Storage planning:</strong> A single HTE run can generate
+tens of gigabytes of raw data. Plan storage capacity and backup strategy
+before data collection begins, not after.</li>
+</ul></section><section><h2 class="section-heading" id="large-scale-facilities">Large-Scale Facilities<a class="anchor" aria-label="anchor" href="#large-scale-facilities"></a></h2>
+<hr class="half-width"><p>Synchrotron and neutron sources including <a href="https://www.diamond.ac.uk/" class="external-link">Diamond Light Source</a> and <a href="https://www.isis.stfc.ac.uk/" class="external-link">ISIS Neutron and Muon Source</a> in
+the UK produce very large datasets from single experiments. These
+facilities have their own data management infrastructure, but
+researchers still need to plan for:</p>
+<ul><li>
+<strong>Data transfer:</strong> How will you get terabytes of data
+from the facility to your institution? Facilities often provide
+temporary storage and data transfer services, but you need to know what
+they offer before your beam time starts.</li>
+<li>
+<strong>Institutional storage:</strong> Check in advance that your
+institution’s storage allocation is sufficient. A single synchrotron
+experiment can exceed default allocations.</li>
+<li>
+<strong>Facility-specific metadata standards:</strong> Diamond and
+ISIS use specific metadata schemas and file formats (NeXus format for
+neutron data, for example). Familiarise yourself with these before your
+visit.</li>
+<li>
+<strong>Embargo and access policies:</strong> Some facility data is
+subject to an embargo period before public release. Understand the
+policy for your beamline.</li>
+</ul><p>In both HTE and large-scale facility contexts, the underlying RDM
+principles are identical to a small-scale experiment: record metadata
+systematically, use consistent names, keep raw data safe, and plan for
+deposition. The scale just means that failures are more expensive and
+harder to recover from.</p>
+<div id="challenge-10-mini-data-management-plan" class="callout challenge">
+<div class="callout-square">
+<i class="callout-icon" data-feather="zap"></i>
+</div>
+<span class="callout-header">Challenge</span>
+<div id="challenge-10-mini-data-management-plan" class="callout-inner">
+<h3 class="callout-title">Challenge 10: Mini Data Management Plan</h3>
+<div class="callout-content">
+<p>Your group has been awarded funding for a project that involves:</p>
+<ul><li>Synthesising 50 new compounds</li>
+<li>Characterising each by ¹H NMR, ¹³C NMR, IR, and high-resolution mass
+spectrometry</li>
+<li>Running 10 of them through a high-throughput screening facility</li>
+<li>Publishing results in an RSC journal</li>
+</ul><p>In groups of 3–4, spend 8 minutes sketching a mini data management
+plan:</p>
+<ol style="list-style-type: decimal"><li>What file naming convention will you use? Write an example file name
+for a ¹H NMR spectrum of compound 23.</li>
+<li>What metadata will you record for each NMR spectrum? List at least
+five items.</li>
+<li>Where will you store raw data during the project?</li>
+<li>Which repository will you deposit the data in at publication, and
+why?</li>
+<li>Roughly how much storage do you think you will need? (Make a
+back-of-envelope estimate.)</li>
+</ol></div>
+</div>
+</div>
+<div id="accordionSolution2" class="accordion challenge-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
+  <h4 class="accordion-header" id="headingSolution2"> Discussion </h4>
+</button>
+<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
+<div class="accordion-body">
+<p><strong>1. File naming.</strong> A good example:
+<code>2025-03-15_cpd023_1H-NMR_400MHz.fid</code> (raw) and
+<code>2025-03-15_cpd023_1H-NMR_400MHz.jdx</code> (exported open format).
+Key elements: date, compound identifier, technique, field strength.
+Avoid spaces and special characters.</p>
+<p><strong>2. NMR metadata.</strong> Essential items: field strength,
+nucleus, solvent, pulse sequence, reference compound, temperature,
+instrument model, acquisition date. Also useful: concentration, number
+of scans, processing parameters.</p>
+<p><strong>3. Storage.</strong> Institutional managed storage is the
+right choice for active project data. Avoid relying on local hard drives
+or USB devices.</p>
+<p><strong>4. Repository.</strong> The Chemotion Repository is the best
+choice for this type of project (reaction data, NMR, MS, IR).
+Institutional repository deposit may also be required. Zenodo is a valid
+fallback if Chemotion does not suit your data. For journals requiring
+it, CSD deposition would be needed for any crystal structures.</p>
+<p><strong>5. Storage estimate.</strong> Rough numbers: a Bruker ¹H FID
+is typically 1–10 MB; ¹³C and 2D spectra are larger. For 50 compounds ×
+2 nuclei × ~5 MB average = ~500 MB for NMR alone. IR and MS data are
+smaller. HTE data could easily add gigabytes. A rough estimate of 5–20
+GB for the full project is reasonable to plan around.</p>
+</div>
+</div>
+</div>
+</div>
 <div id="keypoints1" class="callout keypoints">
 <div class="callout-square">
 <i class="callout-icon" data-feather="key"></i>
@@ -409,14 +689,24 @@ detailed content plan.</p>
 <span class="callout-header">Key Points</span>
 <div class="callout-inner">
 <div class="callout-content">
-<ul><li>TODO: Add key points</li>
+<ul><li>Record metadata for every analytical measurement at the time of
+acquisition – it cannot be reliably reconstructed later.</li>
+<li>For NMR, always save the raw FID alongside the processed spectrum,
+and record field strength, nucleus, solvent, pulse sequence, and
+reference compound as a minimum.</li>
+<li>A <code>README.md</code> and <code>data-dictionary.csv</code> at the
+root of every project folder cost little time to write and save a great
+deal of confusion later.</li>
+<li>High-throughput and large-scale facilities require automated
+metadata capture and advance storage planning – the same principles
+apply, but the consequences of skipping them are much larger.</li>
+<li>Open format exports (JCAMP-DX for spectra, CIF for crystal
+structures) should accompany vendor format raw files for all deposited
+data.</li>
 </ul></div>
 </div>
 </div>
-
-
-
-      </div> <!-- / div.lesson-content -->
+</section></div> <!-- / div.lesson-content -->
     </main><!-- / main#main-content.main-content --><nav class="bottom-pagination mx-md-4" aria-label="Previous and Next Chapter"><div class="d-block d-sm-block d-md-none">
         <a class="chapter-link" href="../instructor/09-chemistry-repositories.html"><i aria-hidden="true" class="small-arrow" data-feather="arrow-left"></i>Previous</a>
         <a class="chapter-link float-end" href="../instructor/11-psdi.html">Next<i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i></a>
@@ -476,7 +766,7 @@ detailed content plan.</p>
   "url": "https://aichemy-hub.github.io/rdm-for-chemists/instructor/10-managing-chemistry-data.html",
   "identifier": "https://aichemy-hub.github.io/rdm-for-chemists/instructor/10-managing-chemistry-data.html",
   "dateCreated": "2026-03-18",
-  "dateModified": "2026-03-18",
+  "dateModified": "2026-03-24",
   "datePublished": "2026-03-24"
 }
 

@@ -551,15 +551,53 @@ schema for spectroscopic data in chemistry.</li>
 </ul></section><section id="09-chemistry-repositories"><h2 class="section-heading"><a href="09-chemistry-repositories.html">Chemistry Data Repositories and Databases</a></h2>
 <hr class="half-width">
 <ul>
-<li>TODO: Add key points</li>
+<li>Domain-specific repositories provide better discoverability and
+community-standard validation than general-purpose alternatives – use
+them as your first choice.</li>
+<li>Key repositories for chemistry include Chemotion
+(synthetic/spectroscopic), CSD (crystal structures), NOMAD and ioChem-BD
+(computational), and Zenodo (general fallback).</li>
+<li>When a paper involves multiple data types, split the deposit across
+appropriate repositories – each with its own DOI – rather than pooling
+everything in a general-purpose archive. List all DOIs in the data
+access statement.</li>
+<li>Crystal structure deposition in the CSD is mandatory for most
+crystallography journals.</li>
+<li>re3data.org and FAIRsharing.org are the best starting points for
+finding a repository appropriate for your data type.</li>
+<li>NFDI4Chem provides freely accessible guidance and tools for
+chemistry data management regardless of where you are based.</li>
 </ul></section><section id="10-managing-chemistry-data"><h2 class="section-heading"><a href="10-managing-chemistry-data.html">Managing Data from Common Chemistry Techniques</a></h2>
 <hr class="half-width">
 <ul>
-<li>TODO: Add key points</li>
+<li>Record metadata for every analytical measurement at the time of
+acquisition – it cannot be reliably reconstructed later.</li>
+<li>For NMR, always save the raw FID alongside the processed spectrum,
+and record field strength, nucleus, solvent, pulse sequence, and
+reference compound as a minimum.</li>
+<li>A <code>README.md</code> and <code>data-dictionary.csv</code> at the
+root of every project folder cost little time to write and save a great
+deal of confusion later.</li>
+<li>High-throughput and large-scale facilities require automated
+metadata capture and advance storage planning – the same principles
+apply, but the consequences of skipping them are much larger.</li>
+<li>Open format exports (JCAMP-DX for spectra, CIF for crystal
+structures) should accompany vendor format raw files for all deposited
+data.</li>
 </ul></section><section id="11-psdi"><h2 class="section-heading"><a href="11-psdi.html">PSDI and the Chemistry Data Landscape</a></h2>
 <hr class="half-width">
 <ul>
-<li>TODO: Add key points</li>
+<li>PSDI provides practical tools and guidance for chemistry and
+physical sciences data management in the UK, including format
+conversion, legacy data digitisation, and training resources.</li>
+<li>The chemistry data ecosystem is becoming more connected: PSDI,
+NFDI4Chem, and IUPAC are working towards compatible standards that
+connect instruments, notebooks, repositories, and publications.</li>
+<li>You do not need to adopt everything at once – picking one or two
+concrete improvements and building from there is more sustainable than
+an overhaul.</li>
+<li>re3data.org, the NFDI4Chem Knowledge Base, and PSDI Resources are
+all free starting points for further learning.</li>
 </ul></section>
 </div>
     </main>

@@ -119,11 +119,11 @@
   Research Data Management for Chemists
 </div>
 
-<aside class="col-md-12 lesson-progress"><div style="width: 77%" class="percentage">
-    77%
+<aside class="col-md-12 lesson-progress"><div style="width: 75%" class="percentage">
+    75%
   </div>
   <div class="progress incubator">
-    <div class="progress-bar incubator" role="progressbar" style="width: 77%" aria-valuenow="77" aria-label="Lesson Progress" aria-valuemin="0" aria-valuemax="100">
+    <div class="progress-bar incubator" role="progressbar" style="width: 75%" aria-valuenow="75" aria-label="Lesson Progress" aria-valuemin="0" aria-valuemax="100">
     </div>
   </div>
 </aside><div class="container">
@@ -279,12 +279,23 @@
 <div class="accordion accordion-flush" id="accordionFlushcurrent">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-headingcurrent">
+      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapsecurrent" aria-expanded="true" aria-controls="flush-collapsecurrent">
         <span class="visually-hidden">Current Chapter</span>
         <span class="current-chapter">
         9. Chemistry Data Repositories and Databases
         </span>
-      
+      </button>
     </div><!--/div.accordion-header-->
+
+    <div id="flush-collapsecurrent" class="accordion-collapse collapse show" aria-labelledby="flush-headingcurrent" data-bs-parent="#accordionFlushcurrent">
+      <div class="accordion-body">
+        <ul><li><a href="#why-use-a-chemistry-specific-repository">Why Use a Chemistry-Specific Repository?</a></li>
+<li><a href="#key-chemistry-repositories">Key Chemistry Repositories</a></li>
+<li><a href="#when-a-paper-has-multiple-data-types">When a Paper Has Multiple Data Types</a></li>
+<li><a href="#nfdi4chem-and-the-german-chemistry-data-infrastructure">NFDI4Chem and the German Chemistry Data Infrastructure</a></li>
+<li><a href="#journal-policies-and-mandatory-deposition">Journal Policies and Mandatory Deposition</a></li>
+        </ul></div><!--/div.accordion-body-->
+    </div><!--/div.accordion-collapse-->
 
   </div><!--/div.accordion-item-->
 </div><!--/div.accordion-flush-->
@@ -365,7 +376,7 @@
       </div>
       <hr></nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Chemistry Data Repositories and Databases</h1>
-        <p>Last updated on 2026-03-18 |
+        <p>Last updated on 2026-03-24 |
 
         <a href="https://github.com/aichemy-hub/rdm-for-chemists/edit/main/episodes/09-chemistry-repositories.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 
@@ -384,7 +395,12 @@
 <div class="card-body">
 <div class="inner">
 <h3 class="card-title">Questions</h3>
-<ul><li>TODO: Add framing questions</li>
+<ul><li>Where should I deposit chemistry data to make it findable and
+reusable?</li>
+<li>What chemistry-specific repositories exist and what do they
+accept?</li>
+<li>What should I do when my paper includes several different types of
+data?</li>
 </ul></div>
 </div>
 </div>
@@ -392,14 +408,286 @@
 <div class="card-body">
 <div class="inner bordered">
 <h3 class="card-title">Objectives</h3>
-<ul><li>TODO: Add learning objectives</li>
+<ul><li>Identify domain-specific repositories for chemistry data</li>
+<li>Understand when to use a specialist repository rather than a
+general-purpose one</li>
+<li>Decide how to handle data deposits when a paper involves multiple
+data types</li>
+<li>Find and evaluate a chemistry repository relevant to your own
+research area</li>
 </ul></div>
 </div>
 </div>
 </div>
 </div>
-<p>TODO: Episode content to be written. See draft_syllabus.md for
-detailed content plan.</p>
+<section><h2 class="section-heading" id="why-use-a-chemistry-specific-repository">Why Use a Chemistry-Specific Repository?<a class="anchor" aria-label="anchor" href="#why-use-a-chemistry-specific-repository"></a></h2>
+<hr class="half-width"><p>You can deposit almost any data in a general-purpose repository like
+Zenodo or Figshare, satisfy most funder requirements, and obtain a DOI.
+So why bother with a domain-specific repository?</p>
+<p>The answer is discoverability and reusability. A general repository
+stores your files and mints a DOI, but a chemistry-specific repository
+understands your data. It can index compounds by chemical structure,
+enforce community metadata standards, validate file formats, and link
+your deposition directly to established databases. A crystal structure
+deposited in the Cambridge Structural Database (CSD) becomes part of a
+curated collection of over a million structures, searchable by geometry,
+connectivity, or space group. The same file sitting in Zenodo is just a
+file.</p>
+<p>The hierarchy of preference introduced in Episode 5 applies directly
+here:</p>
+<ol style="list-style-type: decimal"><li>
+<strong>Domain-specific repository:</strong> always the first choice
+if one exists for your data type</li>
+<li>
+<strong>Institutional repository:</strong> required by many UK
+universities for reporting purposes</li>
+<li>
+<strong>General-purpose repository:</strong> (Zenodo, Figshare) –
+always a valid fallback</li>
+</ol></section><section><h2 class="section-heading" id="key-chemistry-repositories">Key Chemistry Repositories<a class="anchor" aria-label="anchor" href="#key-chemistry-repositories"></a></h2>
+<hr class="half-width"><p>The table below covers some of the repositories most relevant to
+chemistry researchers in the UK.</p>
+<table class="table"><colgroup><col width="35%"><col width="44%"><col width="20%"></colgroup><thead><tr><th>Repository</th>
+<th>What it holds</th>
+<th>Notes</th>
+</tr></thead><tbody><tr><td><strong><a href="https://www.chemotion-repository.net/" class="external-link">Chemotion
+Repository</a></strong></td>
+<td>Reaction data, NMR, MS, IR, UV-Vis</td>
+<td>Free, open; integrates with Chemotion ELN; DOI minting</td>
+</tr><tr><td><strong><a href="https://www.ccdc.cam.ac.uk/" class="external-link">Cambridge Structural
+Database (CSD)</a></strong></td>
+<td>Small-molecule crystal structures</td>
+<td>Free to search; academic licence for full access; mandatory
+deposition for many journals</td>
+</tr><tr><td><strong><a href="https://nomad-lab.eu/" class="external-link">NOMAD</a></strong></td>
+<td>Computational materials science data</td>
+<td>Strong metadata standards for DFT, molecular dynamics</td>
+</tr><tr><td><strong><a href="https://www.iochem-bd.org/" class="external-link">ioChem-BD</a></strong></td>
+<td>Computational chemistry (DFT, MD, etc.)</td>
+<td>Accepts Gaussian, ORCA, CP2K, VASP outputs</td>
+</tr><tr><td><strong><a href="https://radar4chem.radar-service.eu/" class="external-link">RADAR4Chem</a></strong></td>
+<td>General chemistry research data</td>
+<td>Part of NFDI4Chem; accessible internationally</td>
+</tr><tr><td><strong><a href="https://www.rcsb.org/" class="external-link">Protein Data Bank
+(PDB)</a></strong></td>
+<td>Protein and macromolecular structures</td>
+<td>Essential for biochemistry and structural biology</td>
+</tr><tr><td><strong><a href="https://zenodo.org/" class="external-link">Zenodo</a></strong></td>
+<td>Anything</td>
+<td>Best fallback for data types without a specialist home</td>
+</tr></tbody></table><div id="which-repository-would-you-choose" class="callout challenge">
+<div class="callout-square">
+<i class="callout-icon" data-feather="zap"></i>
+</div>
+<span class="callout-header">Challenge</span>
+<div id="which-repository-would-you-choose" class="callout-inner">
+<h3 class="callout-title">Which Repository Would You Choose?</h3>
+<div class="callout-content">
+<p>A researcher produces the following datasets during a project. For
+each one, select the most appropriate repository from the options given
+and explain your reasoning.</p>
+<p><strong>1.</strong> A set of single-crystal X-ray diffraction data
+for a new organic small molecule.</p>
+<ul><li>A. Zenodo</li>
+<li>B. Cambridge Structural Database (CSD)</li>
+<li>C. NOMAD</li>
+<li>D. Protein Data Bank</li>
+</ul><p><strong>2.</strong> DFT input and output files from geometry
+optimisations of a series of transition metal complexes.</p>
+<ul><li>A. Chemotion Repository</li>
+<li>B. Cambridge Structural Database (CSD)</li>
+<li>C. ioChem-BD or NOMAD</li>
+<li>D. Figshare</li>
+</ul><p><strong>3.</strong> Reaction yield data, ¹H NMR spectra, and mass
+spectra from a synthetic chemistry project – no crystal structures or
+computational data.</p>
+<ul><li>A. NOMAD</li>
+<li>B. Protein Data Bank</li>
+<li>C. Chemotion Repository</li>
+<li>D. Zenodo is the only valid option for spectroscopic data</li>
+</ul></div>
+</div>
+</div>
+<div id="accordionSolution1" class="accordion challenge-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
+  <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
+</button>
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div class="accordion-body">
+<p><strong>1. B: Cambridge Structural Database (CSD).</strong> Crystal
+structure data for small organic molecules belongs in the CSD.
+Deposition is mandatory for most crystallography journals, and the CSD
+is the world’s curated reference collection for this data type. Zenodo
+is a valid fallback but provides none of the structural search,
+curation, or community visibility that the CSD offers.</p>
+<p><strong>2. C: ioChem-BD or NOMAD.</strong> Both are designed for
+computational chemistry output files and understand DFT codes. ioChem-BD
+is particularly well-suited for molecular systems; NOMAD has broader
+coverage of solid-state and materials codes. Chemotion is oriented
+towards experimental synthetic chemistry and does not handle DFT
+input/output files.</p>
+<p><strong>3. C: Chemotion Repository.</strong> Chemotion is built for
+exactly this type of data: it understands reactions and spectra, accepts
+JCAMP-DX and other open formats, links records to chemical structures,
+and integrates with the Chemotion ELN. Answer D is wrong: Zenodo is a
+valid alternative, but it is not the <em>only</em> option and is not the
+best choice when a domain-specific repository exists.</p>
+</div>
+</div>
+</div>
+</div>
+</section><section><h2 class="section-heading" id="when-a-paper-has-multiple-data-types">When a Paper Has Multiple Data Types<a class="anchor" aria-label="anchor" href="#when-a-paper-has-multiple-data-types"></a></h2>
+<hr class="half-width"><p>Most chemistry papers draw on several techniques simultaneously. A
+single publication might combine crystal structures, NMR and mass
+spectra, and DFT calculations, each of which has a different natural
+repository home. This situation is extremely common, and knowing how to
+handle it is as important as knowing which repositories exist.</p>
+<p><strong>Splitting across repositories is usually the right
+approach.</strong> Deposit each data type where it fits best: crystal
+structures to the CSD, computational output files to ioChem-BD or NOMAD,
+reaction and spectroscopic data to Chemotion. Each deposit receives its
+own DOI, and the paper’s data access statement simply lists them all.
+Splitting is better for discoverability than pooling everything in a
+single general-purpose archive: your crystal structure becomes part of
+the CSD’s searchable collection, your DFT files become findable
+alongside related computational datasets, and so on. Multiple DOIs in a
+data access statement are perfectly acceptable to funders and
+journals.</p>
+<p><strong>When a single deposit is more appropriate.</strong> There are
+situations where keeping data together in a general-purpose repository
+makes more sense:</p>
+<ul><li>
+<strong>No specialist repository exists</strong> for any of your
+data types. Zenodo or your institutional repository is the right home
+for all of it.</li>
+<li>
+<strong>The relationships between data types are central to the
+paper</strong> for example, a dataset where computational predictions
+are directly compared with experimental outcomes row-by-row is more
+coherent and interpretable as a single structured package.</li>
+<li>
+<strong>Complexity warrants a “front door.”</strong> A
+well-structured Zenodo record with a clear README can link out to
+specialist deposits in the CSD, ioChem-BD, and Chemotion, giving readers
+a single starting point without sacrificing domain-specific
+discoverability. This hybrid approach is increasingly common for complex
+multi-technique papers.</li>
+</ul><p><strong>Journal policies often resolve the decision.</strong> Many
+journals now specify exactly where each data type should go: RSC
+journals require CSD deposition for crystal structures and recommend
+domain-specific repositories for other data. If your journal has
+explicit guidance, follow it. For anything not covered, apply the
+hierarchy of preference: domain-specific first, institutional second,
+general-purpose as a fallback.</p>
+<div id="signpost-multiple-dois-in-your-data-access-statement" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<span class="callout-header">Callout</span>
+<div id="signpost-multiple-dois-in-your-data-access-statement" class="callout-inner">
+<h3 class="callout-title">Signpost Multiple DOIs in Your Data Access
+Statement</h3>
+<div class="callout-content">
+<p>When data is split across repositories, mention each DOI explicitly
+in your data access statement, with a brief note on what each one
+contains. For example:</p>
+<blockquote>
+<p>“Crystal structure data are deposited in the Cambridge Structural
+Database (CCDC 2345678). NMR and mass spectrometry data are available in
+the Chemotion Repository at <a href="https://doi.org/10.14272/xxxxx" class="external-link uri">https://doi.org/10.14272/xxxxx</a> under a CC-BY 4.0
+licence. DFT input and output files are deposited in ioChem-BD at <a href="https://doi.org/10.xxxxx" class="external-link uri">https://doi.org/10.xxxxx</a>.”</p>
+</blockquote>
+<p>This is clearer and more useful to readers than a single catch-all
+reference, and it ensures each dataset is correctly attributed and
+independently citable.</p>
+</div>
+</div>
+</div>
+</section><section><h2 class="section-heading" id="nfdi4chem-and-the-german-chemistry-data-infrastructure">NFDI4Chem and the German Chemistry Data Infrastructure<a class="anchor" aria-label="anchor" href="#nfdi4chem-and-the-german-chemistry-data-infrastructure"></a></h2>
+<hr class="half-width"><p><strong>NFDI4Chem</strong> is Germany’s national initiative for
+chemistry research data infrastructure, part of the broader National
+Research Data Infrastructure (NFDI). Despite being German-led, its
+resources are freely available internationally and represent current
+best practice for chemistry data management. NFDI4Chem maintains the
+Chemotion ecosystem, working groups developing community standards for
+NMR and mass spectrometry, and a detailed knowledge base at <a href="https://knowledgebase.nfdi4chem.de/" class="external-link">knowledgebase.nfdi4chem.de</a>
+covering repositories, file formats, metadata standards, and practical
+guidance. Whether or not you are based in Germany, the NFDI4Chem
+Knowledge Base is one of the best free resources for practical chemistry
+RDM.</p>
+</section><section><h2 class="section-heading" id="journal-policies-and-mandatory-deposition">Journal Policies and Mandatory Deposition<a class="anchor" aria-label="anchor" href="#journal-policies-and-mandatory-deposition"></a></h2>
+<hr class="half-width"><p>Many chemistry journals now require data deposition as a condition of
+publication. Requirements vary by journal and are tightening across the
+field:</p>
+<ul><li>
+<strong>Crystal structures:</strong> Deposition in the CSD is
+mandatory for most crystallography journals (RSC, Wiley, ACS). The CCDC
+reference number must be cited in the paper.</li>
+<li>
+<strong>Spectroscopic data:</strong> RSC journals expect supporting
+data to be deposited in a repository rather than attached as
+supplementary information.</li>
+<li>
+<strong>Computational data:</strong> Journals such as <em>Journal of
+Chemical Theory and Computation</em> encourage deposition of input and
+output files in a specialist repository.</li>
+</ul><p>Always check the specific journal’s data policy before
+submission.</p>
+<div id="challenge-9-find-and-evaluate-a-repository" class="callout challenge">
+<div class="callout-square">
+<i class="callout-icon" data-feather="zap"></i>
+</div>
+<span class="callout-header">Challenge</span>
+<div id="challenge-9-find-and-evaluate-a-repository" class="callout-inner">
+<h3 class="callout-title">Challenge 9: Find and Evaluate a
+Repository</h3>
+<div class="callout-content">
+<p>Go to <a href="https://www.re3data.org/" class="external-link">re3data.org</a>, a global
+registry of research data repositories, and search for repositories
+relevant to your own area of chemistry.</p>
+<p>Find one repository you were not previously aware of, then note
+down:</p>
+<ol style="list-style-type: decimal"><li>What is it called, and what type of data does it accept?</li>
+<li>Does it mint DOIs?</li>
+<li>Is it free to deposit?</li>
+<li>What metadata standards or controlled vocabularies does it use?</li>
+<li>What file formats does it require or recommend?</li>
+</ol><p>Share your findings with your neighbour.</p>
+</div>
+</div>
+</div>
+<div id="accordionSolution2" class="accordion challenge-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
+  <h4 class="accordion-header" id="headingSolution2"> Discussion </h4>
+</button>
+<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
+<div class="accordion-body">
+<p>Common finds when navigating re3data.org for chemistry include:</p>
+<ul><li>
+<strong>Chemotion Repository</strong> (synthetic chemistry,
+spectroscopy)</li>
+<li>
+<strong>CSD/CCDC</strong> (crystal structures)</li>
+<li>
+<strong>NOMAD or ioChem-BD</strong> (computational data)</li>
+<li>
+<strong>MassBank</strong> (mass spectrometry reference spectra)</li>
+<li>
+<strong>nmrXiv</strong> (NMR spectra, developed by NFDI4Chem)</li>
+<li>
+<strong>Zenodo</strong> (general fallback for any data type)</li>
+</ul><p>Key things to check: persistent identifiers (DOIs), long-term
+preservation commitments, metadata standards enforced at upload, and
+whether the repository is indexed in re3data, FAIRsharing, or DataCite.
+A repository that appears in multiple registries with an active
+community is a safer long-term choice than one that is only recently
+established.</p>
+</div>
+</div>
+</div>
+</div>
 <div id="keypoints1" class="callout keypoints">
 <div class="callout-square">
 <i class="callout-icon" data-feather="key"></i>
@@ -407,14 +695,26 @@ detailed content plan.</p>
 <span class="callout-header">Key Points</span>
 <div class="callout-inner">
 <div class="callout-content">
-<ul><li>TODO: Add key points</li>
+<ul><li>Domain-specific repositories provide better discoverability and
+community-standard validation than general-purpose alternatives – use
+them as your first choice.</li>
+<li>Key repositories for chemistry include Chemotion
+(synthetic/spectroscopic), CSD (crystal structures), NOMAD and ioChem-BD
+(computational), and Zenodo (general fallback).</li>
+<li>When a paper involves multiple data types, split the deposit across
+appropriate repositories – each with its own DOI – rather than pooling
+everything in a general-purpose archive. List all DOIs in the data
+access statement.</li>
+<li>Crystal structure deposition in the CSD is mandatory for most
+crystallography journals.</li>
+<li>re3data.org and FAIRsharing.org are the best starting points for
+finding a repository appropriate for your data type.</li>
+<li>NFDI4Chem provides freely accessible guidance and tools for
+chemistry data management regardless of where you are based.</li>
 </ul></div>
 </div>
 </div>
-
-
-
-      </div> <!-- / div.lesson-content -->
+</section></div> <!-- / div.lesson-content -->
     </main><!-- / main#main-content.main-content --><nav class="bottom-pagination mx-md-4" aria-label="Previous and Next Chapter"><div class="d-block d-sm-block d-md-none">
         <a class="chapter-link" href="08-metadata-and-standards.html"><i aria-hidden="true" class="small-arrow" data-feather="arrow-left"></i>Previous</a>
         <a class="chapter-link float-end" href="10-managing-chemistry-data.html">Next<i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i></a>
@@ -474,7 +774,7 @@ detailed content plan.</p>
   "url": "https://aichemy-hub.github.io/rdm-for-chemists/09-chemistry-repositories.html",
   "identifier": "https://aichemy-hub.github.io/rdm-for-chemists/09-chemistry-repositories.html",
   "dateCreated": "2026-03-18",
-  "dateModified": "2026-03-18",
+  "dateModified": "2026-03-24",
   "datePublished": "2026-03-24"
 }
 

@@ -297,12 +297,21 @@
 <div class="accordion accordion-flush" id="accordionFlushcurrent">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-headingcurrent">
+      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapsecurrent" aria-expanded="true" aria-controls="flush-collapsecurrent">
         <span class="visually-hidden">Current Chapter</span>
         <span class="current-chapter">
         11. PSDI and the Chemistry Data Landscape
         </span>
-      
+      </button>
     </div><!--/div.accordion-header-->
+
+    <div id="flush-collapsecurrent" class="accordion-collapse collapse show" aria-labelledby="flush-headingcurrent" data-bs-parent="#accordionFlushcurrent">
+      <div class="accordion-body">
+        <ul><li><a href="#what-is-psdi">What Is PSDI?</a></li>
+<li><a href="#psdi-resources-and-tools">PSDI Resources and Tools</a></li>
+<li><a href="#the-wider-chemistry-data-landscape">The Wider Chemistry Data Landscape</a></li>
+        </ul></div><!--/div.accordion-body-->
+    </div><!--/div.accordion-collapse-->
 
   </div><!--/div.accordion-item-->
 </div><!--/div.accordion-flush-->
@@ -365,7 +374,7 @@
       </div>
       <hr></nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>PSDI and the Chemistry Data Landscape</h1>
-        <p>Last updated on 2026-03-18 |
+        <p>Last updated on 2026-03-24 |
 
         <a href="https://github.com/aichemy-hub/rdm-for-chemists/edit/main/episodes/11-psdi.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 
@@ -386,7 +395,11 @@
 <div class="card-body">
 <div class="inner">
 <h3 class="card-title">Questions</h3>
-<ul><li>TODO: Add framing questions</li>
+<ul><li>What is PSDI and how can it help me manage chemistry data?</li>
+<li>How does the UK chemistry data infrastructure connect to
+international initiatives?</li>
+<li>Where can I go for further training and support in chemistry data
+management?</li>
 </ul></div>
 </div>
 </div>
@@ -394,14 +407,105 @@
 <div class="card-body">
 <div class="inner bordered">
 <h3 class="card-title">Objectives</h3>
-<ul><li>TODO: Add learning objectives</li>
+<ul><li>Describe what the Physical Sciences Data Infrastructure (PSDI) is
+and what it provides</li>
+<li>Identify PSDI tools and resources relevant to your own work</li>
+<li>Place PSDI in the context of the wider chemistry data ecosystem</li>
 </ul></div>
 </div>
 </div>
 </div>
 </div>
-<p>TODO: Episode content to be written. See draft_syllabus.md for
-detailed content plan.</p>
+<section><h2 class="section-heading" id="what-is-psdi">What Is PSDI?<a class="anchor" aria-label="anchor" href="#what-is-psdi"></a></h2>
+<hr class="half-width"><p>The <strong>Physical Sciences Data Infrastructure</strong> (<a href="https://www.psdi.ac.uk/" class="external-link">PSDI</a>) is a UK initiative funded by
+UKRI that supports researchers in chemistry, materials science, and
+related physical sciences to work with research data more effectively.
+Rather than building a single monolithic platform, PSDI focuses on
+connecting and strengthening the data ecosystem that already exists:
+repositories, standards, conversion tools, and training.</p>
+<p>PSDI works alongside and complements other UK infrastructure,
+including institutional RDM services, the Carpentries training network,
+and the Diamond and ISIS large-scale facilities. Its tools and resources
+are freely available to all researchers regardless of their funder or
+institution.</p>
+</section><section><h2 class="section-heading" id="psdi-resources-and-tools">PSDI Resources and Tools<a class="anchor" aria-label="anchor" href="#psdi-resources-and-tools"></a></h2>
+<hr class="half-width"><div class="section level3">
+<h3 id="data-conversion-service">Data Conversion Service<a class="anchor" aria-label="anchor" href="#data-conversion-service"></a></h3>
+<p>One of the most practical barriers to open, FAIR chemistry data is
+format conversion. Vendor instrument files (Bruker <code>.fid</code>,
+Agilent <code>.d</code>, Thermo <code>.raw</code>) need to become open
+formats (JCAMP-DX, mzML, CIF) for deposition, and this conversion is
+often technically difficult or lossy.</p>
+<p>PSDI provides a <a href="https://data-conversion.psdi.ac.uk/" class="external-link">Data
+Conversion Service</a> that handles common chemistry format conversions
+and, importantly, assesses the quality of the conversion. It is
+available as a web application, a command-line tool, and a Python
+library, making it accessible at every level of technical
+confidence.</p>
+</div>
+<div class="section level3">
+<h3 id="data-revival">Data Revival<a class="anchor" aria-label="anchor" href="#data-revival"></a></h3>
+<p>Legacy data – spectra recorded on instruments no longer in service,
+data stored in obsolete formats, or results captured only on paper –
+represents a large body of scientific knowledge that is increasingly
+inaccessible. PSDI’s <strong>Data Revival</strong> service uses
+AI-assisted tools to transform handwritten lab notes and legacy records
+into machine-readable data, making it possible to integrate historical
+datasets into modern workflows.</p>
+</div>
+<div class="section level3">
+<h3 id="resource-catalogue">Resource Catalogue<a class="anchor" aria-label="anchor" href="#resource-catalogue"></a></h3>
+<p>PSDI maintains a curated catalogue of high-quality data sources
+relevant to physical scientists, both open and commercial. Rather than
+searching the web for relevant databases and repositories, the catalogue
+provides a vetted starting point.</p>
+</div>
+<div class="section level3">
+<h3 id="guidance-and-training">Guidance and Training<a class="anchor" aria-label="anchor" href="#guidance-and-training"></a></h3>
+<p>PSDI publishes practical guidance for physical scientists on working
+with research data: tool documentation, worked examples, and
+best-practice recommendations. Much of this material is
+chemistry-specific and complements more generic RDM training resources
+like the ones covered in Part 1 of this workshop.</p>
+</div>
+<div class="section level3">
+<h3 id="camml-school">CaMML School<a class="anchor" aria-label="anchor" href="#camml-school"></a></h3>
+<p>The <strong>Chemistry and Materials Machine Learning (CaMML)
+School</strong> is a PSDI-supported training programme for PhD students
+and early-career researchers, covering data-driven approaches to
+chemistry and materials research. If you are interested in machine
+learning applied to chemical data, this is a good next step.</p>
+<blockquote>
+<p>PSDI Resources: <a href="https://resources.psdi.ac.uk/" class="external-link">resources.psdi.ac.uk</a> PSDI on
+GitHub: <a href="https://github.com/PSDI-UK" class="external-link">github.com/PSDI-UK</a></p>
+</blockquote>
+</div>
+</section><section><h2 class="section-heading" id="the-wider-chemistry-data-landscape">The Wider Chemistry Data Landscape<a class="anchor" aria-label="anchor" href="#the-wider-chemistry-data-landscape"></a></h2>
+<hr class="half-width"><p>PSDI does not operate in isolation. The chemistry data ecosystem is
+increasingly international and interconnected, with several major
+initiatives working towards compatible standards and infrastructure.</p>
+<p><strong>NFDI4Chem</strong> (Germany) maintains the Chemotion
+ecosystem and a detailed knowledge base for chemistry RDM. Its community
+standards for NMR, mass spectrometry, and synthetic chemistry are
+internationally recognised best practice regardless of where you
+work.</p>
+<p><strong>IUPAC</strong> coordinates digital chemistry standards
+through its Committee on Publications and Cheminformatics Data Standards
+(CPCDS), including InChI, SMILES, and the FAIRSpec standard for
+spectroscopic data. These standards form the language that connects
+instruments, notebooks, repositories, and publications.</p>
+<p><strong>Horizon Europe</strong>, the EU’s research funding framework,
+requires open data by default under the principle “as open as possible,
+as closed as necessary.” As collaborative projects with European
+partners become more common, understanding this framework is
+increasingly relevant for UK researchers.</p>
+<p>The long-term vision is a connected ecosystem: data flows from an
+instrument into an ELN, is annotated with standard identifiers and
+metadata, exported in an open format, deposited in a domain-specific
+repository, assigned a DOI, and cited in a publication – with each step
+automated or assisted as far as possible. We are not fully there yet,
+but the infrastructure described in this workshop is moving steadily in
+that direction.</p>
 <div id="keypoints1" class="callout keypoints">
 <div class="callout-square">
 <i class="callout-icon" data-feather="key"></i>
@@ -409,14 +513,21 @@ detailed content plan.</p>
 <span class="callout-header">Key Points</span>
 <div class="callout-inner">
 <div class="callout-content">
-<ul><li>TODO: Add key points</li>
+<ul><li>PSDI provides practical tools and guidance for chemistry and
+physical sciences data management in the UK, including format
+conversion, legacy data digitisation, and training resources.</li>
+<li>The chemistry data ecosystem is becoming more connected: PSDI,
+NFDI4Chem, and IUPAC are working towards compatible standards that
+connect instruments, notebooks, repositories, and publications.</li>
+<li>You do not need to adopt everything at once – picking one or two
+concrete improvements and building from there is more sustainable than
+an overhaul.</li>
+<li>re3data.org, the NFDI4Chem Knowledge Base, and PSDI Resources are
+all free starting points for further learning.</li>
 </ul></div>
 </div>
 </div>
-
-
-
-      </div> <!-- / div.lesson-content -->
+</section></div> <!-- / div.lesson-content -->
     </main><!-- / main#main-content.main-content --><nav class="bottom-pagination mx-md-4" aria-label="Previous and Next Chapter"><div class="d-block d-sm-block d-md-none">
         <a class="chapter-link" href="../instructor/10-managing-chemistry-data.html"><i aria-hidden="true" class="small-arrow" data-feather="arrow-left"></i>Previous</a>
         <a class="chapter-link float-end" href="../instructor/index.html">Next<i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i></a>
@@ -476,7 +587,7 @@ detailed content plan.</p>
   "url": "https://aichemy-hub.github.io/rdm-for-chemists/instructor/11-psdi.html",
   "identifier": "https://aichemy-hub.github.io/rdm-for-chemists/instructor/11-psdi.html",
   "dateCreated": "2026-03-18",
-  "dateModified": "2026-03-18",
+  "dateModified": "2026-03-24",
   "datePublished": "2026-03-24"
 }
 
