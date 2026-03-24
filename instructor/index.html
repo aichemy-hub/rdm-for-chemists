@@ -359,20 +359,94 @@
       
 <div class="section level1">
 <h1 id="workshop-overview">Workshop overview<a class="anchor" aria-label="anchor" href="#workshop-overview"></a></h1>
-<p>Good research data management is essential for reproducible,
+<p>Good research data management (RDM) is essential for reproducible,
 impactful science, yet it is rarely taught as part of a chemistry
 degree. This workshop gives PhD students and postdocs working in
 chemistry the practical knowledge and skills to manage their research
 data effectively, from the first day of a project to long after
 publication.</p>
-<p>Part 1 covers general research data management principles: planning,
-storing, organising, and sharing data, with reference to UK funder
-requirements and the FAIR principles. Part 2 applies these principles to
-the specific challenges of chemistry research, covering topics such as
-metadata standards for spectroscopic data, electronic lab notebooks,
-chemistry-specific data repositories, and managing data from analytical
-techniques including NMR, IR, and mass spectrometry.</p>
-<p>The workshop follows the hands-on, participatory style of <a href="https://carpentries.org/" class="external-link">The Carpentries</a>, with short teaching
+<p><strong>Part 1</strong> (Episodes 1–5) covers general research data
+management principles: planning, storing, organising, sharing, and
+licensing data, with reference to UK funder requirements and the FAIR
+principles.</p>
+<p><strong>Part 2</strong> (Episodes 6–11) applies these principles to
+the specific challenges of chemistry research: reproducibility,
+electronic lab notebooks, metadata standards for spectroscopic data,
+chemistry-specific repositories, managing data from analytical
+techniques, and the UK Physical Sciences Data Infrastructure (PSDI).</p>
+<div class="section level2">
+<h2 id="episode-timings">Episode timings<a class="anchor" aria-label="anchor" href="#episode-timings"></a></h2>
+<table class="table"><colgroup><col width="7%"><col width="22%"><col width="25%"><col width="27%"><col width="17%"></colgroup><thead><tr><th>#</th>
+<th>Episode</th>
+<th>Teaching</th>
+<th>Exercises</th>
+<th>Total</th>
+</tr></thead><tbody><tr><td>1</td>
+<td>Why Does Research Data Management Matter?</td>
+<td>10 min</td>
+<td>5 min</td>
+<td>15 min</td>
+</tr><tr><td>2</td>
+<td>Planning Your Data</td>
+<td>15 min</td>
+<td>10 min</td>
+<td>25 min</td>
+</tr><tr><td>3</td>
+<td>FAIR Data Principles</td>
+<td>10 min</td>
+<td>10 min</td>
+<td>20 min</td>
+</tr><tr><td>4</td>
+<td>Data Storage, Security, and Organisation</td>
+<td>10 min</td>
+<td>10 min</td>
+<td>20 min</td>
+</tr><tr><td>5</td>
+<td>Sharing, Preserving, and Licensing Your Data</td>
+<td>10 min</td>
+<td>10 min</td>
+<td>20 min</td>
+</tr><tr><td></td>
+<td><em>Break</em></td>
+<td></td>
+<td></td>
+<td><em>10–15 min</em></td>
+</tr><tr><td>6</td>
+<td>The Reproducibility Crisis in Chemistry</td>
+<td>10 min</td>
+<td>5 min</td>
+<td>15 min</td>
+</tr><tr><td>7</td>
+<td>Electronic Lab Notebooks for Chemists</td>
+<td>12 min</td>
+<td>3 min</td>
+<td>15 min</td>
+</tr><tr><td>8</td>
+<td>Metadata and Chemical Data Standards</td>
+<td>12 min</td>
+<td>8 min</td>
+<td>20 min</td>
+</tr><tr><td>9</td>
+<td>Chemistry Data Repositories and Databases</td>
+<td>12 min</td>
+<td>8 min</td>
+<td>20 min</td>
+</tr><tr><td>10</td>
+<td>Managing Data from Common Chemistry Techniques</td>
+<td>12 min</td>
+<td>8 min</td>
+<td>20 min</td>
+</tr><tr><td>11</td>
+<td>PSDI and the Chemistry Data Landscape</td>
+<td>10 min</td>
+<td>0 min</td>
+<td>10 min</td>
+</tr><tr><td></td>
+<td><strong>Total (excl. break)</strong></td>
+<td><strong>123 min</strong></td>
+<td><strong>77 min</strong></td>
+<td><strong>200 min</strong></td>
+</tr></tbody></table><p>The workshop follows the hands-on, participatory style of <a href="https://carpentries.org/" class="external-link">The Carpentries</a>, with short teaching
 episodes interspersed with practical challenges.</p>
 <div id="prerequisites" class="callout prereq">
 <div class="callout-square">
@@ -383,15 +457,15 @@ episodes interspersed with practical challenges.</p>
 <h3 class="callout-title">Prerequisites</h3>
 <div class="callout-content">
 <p>No prior knowledge of research data management is required. The
-workshop is designed for a mixed audience — from those encountering RDM
+workshop is designed for a mixed audience from those encountering RDM
 concepts for the first time to those with some awareness who want to
 deepen their understanding.</p>
 <p>Participants should:</p>
 <ul><li>Have a laptop with a web browser and internet access</li>
 <li>Be working in (or about to start) a chemistry-related research
 project</li>
-<li>Download the challenge data files before the workshop (see <a href="index.html#setup">Setup</a>)</li>
 </ul></div>
+</div>
 </div>
 </div>
 </div>
@@ -546,39 +620,16 @@ Finish
 <strong>A laptop</strong> with a web browser and internet
 access</li>
 <li>
-<strong>The challenge data files</strong> (see below)</li>
-<li>
 <strong>A text editor</strong> capable of opening plain text files
 (e.g. VS Code, Notepad++, TextEdit, or any editor you are comfortable
 with)</li>
-</ol><p>No specialist software is required. All exercises use files you can
-open in a text editor and web browser.</p>
-</section><section><h2 class="section-heading" id="download-the-challenge-data">Download the Challenge Data<a class="anchor" aria-label="anchor" href="#download-the-challenge-data"></a></h2>
-<hr class="half-width"><ol style="list-style-type: decimal"><li>Download <a href="../data/challenge-data.zip">challenge-data.zip</a>
-and save it somewhere convenient (e.g. your Desktop or Documents
-folder).</li>
-<li>Unzip/extract the file. You should end up with a folder called
-<strong><code>challenge-data</code></strong> containing numbered
-sub-folders for each exercise.</li>
-</ol><p><strong>Let your instructor know if you need help with this
-step.</strong></p>
-<p>The challenge data folder has the following structure:</p>
-<div class="codewrapper sourceCode" id="cb1">
-<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" tabindex="-1"></a><span class="ex">challenge-data/</span></span>
-<span id="cb1-2"><a href="#cb1-2" tabindex="-1"></a><span class="ex">├──</span> 03_data-access-statements/</span>
-<span id="cb1-3"><a href="#cb1-3" tabindex="-1"></a><span class="ex">├──</span> 04_fair-self-assessment/</span>
-<span id="cb1-4"><a href="#cb1-4" tabindex="-1"></a><span class="ex">├──</span> 05_fix-this-folder/</span>
-<span id="cb1-5"><a href="#cb1-5" tabindex="-1"></a><span class="ex">├──</span> 06_sharing-licensing-repositories/</span>
-<span id="cb1-6"><a href="#cb1-6" tabindex="-1"></a><span class="ex">├──</span> 07_reproducibility-detective/</span>
-<span id="cb1-7"><a href="#cb1-7" tabindex="-1"></a><span class="ex">├──</span> 09_metadata/</span>
-<span id="cb1-8"><a href="#cb1-8" tabindex="-1"></a><span class="ex">├──</span> 10_find-a-repository/</span>
-<span id="cb1-9"><a href="#cb1-9" tabindex="-1"></a><span class="ex">├──</span> 11_multi-technique-dmp/</span>
-<span id="cb1-10"><a href="#cb1-10" tabindex="-1"></a><span class="ex">└──</span> 13_post-workshop-action-plan/</span></code></pre>
-</div>
-<p>Each folder contains the files and instructions needed for that
-challenge. Your instructor will tell you when to open each one.</p>
+</ol><p>No specialist software is required. All exercises are self-contained
+within the episode materials and use only a web browser and text
+editor.</p>
+</section><section><h2 class="section-heading" id="accounts">Accounts<a class="anchor" aria-label="anchor" href="#accounts"></a></h2>
+<hr class="half-width"><p>For one of the exercises you will use the <a href="https://cactus.nci.nih.gov/chemical/structure" class="external-link">NCI/CADD Chemical
+Identifier Resolver</a>, which is freely accessible and does not require
+an account.</p>
 </section></section></main><nav class="bottom-pagination mx-md-4" aria-label="Next Chapter"><!-- content for small screens --><div class="d-block d-sm-block d-md-none">
         <a class="chapter-link float-end" href="../instructor/01-why-rdm.html">Next<i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i></a>
       </div>

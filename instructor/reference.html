@@ -361,7 +361,7 @@
       </div>
       <hr></nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Reference</h1>
-        <p>Last updated on 2026-03-18 |
+        <p>Last updated on 2026-03-24 |
 
         <a href="https://github.com/aichemy-hub/rdm-for-chemists/edit/main/learners/reference.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 
@@ -379,7 +379,14 @@
 <hr class="half-width"><dl><dt>CAS Registry Number</dt>
 <dd>
 A unique numerical identifier assigned by the Chemical Abstracts Service
-to every chemical substance. Proprietary — not ideal for FAIR data.
+to every chemical substance. Proprietary – not ideal for FAIR data.
+</dd>
+<dt>Chemotion</dt>
+<dd>
+An open-source electronic lab notebook (ELN) and repository ecosystem
+for chemistry, maintained by NFDI4Chem. The ELN supports structure
+drawing, reaction schemes, and direct export to the Chemotion
+Repository.
 </dd>
 <dt>CIF (Crystallographic Information File)</dt>
 <dd>
@@ -394,6 +401,12 @@ An XML-based format for representing molecular and chemical data.
 <dd>
 A set of copyright licences that allow creators to grant permissions for
 reuse. Common variants include CC0, CC-BY, CC-BY-SA, and CC-BY-NC.
+</dd>
+<dt>CSD (Cambridge Structural Database)</dt>
+<dd>
+A curated collection of over one million small-molecule crystal
+structures, managed by the CCDC. Deposition is mandatory for most
+crystallography journals.
 </dd>
 <dt>Data Access Statement</dt>
 <dd>
@@ -431,6 +444,12 @@ substances, maintained by IUPAC.
 A fixed-length hash of an InChI string, designed for web searching and
 database lookups.
 </dd>
+<dt>ioChem-BD</dt>
+<dd>
+A computational chemistry repository that accepts DFT and molecular
+dynamics input/output files from codes including Gaussian, ORCA, CP2K,
+and VASP.
+</dd>
 <dt>IUPAC FAIRSpec</dt>
 <dd>
 An IUPAC specification defining metadata standards for FAIR management
@@ -439,17 +458,44 @@ of spectroscopic data in chemistry.
 <dt>JCAMP-DX</dt>
 <dd>
 An open standard file format for spectroscopic data (NMR, IR, MS,
-UV-Vis).
+UV-Vis, Raman). A plain-text format that embeds metadata in a structured
+header.
 </dd>
 <dt>Metadata</dt>
 <dd>
 Data about data. Descriptive information that provides context for a
 dataset, making it findable, interpretable, and reusable.
 </dd>
+<dt>mzML</dt>
+<dd>
+An open standard file format for mass spectrometry data.
+</dd>
+<dt>NFDI4Chem</dt>
+<dd>
+Germany’s national initiative for chemistry research data
+infrastructure. Maintains the Chemotion ecosystem and a detailed
+knowledge base of chemistry RDM best practice at <a href="https://knowledgebase.nfdi4chem.de/" class="external-link">knowledgebase.nfdi4chem.de</a>.
+</dd>
+<dt>NOMAD</dt>
+<dd>
+An open repository for computational materials science data, with strong
+metadata standards for DFT and molecular dynamics output.
+</dd>
+<dt>ODC-By / ODbL (Open Data Commons)</dt>
+<dd>
+Licences designed specifically for databases. ODC-By requires
+attribution; ODbL additionally requires derivative databases to remain
+open.
+</dd>
 <dt>PSDI (Physical Sciences Data Infrastructure)</dt>
 <dd>
 A UK initiative supporting researchers in chemistry and materials
 science with data management tools, guidance, and infrastructure.
+</dd>
+<dt>re3data</dt>
+<dd>
+A global registry of research data repositories, useful for finding
+domain-specific repositories. Available at <a href="https://www.re3data.org/" class="external-link">re3data.org</a>.
 </dd>
 <dt>SMILES (Simplified Molecular Input Line Entry System)</dt>
 <dd>
@@ -457,19 +503,52 @@ A widely used line notation for representing molecular structures as
 text strings.
 </dd>
 </dl></section><section><h2 class="section-heading" id="key-resources">Key Resources<a class="anchor" aria-label="anchor" href="#key-resources"></a></h2>
-<hr class="half-width"><ul><li><a href="https://dmponline.dcc.ac.uk/" class="external-link">DMPonline</a></li>
-<li><a href="https://www.go-fair.org/fair-principles/" class="external-link">GO FAIR — FAIR
+<hr class="half-width"><div class="section level3">
+<h3 id="general-rdm">General RDM<a class="anchor" aria-label="anchor" href="#general-rdm"></a></h3>
+<ul><li><a href="https://dmponline.dcc.ac.uk/" class="external-link">DMPonline</a></li>
+<li><a href="https://www.go-fair.org/fair-principles/" class="external-link">GO FAIR – FAIR
 Principles</a></li>
-<li><a href="https://www.re3data.org/" class="external-link">re3data.org — Registry of
+<li><a href="https://www.re3data.org/" class="external-link">re3data.org – Registry of
 Research Data Repositories</a></li>
-<li><a href="https://creativecommons.org/choose/" class="external-link">Creative Commons —
+<li><a href="https://fairsharing.org/" class="external-link">FAIRsharing.org</a></li>
+<li><a href="https://creativecommons.org/choose/" class="external-link">Creative Commons –
 Choose a Licence</a></li>
-<li><a href="https://iupac.org/what-we-do/digital-standards/" class="external-link">IUPAC —
+</ul></div>
+<div class="section level3">
+<h3 id="chemistry-specific">Chemistry-Specific<a class="anchor" aria-label="anchor" href="#chemistry-specific"></a></h3>
+<ul><li><a href="https://iupac.org/what-we-do/digital-standards/" class="external-link">IUPAC –
 Digital Standards</a></li>
+<li><a href="https://www.degruyterbrill.com/document/doi/10.1515/pac-2021-2009/html" class="external-link">IUPAC
+FAIRSpec</a></li>
+<li><a href="https://iupac.github.io/WFChemCookbook/" class="external-link">IUPAC FAIR
+Chemistry Cookbook</a></li>
 <li><a href="https://knowledgebase.nfdi4chem.de/" class="external-link">NFDI4Chem Knowledge
 Base</a></li>
-<li><a href="https://www.psdi.ac.uk/" class="external-link">PSDI</a></li>
-</ul></section></div> <!-- / div.lesson-content -->
+</ul></div>
+<div class="section level3">
+<h3 id="repositories">Repositories<a class="anchor" aria-label="anchor" href="#repositories"></a></h3>
+<ul><li><a href="https://www.chemotion-repository.net/" class="external-link">Chemotion
+Repository</a></li>
+<li><a href="https://www.ccdc.cam.ac.uk/" class="external-link">Cambridge Structural Database
+(CSD)</a></li>
+<li><a href="https://nomad-lab.eu/" class="external-link">NOMAD</a></li>
+<li><a href="https://www.iochem-bd.org/" class="external-link">ioChem-BD</a></li>
+<li><a href="https://zenodo.org/" class="external-link">Zenodo</a></li>
+</ul></div>
+<div class="section level3">
+<h3 id="electronic-lab-notebooks">Electronic Lab Notebooks<a class="anchor" aria-label="anchor" href="#electronic-lab-notebooks"></a></h3>
+<ul><li><a href="https://chemotion.net/" class="external-link">Chemotion ELN</a></li>
+<li><a href="https://www.elabftw.net/" class="external-link">eLabFTW</a></li>
+<li><a href="https://www.researchspace.com/" class="external-link">RSpace</a></li>
+</ul></div>
+<div class="section level3">
+<h3 id="uk-infrastructure-and-policy">UK Infrastructure and Policy<a class="anchor" aria-label="anchor" href="#uk-infrastructure-and-policy"></a></h3>
+<ul><li><a href="https://www.psdi.ac.uk/" class="external-link">PSDI</a></li>
+<li><a href="https://resources.psdi.ac.uk/" class="external-link">PSDI Resources</a></li>
+<li><a href="https://www.ukri.org/who-we-are/epsrc/our-policies-and-standards/policy-framework-on-research-data/" class="external-link">UKRI/EPSRC
+Policy Framework on Research Data</a></li>
+</ul></div>
+</section></div> <!-- / div.lesson-content -->
     </main><!-- / main#main-content.main-content --><nav class="bottom-pagination mx-md-4" aria-label="Previous and Next Chapter"><div class="d-block d-sm-block d-md-none">
         <a class="chapter-link" href="../instructor/index.html"><i aria-hidden="true" class="small-arrow" data-feather="arrow-left"></i>Previous</a>
         <a class="chapter-link float-end" href="../instructor/index.html">Next<i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i></a>
@@ -529,7 +608,7 @@ Base</a></li>
   "url": "https://aichemy-hub.github.io/rdm-for-chemists/instructor/reference.html",
   "identifier": "https://aichemy-hub.github.io/rdm-for-chemists/instructor/reference.html",
   "dateCreated": "2026-03-18",
-  "dateModified": "2026-03-18",
+  "dateModified": "2026-03-24",
   "datePublished": "2026-03-24"
 }
 
