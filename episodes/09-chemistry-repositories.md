@@ -1,6 +1,6 @@
 ---
 title: "Chemistry Data Repositories and Databases"
-teaching: 10
+teaching: 12
 exercises: 8
 ---
 
@@ -8,6 +8,7 @@ exercises: 8
 
 - Identify domain-specific repositories for chemistry data
 - Understand when to use a specialist repository rather than a general-purpose one
+- Decide how to handle data deposits when a paper involves multiple data types
 - Find and evaluate a chemistry repository relevant to your own research area
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
@@ -16,7 +17,7 @@ exercises: 8
 
 - Where should I deposit chemistry data to make it findable and reusable?
 - What chemistry-specific repositories exist and what do they accept?
-- How do I choose the right repository for my data type?
+- What should I do when my paper includes several different types of data?
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
@@ -42,7 +43,7 @@ The hierarchy of preference introduced in Episode 5 applies directly here:
 
 ## Key Chemistry Repositories
 
-The table below covers some ofthe repositories most relevant to chemistry researchers in the UK.
+The table below covers some of the repositories most relevant to chemistry researchers in the UK.
 
 | Repository | What it holds | Notes |
 |------------|---------------|-------|
@@ -106,6 +107,58 @@ but it is not the *only* option and is not the best choice when a domain-specifi
 repository exists.
 
 :::::::::::::::::::::::::
+
+::::::::::::::::::::::::::::::::::::::::::::::::::
+
+## When a Paper Has Multiple Data Types
+
+Most chemistry papers draw on several techniques simultaneously. A single publication
+might combine crystal structures, NMR and mass spectra, and DFT calculations, each
+of which has a different natural repository home. This situation is extremely common,
+and knowing how to handle it is as important as knowing which repositories exist.
+
+**Splitting across repositories is usually the right approach.** Deposit each data type
+where it fits best: crystal structures to the CSD, computational output files to
+ioChem-BD or NOMAD, reaction and spectroscopic data to Chemotion. Each deposit receives
+its own DOI, and the paper's data access statement simply lists them all. Splitting is
+better for discoverability than pooling everything in a single general-purpose archive:
+your crystal structure becomes part of the CSD's searchable collection, your DFT files
+become findable alongside related computational datasets, and so on. Multiple DOIs in
+a data access statement are perfectly acceptable to funders and journals.
+
+**When a single deposit is more appropriate.** There are situations where keeping data
+together in a general-purpose repository makes more sense:
+
+- **No specialist repository exists** for any of your data types. Zenodo or your
+  institutional repository is the right home for all of it.
+- **The relationships between data types are central to the paper** for example,
+  a dataset where computational predictions are directly compared with experimental
+  outcomes row-by-row is more coherent and interpretable as a single structured package.
+- **Complexity warrants a "front door."** A well-structured Zenodo record with a clear
+  README can link out to specialist deposits in the CSD, ioChem-BD, and Chemotion,
+  giving readers a single starting point without sacrificing domain-specific discoverability.
+  This hybrid approach is increasingly common for complex multi-technique papers.
+
+**Journal policies often resolve the decision.** Many journals now specify exactly where
+each data type should go: RSC journals require CSD deposition for crystal structures
+and recommend domain-specific repositories for other data. If your journal has explicit
+guidance, follow it. For anything not covered, apply the hierarchy of preference: domain-specific
+first, institutional second, general-purpose as a fallback.
+
+:::::::::::::::::::::::::::::::::::::::  callout
+
+## Signpost Multiple DOIs in Your Data Access Statement
+
+When data is split across repositories, mention each DOI explicitly in your data access
+statement, with a brief note on what each one contains. For example:
+
+> "Crystal structure data are deposited in the Cambridge Structural Database
+> (CCDC 2345678). NMR and mass spectrometry data are available in the Chemotion
+> Repository at <https://doi.org/10.14272/xxxxx> under a CC-BY 4.0 licence.
+> DFT input and output files are deposited in ioChem-BD at <https://doi.org/10.xxxxx>."
+
+This is clearer and more useful to readers than a single catch-all reference,
+and it ensures each dataset is correctly attributed and independently citable.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
@@ -181,6 +234,9 @@ community is a safer long-term choice than one that is only recently established
   validation than general-purpose alternatives -- use them as your first choice.
 - Key repositories for chemistry include Chemotion (synthetic/spectroscopic), CSD
   (crystal structures), NOMAD and ioChem-BD (computational), and Zenodo (general fallback).
+- When a paper involves multiple data types, split the deposit across appropriate
+  repositories -- each with its own DOI -- rather than pooling everything in a
+  general-purpose archive. List all DOIs in the data access statement.
 - Crystal structure deposition in the CSD is mandatory for most crystallography journals.
 - re3data.org and FAIRsharing.org are the best starting points for finding a repository
   appropriate for your data type.
