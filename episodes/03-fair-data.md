@@ -187,7 +187,7 @@ The principle to remember: **metadata should always be as open as possible, even
 
 :::::::::::::::::::::::::::::::::::::::  challenge
 
-## Challenge 3: How FAIR Is Your Data?
+## Challenge: How FAIR Is Your Data?
 
 Think of a dataset you have generated as part of a recent publication, even something simple
 like a set of analysis files from an experiment or a table of results.

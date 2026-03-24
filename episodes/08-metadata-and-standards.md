@@ -169,7 +169,7 @@ The practical workflow for most chemists is to keep vendor files as the primary 
 
 :::::::::::::::::::::::::::::::::::::::  challenge
 
-## Challenge 8: Identifiers in Practice
+## Challenge: Identifiers in Practice
 
 Using the [NCI/CADD Chemical Identifier Resolver](https://cactus.nci.nih.gov/chemical/structure) (accessible at `https://cactus.nci.nih.gov/chemical/structure`):
 

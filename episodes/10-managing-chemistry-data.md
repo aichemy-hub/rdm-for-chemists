@@ -71,7 +71,7 @@ The same principles apply:
 
 :::::::::::::::::::::::::::::::::::::::  challenge
 
-## What Is Missing From This Record?
+## Check Your Understanding: What Is Missing From This Record?
 
 A researcher submits the following metadata record to accompany an NMR spectrum in a
 repository:
@@ -204,7 +204,7 @@ are more expensive and harder to recover from.
 
 :::::::::::::::::::::::::::::::::::::::  challenge
 
-## Challenge 10: Mini Data Management Plan
+## Challenge: Mini Data Management Plan
 
 Your group has been awarded funding for a project that involves:
 

@@ -57,7 +57,7 @@ The table below covers some of the repositories most relevant to chemistry resea
 
 :::::::::::::::::::::::::::::::::::::::  challenge
 
-## Which Repository Would You Choose?
+## Check Your Understanding: Which Repository?
 
 A researcher produces the following datasets during a project. For each one, select the
 most appropriate repository from the options given and explain your reasoning.
@@ -191,7 +191,7 @@ Always check the specific journal's data policy before submission.
 
 :::::::::::::::::::::::::::::::::::::::  challenge
 
-## Challenge 9: Find and Evaluate a Repository
+## Challenge: Find and Evaluate a Repository
 
 Go to [re3data.org](https://www.re3data.org/), a global registry of research data
 repositories, and search for repositories relevant to your own area of chemistry.
