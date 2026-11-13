@@ -100,6 +100,9 @@ affects:
   data management plans and open data sharing.
 - **Efficiency.** Time spent searching for files, re-running experiments,
   or reconstructing lost data is time not spent on research.
+- **Sustainability** While the environmental impact of data storage is lower
+  compared to computing, it is still significant (see [https://www.ebi.ac.uk/training/online/courses/sustainable-computing-in-science/what-can-we-do/good-practices-in-data-management/](https://www.ebi.ac.uk/training/online/courses/sustainable-computing-in-science/what-can-we-do/good-practices-in-data-management/)), plus well managed data
+  means (potentially) less experiments ran.
 
 ## What Happens When It Goes Wrong
 
