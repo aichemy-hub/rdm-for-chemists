@@ -173,10 +173,10 @@ are metadata connected to the data.
 ### Rich metadata
 
 Rich metadata goes beyond the basic identification of the data, it includes:
-* provenance
-* administrative metadata
-* descriptive metadata
-* etc.
+- provenance
+- administrative metadata 
+- descriptive metadata
+- etc.
 
 Take a moment to discuss what metadata you may want to collect about a couple of 
 different types of data, and how this would enhance data FAIRness.
