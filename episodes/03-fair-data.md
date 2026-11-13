@@ -162,6 +162,36 @@ alongside the proprietary files.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
+## A big piece of the puzzle: metadata
+
+Metadata is "data about the data". Think about a simple picture on your phone,
+the picture is the data, but you can see information such as the date the picture
+was taken, which device was used, and the location it was taken at. All of these
+are metadata connected to the data.
+
+
+### Rich metadata
+
+Rich metadata goes beyond the basic identification of the data, it includes:
+* provenance
+* administrative metadata
+* descriptive metadata
+* etc.
+
+Take a moment to discuss what metadata you may want to collect about a couple of 
+different types of data, and how this would enhance data FAIRness.
+
+### Ontologies
+
+>"[...] an ontology is a way of showing the properties of a subject area and how they are related, by defining a set of terms and relational expressions that represent the entities in that subject area" ([Wikipedia](https://en.wikipedia.org/wiki/Ontology_(information_science)))
+
+### Schemas
+
+> "A schema is a predefined set of elements designed for a specific purpose, such as describing and managing information resources." (NISO, 2004)
+
+
+We'll talk more about metadata in chemistry in section 8.
+
 ## FAIR Is Not the Same as Open
 
 This is one of the most common misconceptions about FAIR. The two concepts
