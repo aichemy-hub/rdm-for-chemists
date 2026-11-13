@@ -40,7 +40,10 @@
   <div class="container-fluid top-nav-container">
     <div class="col-md-8">
       <div class="large-logo">
-        <img id="incubator-logo" alt="Carpentries Incubator" src="../assets/images/incubator-logo.svg"><span class="badge text-bg-danger">
+        <a href="index.html">
+        <img id="incubator-logo" alt="Carpentries Incubator" src="../assets/images/incubator-logo.svg"></a>
+
+        <span class="badge text-bg-danger">
           <abbr title="This lesson is in the pre-alpha phase, which means that it is in early development, but has not yet been taught.">
             <a href="https://docs.carpentries.org/resources/curriculum/lesson-life-cycle.html" class="external-link alert-link">
               <i aria-hidden="true" class="icon" data-feather="alert-octagon" style="border-radius: 5px"></i>
@@ -90,14 +93,15 @@
 </div>
     </div>
   </div>
-  <hr></header><nav class="navbar navbar-expand-xl bottom-nav incubator" aria-label="Main Navigation"><div class="container-fluid nav-container">
+</header><nav class="navbar navbar-expand-xl bottom-nav incubator" aria-label="Main Navigation"><div class="container-fluid nav-container">
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle Navigation">
       <span class="navbar-toggler-icon"></span>
       <span class="menu-title">Menu</span>
     </button>
     <div class="nav-logo">
-      <img class="small-logo" alt="Carpentries Incubator" src="../assets/images/incubator-logo-sm.svg">
-</div>
+      <a href="index.html">
+      <img class="small-logo" alt="Carpentries Incubator" src="../assets/images/incubator-logo-sm.svg"></a>
+    </div>
     <div class="lesson-title-md">
       Research Data Management for Chemists
     </div>
@@ -143,7 +147,7 @@
       </fieldset>
     </form>
     -->
-    <a id="search-button" class="btn btn-primary" href="../instructor/aio.html" role="button" aria-label="Search the All In One page">Search the All In One page</a>
+    <a id="search-button-nav" class="btn btn-primary" href="../instructor/aio.html" role="button" aria-label="Search the All In One page">Search the All In One page</a>
   </div>
 <!--/div.container-fluid -->
 </nav><div class="container">
@@ -155,6 +159,9 @@
           <i class="search-icon" data-feather="x" role="img"></i>
         </button>
         <div class="sidebar-inner">
+          <div class="row mobile-row" id="theme-row-mobile">
+            <a id="search-button-sidebar" class="btn btn-primary" href="../instructor/aio.html" role="button" aria-label="Search the All In One page">Search the All In One page</a>
+          </div>
           <div class="row mobile-row" id="theme-row-mobile">
             <menu class="col theme-selector" id="theme-selector-sidebar">
 <li class="nav-item dropdown theme-button-list" id="theme-button-list-sidebar">
@@ -203,13 +210,13 @@
 <!--/div.accordion-item-->
                 </div>
 <!--/div.accordion-flush-->
+
               </div>
 <!--div.sidenav-view-selector -->
             </div>
 <!--/div.col -->
 
-            <hr>
-</div>
+          </div>
 <!--/div.mobile-row -->
 
           <div class="accordion accordion-flush" id="accordion-chapters-toggle">
@@ -372,6 +379,34 @@
             </div>
 
             <hr class="half-width">
+<div class="accordion accordion-flush" id="accordion-links-toggle">
+                <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-heading-links-toggle">
+                  <button class="accordion-button collapsed" id="links" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse-links-toggle" aria-expanded="false" aria-controls="flush-collapse-links-toggle">
+                    LINKS
+                  </button>
+                </h2>
+                <div id="flush-collapse-links-toggle" class="accordion-collapse show collapse" data-bs-parent="#accordion-links-toggle">
+                    <div class="accordion-body">
+                        <ul>
+<li>
+                            <a href="../instructor/key-points.html">Key Points</a>
+                            </li>
+                            <li>
+                            <a href="../instructor/instructor-notes.html">Instructor Notes</a>
+                            </li>
+                            <li>
+                            <a href="../instructor/images.html">Extract All Images</a>
+                            </li>
+                        </ul>
+</div>
+                </div>
+                </div>
+<!--/div.accordion-item-->
+            </div>
+<!--/div.accordion-flush-->
+
+            <hr class="half-width">
 <div class="accordion accordion-flush lesson-resources" id="accordion-resources-toggle">
               <div class="accordion-item">
                 <h2 class="accordion-header" id="flush-heading-resources-toggle">
@@ -382,16 +417,7 @@
                 <div id="flush-collapse-resources-toggle" class="accordion-collapse collapse" data-bs-parent="#accordion-resources-toggle">
                   <div class="accordion-body">
                     <ul>
-<li>
-                        <a href="../instructor/key-points.html">Key Points</a>
-                      </li>
-                      <li>
-                        <a href="../instructor/instructor-notes.html">Instructor Notes</a>
-                      </li>
-                      <li>
-                        <a href="../instructor/images.html">Extract All Images</a>
-                      </li>
-                      <hr>
+<hr>
 <li><a class="dropdown-item" href="reference.html">Reference</a></li>
                     </ul>
 </div>
@@ -424,7 +450,7 @@
         
 <section id="aio-01-why-rdm"><p>Content from <a href="01-why-rdm.html">Why Does Research Data Management Matter?</a></p>
 <hr>
-<p>Last updated on 2026-03-24 |
+<p>Last updated on 2026-11-13 |
 
         <a href="https://github.com/aichemy-hub/rdm-for-chemists/edit/main/episodes/01-why-rdm.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 15 minutes</p>
@@ -571,6 +597,11 @@ now require data management plans and open data sharing.</li>
 <strong>Efficiency.</strong> Time spent searching for files,
 re-running experiments, or reconstructing lost data is time not spent on
 research.</li>
+<li>
+<strong>Sustainability</strong> While the environmental impact of
+data storage is lower compared to computing, it is still significant
+(see <a href="https://www.ebi.ac.uk/training/online/courses/sustainable-computing-in-science/what-can-we-do/good-practices-in-data-management/" class="external-link">https://www.ebi.ac.uk/training/online/courses/sustainable-computing-in-science/what-can-we-do/good-practices-in-data-management/</a>),
+plus well managed data means (potentially) less experiments ran.</li>
 </ul></section><section><h2 class="section-heading" id="what-happens-when-it-goes-wrong">What Happens When It Goes Wrong<a class="anchor" aria-label="anchor" href="#what-happens-when-it-goes-wrong"></a>
 </h2>
 <hr class="half-width">
@@ -1166,7 +1197,7 @@ it out later.</li>
 </div>
 </section></section><section id="aio-03-fair-data"><p>Content from <a href="03-fair-data.html">FAIR Data Principles</a></p>
 <hr>
-<p>Last updated on 2026-03-24 |
+<p>Last updated on 2026-11-13 |
 
         <a href="https://github.com/aichemy-hub/rdm-for-chemists/edit/main/episodes/03-fair-data.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 20 minutes</p>
@@ -1353,7 +1384,7 @@ rich metadata and a DOI, but the files are in a format that requires a
   Discussion
   </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <p><strong>A</strong> violates <strong>Reusable</strong> (and arguably
 <strong>Interoperable</strong>). The dataset has a DOI (Findable) and
@@ -1377,6 +1408,42 @@ alongside the proprietary files.</p>
 </div>
 </div>
 </div>
+</div>
+</section><section><h2 class="section-heading" id="a-big-piece-of-the-puzzle-metadata">A big piece of the puzzle: metadata<a class="anchor" aria-label="anchor" href="#a-big-piece-of-the-puzzle-metadata"></a>
+</h2>
+<hr class="half-width">
+<p>Metadata is “data about the data”. Think about a simple picture on
+your phone, the picture is the data, but you can see information such as
+the date the picture was taken, which device was used, and the location
+it was taken at. All of these are metadata connected to the data.</p>
+<div class="section level3">
+<h3 id="rich-metadata">Rich metadata<a class="anchor" aria-label="anchor" href="#rich-metadata"></a>
+</h3>
+<p>Rich metadata goes beyond the basic identification of the data, it
+includes: * provenance * administrative metadata * descriptive metadata
+* etc.</p>
+<p>Take a moment to discuss what metadata you may want to collect about
+a couple of different types of data, and how this would enhance data
+FAIRness.</p>
+</div>
+<div class="section level3">
+<h3 id="ontologies">Ontologies<a class="anchor" aria-label="anchor" href="#ontologies"></a>
+</h3>
+<blockquote>
+<p>“[…] an ontology is a way of showing the properties of a subject area
+and how they are related, by defining a set of terms and relational
+expressions that represent the entities in that subject area” (<a href="https://en.wikipedia.org/wiki/Ontology_(information_science)" class="external-link">Wikipedia</a>)</p>
+</blockquote>
+</div>
+<div class="section level3">
+<h3 id="schemas">Schemas<a class="anchor" aria-label="anchor" href="#schemas"></a>
+</h3>
+<blockquote>
+<p>“A schema is a predefined set of elements designed for a specific
+purpose, such as describing and managing information resources.” (NISO,
+2004)</p>
+</blockquote>
+<p>We’ll talk more about metadata in chemistry in section 8.</p>
 </div>
 </section><section><h2 class="section-heading" id="fair-is-not-the-same-as-open">FAIR Is Not the Same as Open<a class="anchor" aria-label="anchor" href="#fair-is-not-the-same-as-open"></a>
 </h2>
@@ -1460,7 +1527,7 @@ What is the single easiest thing you could do to improve your score?</p>
   Discussion
   </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
 <div class="accordion-body">
 <p>For most researchers, the honest answer is that datasets can score
 very poorly or very well against FAIR principles. The point of the
@@ -3550,7 +3617,7 @@ computational data.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <p><strong>1. B: Cambridge Structural Database (CSD).</strong> Crystal
 structure data for small organic molecules belongs in the CSD.
@@ -3710,7 +3777,7 @@ down:</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Discussion </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
 <div class="accordion-body">
 <p>Common finds when navigating re3data.org for chemistry include:</p>
 <ul>
@@ -3907,7 +3974,7 @@ Choose all that apply.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <p><strong>A, B, D, E, and F are all missing and are essential metadata
 for NMR.</strong></p>
@@ -4071,7 +4138,7 @@ back-of-envelope estimate.)</li>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Discussion </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
 <div class="accordion-body">
 <p><strong>1. File naming.</strong> A good example:
 <code>2025-03-15_cpd023_1H-NMR_400MHz.fid</code> (raw) and
@@ -4317,7 +4384,7 @@ all free starting points for further learning.</li>
         <p>Materials licensed under <a href="LICENSE.html">CC-BY 4.0</a> by the authors</p>
 
         <p>Template licensed under <a href="https://creativecommons.org/licenses/by-sa/4.0/" class="external-link">CC-BY 4.0</a> by <a href="https://carpentries.org/" class="external-link">The Carpentries</a></p>
-        <p>Built with <a href="https://github.com/carpentries/sandpaper/tree/" class="external-link">sandpaper (0.20.1)</a>, <a href="https://github.com/carpentries/pegboard/tree/" class="external-link">pegboard (0.7.9)</a>, and <a href="https://github.com/carpentries/varnish/tree/" class="external-link">varnish (1.1.0)</a></p>
+        <p>Built with <a href="https://github.com/carpentries/sandpaper/tree/" class="external-link">sandpaper (0.21.1)</a>, <a href="https://github.com/carpentries/pegboard/tree/" class="external-link">pegboard (0.7.9)</a>, and <a href="https://github.com/carpentries/varnish/tree/" class="external-link">varnish (1.1.3)</a></p>
 		</div>
 		</footer>
 </div> <!-- / div.container -->
@@ -4340,8 +4407,8 @@ all free starting points for further learning.</li>
   "url": "https://aichemy-hub.github.io/rdm-for-chemists/instructor/aio.html",
   "identifier": "https://aichemy-hub.github.io/rdm-for-chemists/instructor/aio.html",
   "dateCreated": "2026-03-18",
-  "dateModified": "2026-05-19",
-  "datePublished": "2026-05-19"
+  "dateModified": "2026-11-13",
+  "datePublished": "2026-11-13"
 }
 
   </script><script>
@@ -4350,7 +4417,7 @@ all free starting points for further learning.</li>
           var _paq = window._paq = window._paq || [];
           /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
           _paq.push(["setDocumentTitle", document.domain + "/" + document.title]);
-          _paq.push(["setDomains", ["*.lessons.carpentries.org","*.datacarpentry.github.io","*.datacarpentry.org","*.librarycarpentry.github.io","*.librarycarpentry.org","*.swcarpentry.github.io", "*.carpentries.github.io"]]);
+          _paq.push(["setDomains", ["*.lessons.carpentries.org","*.datacarpentry.github.io","*.datacarpentry.org","*.hpc-carpentry.github.io","*.hpc-carpentry.org","*.librarycarpentry.github.io","*.librarycarpentry.org","*.swcarpentry.github.io", "*.carpentries.github.io"]]);
           _paq.push(["setDoNotTrack", true]);
           _paq.push(["disableCookies"]);
           _paq.push(["trackPageView"]);
