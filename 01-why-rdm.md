@@ -190,7 +190,7 @@ We will return to the reproducibility crisis in more detail in Part 2 of
 this workshop
 ([Episode 6: The Reproducibility Crisis in Chemistry](06-reproducibility-in-chemistry.md)),
 where we look at chemistry-specific challenges and what the community is
-doing about them.
+doing about them. 
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 

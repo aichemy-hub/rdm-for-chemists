@@ -83,6 +83,9 @@ In practice, if you are depositing a fixed collection of files in a repository, 
 
 If your data involves contractual restrictions (e.g. data under NDA or from an industrial collaboration), discuss the appropriate approach with your institution's legal or technology transfer team before depositing anything.
 
+The license you choose to use should be one of the considerations in the selection of the repository. Some
+repositories only allow a small subset of licenses, and they may not feature the one you need.
+
 :::::::::::::::::::::::::::::::::::::::  challenge
 
 ## Check Your Understanding: Which Licence?

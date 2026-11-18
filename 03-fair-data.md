@@ -103,6 +103,8 @@ reused by others (and by you, years later). This means:
   this might mean following IUPAC recommendations for spectral data or
   depositing crystal structures with the CSD
 
+Ensuring data is reusable enables sustainable research practices such as metaanalyses.
+
 :::::::::::::::::::::::::::::::::::::::::  callout
 
 ## FAIR Is a Spectrum, Not a Switch
@@ -273,6 +275,26 @@ The single highest-impact improvement for most people is to **deposit data in a 
 This gains F, A, and often R in one step. We will cover how to do this well in Episode 5.
 
 :::::::::::::::::::::::::
+
+::::::::::::::::::::::::::::::::::::::::::::::::::
+
+:::::::::::::::::::::::::::::::::::::::::  callout
+
+## CARE principles
+
+In addition to the FAIR principles, you should be aware of the CARE principles
+for Indigenous Data Governance.
+
+These principles are:
+- Collective benefit
+- Authority to control
+- Responsibility
+- Ethics
+
+These principles complement the existing FAIR principles and apply whenever data involving
+or belonging to Indigenous Peoples is generated, collected, analysed or stored. They are
+not limited to human data, but also to data based on Indigenous knowledge, or collected from Indigenous
+land.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 

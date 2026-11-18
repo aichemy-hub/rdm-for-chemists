@@ -194,7 +194,7 @@ Always check the specific journal's data policy before submission.
 ## Challenge: Find and Evaluate a Repository
 
 Go to [re3data.org](https://www.re3data.org/), a global registry of research data
-repositories, and search for repositories relevant to your own area of chemistry.
+repositories, and/or [fairsharing.org/](https://fairsharing.org/), a resource on data and metadata standards and policies, and search for repositories relevant to your own area of chemistry.
 
 Find one repository you were not previously aware of, then note down:
 

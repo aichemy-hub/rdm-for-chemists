@@ -165,6 +165,8 @@ For instrument and technique-specific data, some open formats are:
 - **nmrML:** an emerging open format for NMR data with richer metadata support than JCAMP-DX.
 - **CML (Chemical Markup Language):** an XML-based format for general chemical information, including structures, spectra, and reactions.
 
+Metadata is usually collected in structured JSON or XML formats, which are both machine and human readible.
+
 The practical workflow for most chemists is to keep vendor files as the primary archival format for raw data (they preserve everything) and export to open formats for deposition and sharing. Many repositories now accept vendor formats but recommend or require an open-format companion file.
 
 :::::::::::::::::::::::::::::::::::::::  challenge

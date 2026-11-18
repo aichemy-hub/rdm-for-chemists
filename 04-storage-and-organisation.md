@@ -31,6 +31,8 @@ A few principles that work well together:
 - **Be descriptive but concise.** Include enough information to identify what the file contains: The technique, sample or compound, and what stage of processing it is at.
 - **Use version numbers consistently**, and avoid the word "final". Files named `final`, `final2`, and `FINAL_really_final` are a sign that version control has broken down. Use `v01`, `v02` instead.
 
+Be mindful some legacy or niche systems may be even more restrictive with the naming allowed. In particular you may want to check the length of filename allowed, some system only allow for 8 characters (excluding the extension)!
+
 For example:
 
 ```
