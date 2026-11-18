@@ -103,6 +103,8 @@ reused by others (and by you, years later). This means:
   this might mean following IUPAC recommendations for spectral data or
   depositing crystal structures with the CSD
 
+Ensuring data is reusable enables sustainable research practices such as metaanalyses.
+
 :::::::::::::::::::::::::::::::::::::::::  callout
 
 ## FAIR Is a Spectrum, Not a Switch
