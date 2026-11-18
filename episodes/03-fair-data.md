@@ -276,6 +276,26 @@ This gains F, A, and often R in one step. We will cover how to do this well in E
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
+:::::::::::::::::::::::::::::::::::::::::  callout
+
+## CARE principles
+
+In addition to the FAIR principles, you should be aware of the CARE principles
+for Indigenous Data Governance.
+
+These principles are:
+- Collective benefit
+- Authority to control
+- Responsibility
+- Ethics
+
+These principles complement the existing FAIR principles and apply whenever data involving
+or belonging to Indigenous Peoples is generated, collected, analysed or stored. They are
+not limited to human data, but also to data based on Indigenous knowledge, or collected from Indigenous
+land.
+
+::::::::::::::::::::::::::::::::::::::::::::::::::
+
 :::::::::::::::::::::::::::::::::::::::: keypoints
 
 - FAIR stands for Findable, Accessible, Interoperable, and Reusable: It is a framework for making data useful beyond its original context.
